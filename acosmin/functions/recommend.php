@@ -7,7 +7,7 @@
  *	Based on Kirki's recommending function:
  *	https://gist.github.com/aristath/a42f51db02b9c1d22794
  *
- *	________________
+ *  ________________
  *
 /* ------------------------------------------------------------------------- */
 
@@ -134,13 +134,13 @@ if ( ! function_exists( 'businessx_dismiss_ext_action' ) ) {
 
 if ( ! function_exists( 'businessx_installer_register' ) ) {
     /**
-	 * Registers the section, setting & control for the businessx installer.
-	 */
-	function businessx_installer_register( $wp_customize ) {
-		// Add the section/
-		// You can add your description here.
-		// Please note that the title will not be displayed.
-		if ( ! businessx_check_exts_state() ) {
+     * Registers the section, setting & control for the businessx installer.
+     */
+    function businessx_installer_register( $wp_customize ) {
+    	// Add the section/
+    	// You can add your description here.
+    	// Please note that the title will not be displayed.
+    	if ( ! businessx_check_exts_state() ) {
     		$wp_customize->add_section( 'businessx_installer', array(
     			'title'       => '',
     			'description' => __( 'If you want to take full advantage of the options this theme has to provide <b><em>(Front Page sections)</em></b>, please install and activate the <b><em>Businessx Extensions</em></b> plugin.', 'businessx' ),
@@ -160,6 +160,6 @@ if ( ! function_exists( 'businessx_installer_register' ) ) {
     			'section' => 'businessx_installer',
     		) ) );
         }
-	}
+    }
     add_action( 'customize_register', 'businessx_installer_register' );
 }
