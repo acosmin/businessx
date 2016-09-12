@@ -1,13 +1,12 @@
-== Businessx WordPress Theme ==
+## Businessx WordPress Theme ##
 
 Theme Name: Businessx
 Theme URI: http://www.acosmin.com/theme/businessx/
 Author: Alexandru Cosmin
 
-Businessx WordPress Theme, Copyright 2016 Acosmin.com
 Businessx is distributed under the terms of the GNU GPL
 
-==== Changelog ====
+#### Changelog ####
 
 v1.0.3
 * Released on GitHub
