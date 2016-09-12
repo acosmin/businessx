@@ -1,0 +1,100 @@
+/* Admin CSS Styles */
+
+/* Dashicons */
+.bx-control-info-label:after {
+    font-family: dashicons;
+	line-height: 1.2;
+	vertical-align: middle;
+}
+
+/* Customizer Info Control */
+.bx-control-info {
+	background-color: #fff;
+    border: 1px solid #e1e1e1;
+    padding: 1em;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+	position: relative;
+}
+.bx-m-t {
+	margin-top: 1.222em;	
+}
+.bx-m-b {
+	margin-bottom: 1.222em;	
+}
+.bx-control-info:after, .bx-control-info:before {
+	top: 100%;
+	left: 10%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.bx-control-info.no-pointer:after, .bx-control-info.no-pointer:before {
+	display: none;	
+}
+.bx-control-info:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #fff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.bx-control-info:before {
+	border-color: rgba(225, 225, 225, 0);
+	border-top-color: #e1e1e1;
+	border-width: 9px;
+	margin-left: -9px;
+}
+.bx-control-info > :last-child {
+	margin-bottom: 0;	
+}
+.bx-control-info-label {
+	position: relative;
+	padding-right: 40px;
+}
+
+.bx-control-info-label .dashicons {
+	position: absolute;
+    top: 0.122em;
+    right: 0;
+	opacity: 0.5;
+}
+.bx-control-info-description {
+	border-top: 1px solid #e1e1e1;
+    padding-top: 0.322em;
+}
+
+/* Customizer Button Control */
+.bx-btn-notice {
+	display: none;
+	width: 100%;
+	display: inline-block;	
+}
+
+/* Upsell + Docs in Customizer Header */
+.bx_btns-docs-upsell {
+	overflow: hidden;
+	padding: 0 20px 15px 20px;
+	background-color: #fff;	
+}
+.bx_btns-docs-upsell .button {
+	width: 47%;
+	text-align: center;	
+}
+.bx_btns-docs-upsell .bx_btn-prov, .bx_btns-docs-upsell .bx_btn-prov:hover {
+	float: left;
+    border-color: #bf1111;
+    background-color: rgba(247, 12, 12, 0.73);
+    box-shadow: 0 1px 0 #b50a0a;
+    color: #fff;
+	font-style: italic;
+}
+.bx_btns-docs-upsell .bx_btn-prov:hover {
+	border-color: #921919;
+	background-color: rgba(247, 12, 12, 0.63);
+}
+.bx_btns-docs-upsell .bx_btn-docs {
+	float: right;	
+}

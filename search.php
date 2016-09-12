@@ -1,0 +1,52 @@
+<?php
+/* ------------------------------------------------------------------------- *
+ *	Search template					
+/* ------------------------------------------------------------------------- */
+
+/*  Filtered CSS classes
+ *	---
+ *	section: grid-wrap
+ *	div: grid-container grid-1 padding-small clearfix
+ *	main: grid-col grid-posts-col site-search clearfix
+ *	---
+*/
+
+// Header
+get_header(); 
+
+// Title
+businessx_get_heading_templ( 'search', 'full-width' );
+?>
+
+<section role="main" id="content" class="<?php businessx_occ( 'businessx_search___section_classes' ); ?>">
+	<?php do_action( 'businessx_search__inner_sec_top' ); ?>
+    
+	<div class="<?php businessx_occ( 'businessx_search___container_classes' ); ?>">
+    	
+        <?php do_action( 'businessx_search__inner_before' ); ?>
+        
+        <main id="main" class="<?php businessx_occ( 'businessx_search___main_classes' ); ?>" role="main">
+			<?php 
+			if ( have_posts() ) : 
+				while ( have_posts() ) : the_post(); 
+					get_template_part( 'partials/posts/content', get_post_format() );
+				endwhile;
+				businessx_paged( '<nav class="posts-pagination grid-col grid-4x-col fw-bold ta-right clearfix" role="navigation">' );
+			else :
+				get_template_part( 'partials/posts/content', 'none' );
+			endif;
+			?>	
+        </main>
+		
+        <?php get_sidebar(); ?>
+        
+        <?php do_action( 'businessx_search__inner_after' ); ?>
+        
+    </div>
+    
+    <?php do_action( 'businessx_search__inner_sec_bottom' ); ?>
+</section>
+
+<?php 
+// Footer
+get_footer(); ?>
