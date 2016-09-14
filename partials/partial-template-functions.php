@@ -19,7 +19,7 @@
 /* -- Header placeholder */
 if ( ! function_exists( 'businessx_header_placeholder' ) ) {
 	function businessx_header_placeholder() {
-		?><div class="mh-placeholder"></div><?php	
+		?><div class="mh-placeholder"></div><?php
 	}
 }
 
@@ -30,10 +30,10 @@ if ( ! function_exists( 'businessx_logo_display' ) ) {
 		$custom_logo 	= get_theme_mod( 'custom_logo' );
 		$logo_type 		= get_theme_mod( 'logo_type_select', 'logo-text-type' );
 		$disabled		= get_theme_mod( 'footer_credits_logo_hide', false );
-		
+
 		if( $footer && $disabled )
 			return;
-		
+
 		if( $custom_logo && $logo_type == 'logo-image-type' ) {
 			?>
 			<div class="logo-wrap"><?php the_custom_logo(); ?></div>
@@ -60,7 +60,7 @@ if ( ! function_exists( 'businessx_menu_main_area' ) ) {
                         'container'			=> false,
                         'fallback_cb'		=> 'businessx_fb_menu'
                     ) );
-                    
+
                     wp_nav_menu( $menu_args );
                 ?>
         	</nav>
@@ -72,16 +72,16 @@ if ( ! function_exists( 'businessx_menu_main_area' ) ) {
 
 /* -- Wrapper for the right side menu */
 if ( ! function_exists( 'businessx_menu_actions_area' ) ) {
-	function businessx_menu_actions_area() { 
+	function businessx_menu_actions_area() {
 		?>
         <div class="main-header-right clearfix">
-        	<?php 
+        	<?php
 			// Hooked: businessx_menu_action_btns() - 11
-			do_action( 'businessx_header__action_btns_1' ); ?> 
-			
+			do_action( 'businessx_header__action_btns_1' ); ?>
+
 			<div class="main-header-btns">
             	<?php
-				/* Hooked: 
+				/* Hooked:
 				businessx_search_button() - 10
 				businessx_mobile_menu_button() - 20 */
 				do_action( 'businessx_header__action_btns_2' ); ?>
@@ -95,7 +95,7 @@ if ( ! function_exists( 'businessx_menu_actions_area' ) ) {
 /* -- Action buttons menu - right side */
 if ( ! function_exists( 'businessx_menu_action_btns' ) ) {
 	function businessx_menu_action_btns() {
-		
+
 		$args = apply_filters( 'businessx_menu___actions_args', array(
 			'theme_location'	=> 'actions',
 			'menu_class'     	=> 'actions-menu clearfix"',
@@ -124,7 +124,7 @@ if ( ! function_exists( 'businessx_search_button' ) ) {
 /* -- Action buttons - Mobile menu */
 if ( ! function_exists( 'businessx_mobile_menu_button' ) ) {
 	function businessx_mobile_menu_button() {
-		$menu_btn = apply_filters( 'businessx_mobile_menu_button___text', $menu_btn = esc_html__( 'Menu', 'businessx' ) );
+		$menu_btn = apply_filters( 'businessx_mobile_menu_button___text', $menu_btn = __( 'Menu', 'businessx' ) );
 		?>
         <span class="ac-btn-h ac-btn-mobile"><a href="#" class="ac-btn-mobile-menu"><?php businessx_icon( 'bars' ) ?> <?php echo esc_html( $menu_btn ); ?></a></span>
         <?php
@@ -134,7 +134,7 @@ if ( ! function_exists( 'businessx_mobile_menu_button' ) ) {
 
 /* -- Search overlay - when header search button is clicked */
 if ( ! function_exists( 'businessx_search_display' ) ) {
-	function businessx_search_display() { 
+	function businessx_search_display() {
 		$disabled = get_theme_mod( 'header_misc_hide_search_btn', false );
 		if( ! $disabled ) : ?>
 		<div class="search-wrap">
@@ -160,13 +160,13 @@ if ( ! function_exists( 'businessx_footer_widgets_wrapper' ) ) {
 		?>
         <div class="<?php businessx_occ( 'businessx_footer_widgets___wrapper_classes', array( 'footer-widgets' ) ) ?>">
         	<div class="<?php businessx_occ( 'businessx_footer_widgets___grid_classes', array( 'footer-sidebars', 'grid-1', 'clearfix' ) ) ?> <?php businessx_anim_classes(); ?>">
-            	<?php 
+            	<?php
 					/*	Hooked:
 					/*	businessx_footer_sidebar_1() - 10
 					/*	businessx_footer_sidebar_2() - 20
-					/*	businessx_footer_sidebar_3() - 30				
+					/*	businessx_footer_sidebar_3() - 30
 					/* --------------------------------------- */
-					do_action( 'businessx_footer__sidebars' ); 
+					do_action( 'businessx_footer__sidebars' );
 				?>
             </div>
 		</div>
@@ -185,14 +185,14 @@ if ( ! function_exists( 'businessx_footer_sidebar_1' ) ) {
         <div id="footer-sidebar-1" class="<?php businessx_occ( 'businessx_footer_sidebar___1_classes', array( 'grid-col', 'grid-2x3-col', 'footer-sidebar' ) ) ?>">
 			<?php
             do_action( 'businessx_footer_sidebar__1_top' );
-                
+
                 // Display widgets
-                if ( is_active_sidebar( 'sidebar-footer-1' ) ) { 
-                    dynamic_sidebar( 'sidebar-footer-1' ); 
+                if ( is_active_sidebar( 'sidebar-footer-1' ) ) {
+                    dynamic_sidebar( 'sidebar-footer-1' );
                 } else {
-					businessx_footer_sidebars_demo_widgets( 'sidebar-footer-1' );	
+					businessx_footer_sidebars_demo_widgets( 'sidebar-footer-1' );
 				}
-                
+
             do_action( 'businessx_footer_sidebar__1_bottom' );
             ?>
         </div>
@@ -207,14 +207,14 @@ if ( ! function_exists( 'businessx_footer_sidebar_2' ) ) {
         <div id="footer-sidebar-2" class="<?php businessx_occ( 'businessx_footer_sidebar___2_classes', array( 'grid-col', 'grid-2x3-col', 'footer-sidebar' ) ) ?>">
 			<?php
             do_action( 'businessx_footer_sidebar__2_top' );
-                
+
                 // Display widgets
-                if ( is_active_sidebar( 'sidebar-footer-2' ) ) { 
-                    dynamic_sidebar( 'sidebar-footer-2' ); 
+                if ( is_active_sidebar( 'sidebar-footer-2' ) ) {
+                    dynamic_sidebar( 'sidebar-footer-2' );
                 } else {
-					businessx_footer_sidebars_demo_widgets( 'sidebar-footer-2' );	
+					businessx_footer_sidebars_demo_widgets( 'sidebar-footer-2' );
 				}
-                
+
             do_action( 'businessx_footer_sidebar__2_bottom' );
             ?>
         </div>
@@ -229,14 +229,14 @@ if ( ! function_exists( 'businessx_footer_sidebar_3' ) ) {
         <div id="footer-sidebar-3" class="<?php businessx_occ( 'businessx_footer_sidebar___3_classes', array( 'grid-col', 'grid-2x3-col', 'footer-sidebar', 'last-col' ) ) ?>">
 			<?php
             do_action( 'businessx_footer_sidebar__3_top' );
-                
+
                 // Display widgets
-                if ( is_active_sidebar( 'sidebar-footer-3' ) ) { 
-                    dynamic_sidebar( 'sidebar-footer-3' ); 
+                if ( is_active_sidebar( 'sidebar-footer-3' ) ) {
+                    dynamic_sidebar( 'sidebar-footer-3' );
                 } else {
-					businessx_footer_sidebars_demo_widgets( 'sidebar-footer-3' );	
+					businessx_footer_sidebars_demo_widgets( 'sidebar-footer-3' );
 				}
-                
+
             do_action( 'businessx_footer_sidebar__3_bottom' );
             ?>
         </div>
@@ -255,11 +255,11 @@ if ( ! function_exists( 'businessx_footer_creds_wrapper' ) ) {
 		?>
         <div class="footer-credits">
         	<div class="footer-creds clearfix">
-            	<?php 
+            	<?php
 				/*	Hooked:
 				/*	businessx_logo_display() - 10
 				/*	businessx_footer_creds_menu() - 20
-				/*	businessx_footer_creds_copyright() - 30				
+				/*	businessx_footer_creds_copyright() - 30
 				/* --------------------------------------- */
 				do_action( 'businessx_footer__creds', true ) ?>
             </div>
@@ -302,7 +302,12 @@ if ( ! function_exists( 'businessx_footer_creds_copyright' ) ) {
         <div class="footer-creds-copyright">
         	<span>
 				<span class="footer-copyright"><?php if( $copyright != '' ) { echo businessx_content_filter( $copyright, $allowed ); } ?></span>
-				<?php printf( esc_attr__( '%1$s designed by %2$s.', 'businessx' ), 'BusinessX', '<a href="http://www.acosmin.com" alt="Premium WordPress Themes & Plugins by Acosmin" title="Premium WordPress Themes & Plugins by Acosmin" rel="designer">Acosmin</a>' ); ?>
+				<?php
+				printf( esc_html__( '%1$s designed by %2$s.', 'businessx' ),
+					esc_html__( 'Businessx theme', 'businessx' ),
+					'<a href="http://www.acosmin.com" title="' . esc_attr__( 'Premium WordPress Themes &amp; Plugins by Acosmin', 'businessx' ) . '">' . esc_html__( 'Acosmin', 'businessx' ) . '</a>' 
+				);
+				?>
 			</span>
         </div>
         <?php
@@ -351,23 +356,23 @@ if ( ! function_exists( 'businessx_post_meta_display' ) ) {
 		$index_readmore = get_theme_mod( 'posts_index_hide_meta_read_more', false );
 		$index_date = get_theme_mod( 'posts_index_hide_meta_date', false );
 		$index_category = get_theme_mod( 'posts_index_hide_meta_category', false );
-		
+
 		if( is_single() ) {
-			if( $single_author ) { 
+			if( $single_author ) {
 				$show['author']['show'] = false; }
-			if( $single_date ) { 
+			if( $single_date ) {
 				$show['date']['show'] = false; }
-			if( $single_category ) { 
+			if( $single_category ) {
 				$show['category']['show'] = false; }
 		} else {
-			if( $index_readmore ) { 
+			if( $index_readmore ) {
 				$show['more']['show'] = false; }
-			if( $index_date ) { 
+			if( $index_date ) {
 				$show['date']['show'] = false; }
-			if( $index_category ) { 
+			if( $index_category ) {
 				$show['category']['show'] = false; }
 		}
-		
+
 		return $show;
 	}
 }
@@ -379,9 +384,9 @@ if ( ! function_exists( 'businessx_index_post_meta_footer' ) ) {
 		?>
         <footer class="entry-meta">
         	<ul class="entry-meta-list clearfix">
-            	<?php 
+            	<?php
 				/*	Hooked:
-				/*	businessx_post_meta() - 10			
+				/*	businessx_post_meta() - 10
 				/* --------------------------------------- */
 				do_action( 'businessx_index__post_meta' ); ?>
             </ul>
@@ -425,7 +430,7 @@ if ( ! function_exists( 'businessx_portfolio_page_masonry_sizers' ) ) {
 		$output .= '<div class="sec-portfolio-grid-sizer"></div>';
 		$output .= '<div class="sec-portfolio-gutter-sizer"></div>';
 		$new_output = apply_filters( 'businessx_portfolio_page_masonry___sizers', $output );
-			
+
 		echo wp_kses_post( $new_output );
 	}
 }

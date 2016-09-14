@@ -1,6 +1,6 @@
 <?php
 /* ------------------------------------------------------------------------- *
- *	Page heading template					
+ *	Page heading template
 /* ------------------------------------------------------------------------- */
 ?>
 
@@ -9,7 +9,7 @@
     <?php do_action( 'businessx_phfw__inner_top' ); ?>
 	<div class="sec-hs-elements ta-center">
     	<?php do_action( 'businessx_phfw__heading_top' ); ?>
-    	<h2 class="hs-primary-large"><?php the_title(); ?></h2>
+    		<?php the_title( '<h2 class="hs-primary-large">', '</h2>' ); ?>
         <?php do_action( 'businessx_phfw__heading_bottom' ); ?>
     </div>
     <?php do_action( 'businessx_phfw__inner_bottom' ); ?>

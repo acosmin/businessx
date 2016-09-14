@@ -1,6 +1,6 @@
 <?php
 /* ------------------------------------------------------------------------- *
- *	Index heading - no sections template					
+ *	Index heading - no sections template
 /* ------------------------------------------------------------------------- */
 ?>
 
@@ -15,10 +15,10 @@
 	<div class="grid-container grid-1 padding-small clearfix">
     	<main id="main" class="grid-col grid-4x-col site-main clearfix" role="main">
     		<p class="alert alert-warning ta-center">
-                <?php 
-				printf( __( 'You need %s activated to display sections. Activate the plugin first!', 'businessx' ), 
-						'<b><a href="https://wordpress.org/plugins/businessx-extensions/">' . __( 'Businessx Extensions', 'businessx' ) . '</a></b>' ); 
-				?> 
+                <?php
+				printf( __( 'You need %s activated to display sections. Activate the plugin first!', 'businessx' ),
+						'<b><a href="' . esc_url( __( "https://wordpress.org/plugins/businessx-extensions/", "businessx" ) . '">' . esc_html__( 'Businessx Extensions', 'businessx' ) . '</a></b>' ); 
+				?>
 			</p>
         </main>
     </div>
