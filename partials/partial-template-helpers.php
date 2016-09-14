@@ -237,7 +237,7 @@ if ( ! function_exists( 'businessx_header_bg_options' ) ) {
 			$large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $pid ), $size );
 			if ( ! empty( $large_image[0] ) ) {
 			   $large_image_url = $large_image[0];
-			   $css .= ' #top-header-' . $pid . ' { background-image: url("' . esc_url( $large_image_url ) . '"); }';
+			   $css .= ' #top-header-' . intval( $pid ) . ' { background-image: url("' . esc_url( $large_image_url ) . '"); }';
 			}
 		} else { $show_ch = true; }
 
