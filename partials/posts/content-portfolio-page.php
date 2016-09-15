@@ -7,7 +7,7 @@ $pid = intval( get_the_ID() );
 <div class="grid-col grid-2x-col sec-portfolio-item">
     <figure class="sec-portfolio-item-thumbnail">
         <?php if( has_post_thumbnail( $pid ) ) {
-            echo get_the_post_thumbnail( $pid, apply_filters( 'businessx_portfolio_thumbnail_size', 'bx-portfolio' ) ); } ?>
+            echo get_the_post_thumbnail( $pid, apply_filters( 'businessx_portfolio_thumbnail_size', 'businessx-tmb-portfolio' ) ); } ?>
         <figcaption>
             <p class="description">
                 <span class="title"><a href="<?php echo esc_url( get_permalink() ); ?>" title="<?php echo esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></span>

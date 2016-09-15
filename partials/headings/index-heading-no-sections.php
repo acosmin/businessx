@@ -16,8 +16,7 @@
     	<main id="main" class="grid-col grid-4x-col site-main clearfix" role="main">
     		<p class="alert alert-warning ta-center">
                 <?php
-				printf( __( 'You need %s activated to display sections. Activate the plugin first!', 'businessx' ),
-						'<b><a href="' . esc_url( __( "https://wordpress.org/plugins/businessx-extensions/", "businessx" ) . '">' . esc_html__( 'Businessx Extensions', 'businessx' ) . '</a></b>' ); 
+				printf( __( 'You need %s activated to display sections. Activate the plugin first!', 'businessx' ), '<b><a href="' . esc_url( __( 'https://wordpress.org/plugins/businessx-extensions/', 'businessx' ) ) . '">' . esc_html__( 'Businessx Extensions', 'businessx' ) . '</a></b>' )
 				?>
 			</p>
         </main>
