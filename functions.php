@@ -70,9 +70,9 @@ if ( ! function_exists( 'businessx_setup' ) ) {
 		// Enable support for Post Thumbnails on posts and pages.
 		add_theme_support( 'post-thumbnails' );
 		set_post_thumbnail_size( 1200, 0, true );
-		add_image_size( 'bx-portfolio', 630, 415, true );
-		add_image_size( 'bx-blog-wide', 594 );
-		add_image_size( 'bx-blog-normal', 250, 250, true );
+		add_image_size( 'businessx-tmb-portfolio', 630, 415, true );
+		add_image_size( 'businessx-tmb-blog-wide', 594 );
+		add_image_size( 'businessx-tmb-blog-normal', 250, 250, true );
 
 		// Register locations for your menus
 		register_nav_menus( array(
