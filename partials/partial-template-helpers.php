@@ -38,7 +38,7 @@ if ( ! function_exists( 'businessx_sidebars_demo_widgets' ) ) {
 			);
 
 			// Display a friendly notice
-			if( $sidebar_name != '' ) {
+			if( $sidebar_name != '' && current_user_can( 'edit_theme_options' ) ) {
 				echo '<p class="alert alert-warning ta-center widget">';
 				printf( __( 'This sidebar is empty, you should add some widgets (in %s). Until then we are showing some default widgets.', 'businessx' ), '<strong>' . esc_html( $sidebar_name ) . '</strong>' );
 				echo '</p>'; }
@@ -96,12 +96,22 @@ if ( ! function_exists( 'businessx_footer_sidebars_demo_widgets' ) ) {
 
 				case 'sidebar-footer-3' :
 					// Show Text Widget
-					the_widget( 'WP_Widget_Text',
-						array(
-							'title' => esc_html__( 'Demo Widgets', 'businessx' ),
-							'text' => __( '<p>These are <strong>demo widgets</strong>, you can add your own in this sidebars: Footer #1 Sidebar, Footer #2 Sidebar and Footer #3 Sidebar.</p><p>You can also disable this entire section (widgetized footer) from <em>Customizer > Settings > Footer > Disable footer sidebars.</em></p><p>Simple stuff :D</p>', 'businessx' ),
-							'filter' => true
-						),
+					if( current_user_can( 'edit_theme_options' ) ) {
+						the_widget( 'WP_Widget_Text',
+							array(
+								'title' => esc_html__( 'Demo Widgets', 'businessx' ),
+								'text' => __( '<p>These are <strong>demo widgets</strong>, you can add your own in this sidebars: Footer #1 Sidebar, Footer #2 Sidebar and Footer #3 Sidebar.</p><p>You can also disable this entire section (widgetized footer) from <em>Customizer > Settings > Footer > Disable footer sidebars.</em></p><p>Simple stuff :D</p>', 'businessx' ),
+								'filter' => true
+							),
+							array(
+								'before_widget' => '<aside class="widget clearfix">',
+								'after_widget'  => '</aside><!-- END .widget -->',
+								'before_title'  => '<h3 class="widget-title hs-secondary-smallest ls-min"><span>',
+								'after_title'   => '</span></h3>',
+							)
+						);
+					}
+					the_widget( 'WP_Widget_Meta', array(),
 						array(
 							'before_widget' => '<aside class="widget clearfix">',
 							'after_widget'  => '</aside><!-- END .widget -->',
