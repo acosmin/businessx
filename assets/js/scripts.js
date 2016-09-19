@@ -89,15 +89,6 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 
 
 /*!
- * imagesLoaded PACKAGED v3.1.8
- * JavaScript is all like "You images are done yet or what?"
- * MIT License
- */
-(function(){function e(){}function t(e,t){for(var n=e.length;n--;)if(e[n].listener===t)return n;return-1}function n(e){return function(){return this[e].apply(this,arguments)}}var i=e.prototype,r=this,o=r.EventEmitter;i.getListeners=function(e){var t,n,i=this._getEvents();if("object"==typeof e){t={};for(n in i)i.hasOwnProperty(n)&&e.test(n)&&(t[n]=i[n])}else t=i[e]||(i[e]=[]);return t},i.flattenListeners=function(e){var t,n=[];for(t=0;e.length>t;t+=1)n.push(e[t].listener);return n},i.getListenersAsObject=function(e){var t,n=this.getListeners(e);return n instanceof Array&&(t={},t[e]=n),t||n},i.addListener=function(e,n){var i,r=this.getListenersAsObject(e),o="object"==typeof n;for(i in r)r.hasOwnProperty(i)&&-1===t(r[i],n)&&r[i].push(o?n:{listener:n,once:!1});return this},i.on=n("addListener"),i.addOnceListener=function(e,t){return this.addListener(e,{listener:t,once:!0})},i.once=n("addOnceListener"),i.defineEvent=function(e){return this.getListeners(e),this},i.defineEvents=function(e){for(var t=0;e.length>t;t+=1)this.defineEvent(e[t]);return this},i.removeListener=function(e,n){var i,r,o=this.getListenersAsObject(e);for(r in o)o.hasOwnProperty(r)&&(i=t(o[r],n),-1!==i&&o[r].splice(i,1));return this},i.off=n("removeListener"),i.addListeners=function(e,t){return this.manipulateListeners(!1,e,t)},i.removeListeners=function(e,t){return this.manipulateListeners(!0,e,t)},i.manipulateListeners=function(e,t,n){var i,r,o=e?this.removeListener:this.addListener,s=e?this.removeListeners:this.addListeners;if("object"!=typeof t||t instanceof RegExp)for(i=n.length;i--;)o.call(this,t,n[i]);else for(i in t)t.hasOwnProperty(i)&&(r=t[i])&&("function"==typeof r?o.call(this,i,r):s.call(this,i,r));return this},i.removeEvent=function(e){var t,n=typeof e,i=this._getEvents();if("string"===n)delete i[e];else if("object"===n)for(t in i)i.hasOwnProperty(t)&&e.test(t)&&delete i[t];else delete this._events;return this},i.removeAllListeners=n("removeEvent"),i.emitEvent=function(e,t){var n,i,r,o,s=this.getListenersAsObject(e);for(r in s)if(s.hasOwnProperty(r))for(i=s[r].length;i--;)n=s[r][i],n.once===!0&&this.removeListener(e,n.listener),o=n.listener.apply(this,t||[]),o===this._getOnceReturnValue()&&this.removeListener(e,n.listener);return this},i.trigger=n("emitEvent"),i.emit=function(e){var t=Array.prototype.slice.call(arguments,1);return this.emitEvent(e,t)},i.setOnceReturnValue=function(e){return this._onceReturnValue=e,this},i._getOnceReturnValue=function(){return this.hasOwnProperty("_onceReturnValue")?this._onceReturnValue:!0},i._getEvents=function(){return this._events||(this._events={})},e.noConflict=function(){return r.EventEmitter=o,e},"function"==typeof define&&define.amd?define("eventEmitter/EventEmitter",[],function(){return e}):"object"==typeof module&&module.exports?module.exports=e:this.EventEmitter=e}).call(this),function(e){function t(t){var n=e.event;return n.target=n.target||n.srcElement||t,n}var n=document.documentElement,i=function(){};n.addEventListener?i=function(e,t,n){e.addEventListener(t,n,!1)}:n.attachEvent&&(i=function(e,n,i){e[n+i]=i.handleEvent?function(){var n=t(e);i.handleEvent.call(i,n)}:function(){var n=t(e);i.call(e,n)},e.attachEvent("on"+n,e[n+i])});var r=function(){};n.removeEventListener?r=function(e,t,n){e.removeEventListener(t,n,!1)}:n.detachEvent&&(r=function(e,t,n){e.detachEvent("on"+t,e[t+n]);try{delete e[t+n]}catch(i){e[t+n]=void 0}});var o={bind:i,unbind:r};"function"==typeof define&&define.amd?define("eventie/eventie",o):e.eventie=o}(this),function(e,t){"function"==typeof define&&define.amd?define(["eventEmitter/EventEmitter","eventie/eventie"],function(n,i){return t(e,n,i)}):"object"==typeof exports?module.exports=t(e,require("wolfy87-eventemitter"),require("eventie")):e.imagesLoaded=t(e,e.EventEmitter,e.eventie)}(window,function(e,t,n){function i(e,t){for(var n in t)e[n]=t[n];return e}function r(e){return"[object Array]"===d.call(e)}function o(e){var t=[];if(r(e))t=e;else if("number"==typeof e.length)for(var n=0,i=e.length;i>n;n++)t.push(e[n]);else t.push(e);return t}function s(e,t,n){if(!(this instanceof s))return new s(e,t);"string"==typeof e&&(e=document.querySelectorAll(e)),this.elements=o(e),this.options=i({},this.options),"function"==typeof t?n=t:i(this.options,t),n&&this.on("always",n),this.getImages(),a&&(this.jqDeferred=new a.Deferred);var r=this;setTimeout(function(){r.check()})}function f(e){this.img=e}function c(e){this.src=e,v[e]=this}var a=e.jQuery,u=e.console,h=u!==void 0,d=Object.prototype.toString;s.prototype=new t,s.prototype.options={},s.prototype.getImages=function(){this.images=[];for(var e=0,t=this.elements.length;t>e;e++){var n=this.elements[e];"IMG"===n.nodeName&&this.addImage(n);var i=n.nodeType;if(i&&(1===i||9===i||11===i))for(var r=n.querySelectorAll("img"),o=0,s=r.length;s>o;o++){var f=r[o];this.addImage(f)}}},s.prototype.addImage=function(e){var t=new f(e);this.images.push(t)},s.prototype.check=function(){function e(e,r){return t.options.debug&&h&&u.log("confirm",e,r),t.progress(e),n++,n===i&&t.complete(),!0}var t=this,n=0,i=this.images.length;if(this.hasAnyBroken=!1,!i)return this.complete(),void 0;for(var r=0;i>r;r++){var o=this.images[r];o.on("confirm",e),o.check()}},s.prototype.progress=function(e){this.hasAnyBroken=this.hasAnyBroken||!e.isLoaded;var t=this;setTimeout(function(){t.emit("progress",t,e),t.jqDeferred&&t.jqDeferred.notify&&t.jqDeferred.notify(t,e)})},s.prototype.complete=function(){var e=this.hasAnyBroken?"fail":"done";this.isComplete=!0;var t=this;setTimeout(function(){if(t.emit(e,t),t.emit("always",t),t.jqDeferred){var n=t.hasAnyBroken?"reject":"resolve";t.jqDeferred[n](t)}})},a&&(a.fn.imagesLoaded=function(e,t){var n=new s(this,e,t);return n.jqDeferred.promise(a(this))}),f.prototype=new t,f.prototype.check=function(){var e=v[this.img.src]||new c(this.img.src);if(e.isConfirmed)return this.confirm(e.isLoaded,"cached was confirmed"),void 0;if(this.img.complete&&void 0!==this.img.naturalWidth)return this.confirm(0!==this.img.naturalWidth,"naturalWidth"),void 0;var t=this;e.on("confirm",function(e,n){return t.confirm(e.isLoaded,n),!0}),e.check()},f.prototype.confirm=function(e,t){this.isLoaded=e,this.emit("confirm",this,t)};var v={};return c.prototype=new t,c.prototype.check=function(){if(!this.isChecked){var e=new Image;n.bind(e,"load",this),n.bind(e,"error",this),e.src=this.src,this.isChecked=!0}},c.prototype.handleEvent=function(e){var t="on"+e.type;this[t]&&this[t](e)},c.prototype.onload=function(e){this.confirm(!0,"onload"),this.unbindProxyEvents(e)},c.prototype.onerror=function(e){this.confirm(!1,"onerror"),this.unbindProxyEvents(e)},c.prototype.confirm=function(e,t){this.isConfirmed=!0,this.isLoaded=e,this.emit("confirm",this,t)},c.prototype.unbindProxyEvents=function(e){n.unbind(e.target,"load",this),n.unbind(e.target,"error",this)},s});
-
-
-
-/*!
  * parallax.js v1.4.2 (http://pixelcog.github.io/parallax.js/)
  * @copyright 2016 PixelCog, Inc.
  * @license MIT (https://github.com/pixelcog/parallax.js/blob/master/LICENSE)
@@ -131,7 +122,7 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 ;( function( $, window, document, undefined )
 	{
 		'use strict';
-		
+
 		// Selectors
 		var $window			= $( window ),
 			$body			= $( 'body' ),
@@ -139,14 +130,14 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 			$header			= $( '.main-header' ),
 			$fixed_menu		= $( '.mh-fixed' ),
 			$logo_wrap		= $fixed_menu.find( '.logo-wrap' );
-		
+
 		// Test mobile
 		var ac_TestMobile = function() {
-			if( (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera) ) { return true; } else { return false; }	
+			if( (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera) ) { return true; } else { return false; }
 		}
-		
-		
-		// Sticky header/menu 
+
+
+		// Sticky header/menu
 		var ac_FixedMenu = function() {
 			var hidden_class	= 'mh-hidden',
 				transp_class	= 'mh-transparent',
@@ -159,7 +150,7 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 						wHeight			= $window.height();
 						wScrollCurrent	= $window.scrollTop();
 						wScrollDiff		= wScrollBefore - wScrollCurrent;
-		
+
 						if( wScrollCurrent <= 0 ) {
 							$logo_wrap.fadeIn(300).css('display','');
 							if( $body.hasClass( 'menu-ff' ) ) {
@@ -167,10 +158,10 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 							} else if( $body.hasClass( 'menu-tf' ) ) {
 								$fixed_menu.removeClass( hidden_class ).addClass( transp_class ).removeClass( moving_class );
 							};
-							
+
 						} else if( wScrollDiff > 0 && $fixed_menu.hasClass( hidden_class ) ) {
 							$fixed_menu.removeClass( hidden_class );
-							
+
 						} else if( wScrollDiff < 0 ) {
 							if( $body.hasClass( 'menu-tf' ) ) { $fixed_menu.removeClass( transp_class ); }
 							$logo_wrap.fadeOut(0);
@@ -180,15 +171,15 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 								$fixed_menu.addClass( moving_class ).addClass( hidden_class );
 							}
 						}
-						
+
 						wScrollBefore = wScrollCurrent;
-						
+
 					});
-			} 
+			}
 		} // Sticky menu
 		ac_FixedMenu();
-		
-		
+
+
 		// Setup menu placeholder
 		var ac_MenuHeight = function() {
 			if( $body.hasClass( 'menu-ff' ) ) {
@@ -196,8 +187,8 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 			}
 		}
 		ac_MenuHeight();
-		
-		
+
+
 		// Add some simple animations
 		var ac_AnimateElements = function() {
 			var fader		= $('.fader'),
@@ -208,24 +199,24 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 				dir_down	= 'down',
 				fader_on 	= 'fader-on',
 				fader_reset	= 'fader-reset';
-			
-			// Normal speed	
+
+			// Normal speed
 			fader.waypoint(function(direction) {
 				if (direction === dir_up && $body.hasClass(fader_reset)) {
 					$(this.element).removeClass( fader_on ); }
 			}, { offset: offset });
-			
+
 			fader.waypoint(function(direction) {
 				if (direction === dir_down) {
 				  $(this.element).addClass( fader_on ); }
 			}, { offset: offset });
-			
+
 			// Faster speed
 			fader_quick.waypoint(function(direction) {
 				if (direction === dir_up && $body.hasClass(fader_reset)) {
 					$(this.element).removeClass( fader_on ); }
 			}, { offset: offset_q });
-		
+
 			fader_quick.waypoint(function(direction) {
 				if (direction === dir_down) {
 					$(this.element).addClass( fader_on ); }
@@ -241,7 +232,7 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 				search_trigger 	= $('#big-search-trigger'),
 				search_close 	= $('#big-search-close'),
 				search_big		= 'big-search';
-				
+
 			search_close.on('touchend click', function( event ){
 				event.preventDefault();
 				if($body.hasClass(search_big)){
@@ -251,7 +242,7 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 					}, 100);
 				}
 			});
-		
+
 			search_trigger.on( 'touchend click', function( event ){
 				event.preventDefault();
 				event.stopPropagation();
@@ -261,26 +252,26 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 				}, 100);
 				search_field.attr('placeholder', businessx_scripts_data['bx_search_placeholder'] );
 			});
-		
+
 			search_field.on('touchend click', function( event ){
 				event.stopPropagation();
 			});
 		}
 		ac_SearchAction();
-		
-		
+
+
 		// Prevent default on click
-		$document.on( 'click', '.testimonial-button a', function( event ) { 
+		$document.on( 'click', '.testimonial-button a', function( event ) {
 			if( $(this).attr( 'href' ) == '#' || $(this).attr( 'href' ) == '' ) {
 			event.preventDefault(); }
 		} );
-		
-		
+
+
 		// Scroll to id
-		$document.on( 'click', '.gotosection > a', function( event ) { 
+		$document.on( 'click', '.gotosection > a', function( event ) {
 			var the_href	= $( this ).attr( 'href' ),
 				id_target	= $( the_href );
-			
+
 			if( id_target.length ) {
 				$body.animate({
 					scrollTop: id_target.offset().top
@@ -288,8 +279,8 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 			}
 			event.preventDefault();
 		});
-		
-		
+
+
 		// Adjust Section Height
 		var ac_SectionHeight = function() {
 			var selected_items	= $( '.sec-hero, .sec-slider-slide, .heading-full-height' ),
@@ -297,45 +288,45 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 				no_height_adj	= 'no-height-adj',
 				new_height		= ( $body.hasClass( 'menu-ff' ) || $body.hasClass( 'menu-nn' ) ) ? $window.height() - $header.outerHeight() : $window.height(),
 				padding_top		= $header.not('.mh-moving').outerHeight();
-			
+
 			if( ! ac_TestMobile() ) {
 				// Desktop
 				selected_items.css({
 					'height' : new_height
 				});
 			} else { /* Mobile */ }
-			
+
 			// Pages height
 			if( ! ( $body.hasClass( 'menu-ff' ) || $body.hasClass( 'menu-nn' ) ) ) {
 				smaller_heigh.css({
-					'paddingTop' : padding_top	
+					'paddingTop' : padding_top
 				});
 			}
 		};
 		ac_SectionHeight();
-		
-		
+
+
 		// Add some padding-top to the first section
 		var ac_SectionPadding = function() {
 			var first_section 	= $('section[class*=sec-]').first(),
 				menu_height		= $header.not('.mh-moving').outerHeight() - 40;
-			
-			if( ! $header.length || ( $body.hasClass( 'menu-ff' ) || $body.hasClass( 'menu-nn' ) ) ) 
+
+			if( ! $header.length || ( $body.hasClass( 'menu-ff' ) || $body.hasClass( 'menu-nn' ) ) )
 				return;
-				
+
 			first_section.not('.sec-slider, .sec-hero').css('paddingTop', menu_height);
 		};
 		ac_SectionPadding();
 
-		
+
 		// Fade headings when scrolling
 		var ac_FadeDown = function() {
 			$window.scroll( function() {
 			var	apply_to		= $('.heading-full-height, .heading-full-width');
-				
+
 			if( ! apply_to.length || ac_TestMobile() )
 					return;
-					
+
 			var top_value 		= apply_to.offset().top,
 				element_height 	= apply_to.outerHeight(),
 				scroll_position = $window.scrollTop(),
@@ -353,7 +344,7 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 		};
 		ac_FadeDown();
 
-		
+
 		// Mobile Menu
 		var ac_MobileMenu = function() {
 			var menu			= 'main-menu',
@@ -363,21 +354,21 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 				mobile_arrow	= '.mobile-arrow',
 				parent_opened	= 'parent-opened',
 				opened			= 'opened';
-				
+
 			if( ! menu_select.length )
 				return;
-				
+
 			if( $body.hasClass('menu-ff') || $body.hasClass('menu-nn') ) {
 				$('.sec-hero .sec-hs-elements').css('top','50%');
 			}
-			
+
 			$document.on('touchend click', '.ac-btn-mobile-menu', function( event ) {
 				event.preventDefault();
 				menu_select.detach().prependTo('body').addClass(mobile_menu).removeClass(menu).fadeIn(300);
 				$('.'+mobile_menu).find('li.menu-item-has-children > a').after('<a href="#" class="mobile-arrow"></a>');
 				$body.toggleClass(opened_menu);
 			});
-			
+
 			$document.on('touchend click', '.ac-btn-mobile-close', function( event ){
 				event.preventDefault();
 				$('.'+mobile_menu).prependTo('.main-menu-wrap').removeClass(mobile_menu).addClass(menu);
@@ -386,7 +377,7 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 				menu_select.find('.'+opened).removeClass(opened);
 				$body.removeClass(opened_menu);
 			});
-			
+
 			$document.on('touchend click', mobile_arrow, function( event ){
 				event.preventDefault();
 				$( event.target ).parent().toggleClass(parent_opened);
@@ -394,12 +385,12 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 			});
 		};
 		ac_MobileMenu();
-		
-		
+
+
 		// Fitvids
 		 $('.post, .widget').fitVids();
-		
-		
+
+
 		// On Window Resize
 		$window.resize( function() {
 			ac_SectionHeight();
@@ -407,12 +398,12 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 			ac_SectionPadding();
 			$window.trigger('resize.px.parallax');
 		});
-		
-		
+
+
 		// On Window Load
 		$window.load(function(){
 			$('#bx-preloader').fadeOut('slow',function(){$(this).remove();});
 		});
 
-		
+
 })( jQuery, window, document );
