@@ -53,7 +53,6 @@ if ( ! function_exists( 'businessx_logo_display' ) ) {
 /* -- Display main menu  */
 if ( ! function_exists( 'businessx_menu_main_area' ) ) {
 	function businessx_menu_main_area() {
-		 //if ( has_nav_menu( 'primary' ) ) :
 		 ?>
 			<nav class="main-menu-wrap" role="navigation" aria-label="<?php _e( 'Primary Menu', 'businessx' ); ?>">
 				<?php
@@ -68,7 +67,6 @@ if ( ! function_exists( 'businessx_menu_main_area' ) ) {
                 ?>
         	</nav>
          <?php
-		 //endif;
 	}
 }
 
@@ -128,9 +126,11 @@ if ( ! function_exists( 'businessx_search_button' ) ) {
 if ( ! function_exists( 'businessx_mobile_menu_button' ) ) {
 	function businessx_mobile_menu_button() {
 		$menu_btn = apply_filters( 'businessx_mobile_menu_button___text', $menu_btn = __( 'Menu', 'businessx' ) );
+		if ( has_nav_menu( 'primary' ) ) :
 		?>
         <span class="ac-btn-h ac-btn-mobile"><a href="#" class="ac-btn-mobile-menu"><?php businessx_icon( 'bars' ) ?> <?php echo esc_html( $menu_btn ); ?></a></span>
         <?php
+		endif;
 	}
 }
 
