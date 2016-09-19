@@ -1,6 +1,6 @@
 <?php
 /* ------------------------------------------------------------------------- *
- *	Header template					
+ *	Header template
 /* ------------------------------------------------------------------------- */
 
 /*  Filtered CSS classes
@@ -20,22 +20,22 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php 
+<?php
 	/*	Hooked:
 	/*	businessx_header_placeholder() - 11
-	/*	businessx_preloader_output_html() - 20			
+	/*	businessx_preloader_output_html() - 20
 	/* --------------------------------------- */
-	do_action( 'businessx_header__before' ); 
+	do_action( 'businessx_header__before' );
 ?>
 
 <header id="main-header" <?php businessx_header_classes(); ?>>
 	<div class="<?php businessx_occ( 'businessx_header___inner_wrap' ) ?>">
-    
-    	<?php 
+
+    	<?php
 			/*	Hooked:
 			/*	businessx_logo_display() - 10
 			/*	businessx_menu_main_area() - 20
-			/*	businessx_menu_actions_area() - 30				
+			/*	businessx_menu_actions_area() - 30
 			/* --------------------------------------- */
 			do_action( 'businessx_main__header' );
 		?>
