@@ -3310,7 +3310,7 @@ body.nav-open .mobile-menu {
 	padding-left: 1em;
 }
 .widget img {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 
