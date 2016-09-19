@@ -166,7 +166,7 @@ function businessx_section_parallax( $enabled, $bgimg, $return = false ) {
 	$output				= '';
 
 	if( $bgimg != '' && $parallax ) {
-		$output = ' data-parallax="scroll" data-speed="0.5" data-bleed="50" data-image-src="' . esc_url( $background ) . '" style="background: none !important;"';
+		$output = ' data-parallax="scroll" data-speed="0.5" data-image-src="' . esc_url( $background ) . '" style="background: none !important;"';
 	}
 
 	if( $return ) { return $output; } else { echo $output; }
