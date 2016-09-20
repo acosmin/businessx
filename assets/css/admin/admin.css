@@ -17,10 +17,10 @@
 	position: relative;
 }
 .bx-m-t {
-	margin-top: 1.222em;	
+	margin-top: 1.222em;
 }
 .bx-m-b {
-	margin-bottom: 1.222em;	
+	margin-bottom: 1.222em;
 }
 .bx-control-info:after, .bx-control-info:before {
 	top: 100%;
@@ -33,7 +33,7 @@
 	pointer-events: none;
 }
 .bx-control-info.no-pointer:after, .bx-control-info.no-pointer:before {
-	display: none;	
+	display: none;
 }
 .bx-control-info:after {
 	border-color: rgba(255, 255, 255, 0);
@@ -48,7 +48,7 @@
 	margin-left: -9px;
 }
 .bx-control-info > :last-child {
-	margin-bottom: 0;	
+	margin-bottom: 0;
 }
 .bx-control-info-label {
 	position: relative;
@@ -70,18 +70,18 @@
 .bx-btn-notice {
 	display: none;
 	width: 100%;
-	display: inline-block;	
+	display: inline-block;
 }
 
 /* Upsell + Docs in Customizer Header */
 .bx_btns-docs-upsell {
 	overflow: hidden;
 	padding: 0 20px 15px 20px;
-	background-color: #fff;	
+	background-color: #fff;
 }
 .bx_btns-docs-upsell .button {
 	width: 47%;
-	text-align: center;	
+	text-align: center;
 }
 .bx_btns-docs-upsell .bx_btn-prov, .bx_btns-docs-upsell .bx_btn-prov:hover {
 	float: left;
@@ -96,5 +96,22 @@
 	background-color: rgba(247, 12, 12, 0.63);
 }
 .bx_btns-docs-upsell .bx_btn-docs {
-	float: right;	
+	float: right;
+}
+
+/* Customizer Link Section */
+#customize-controls .control-section-link-button .accordion-section-title:hover,
+#customize-controls .control-section-link-button .accordion-section-title:focus {
+	background-color: #fff;
+}
+
+.control-section-link-button .accordion-section-title .button {
+	margin-top:  -4px;
+	font-weight: 400;
+	margin-left: 8px;
+}
+
+.rtl .control-section-link-button .accordion-section-title .button {
+	margin-left:  0;
+	margin-right: 8px;
 }
