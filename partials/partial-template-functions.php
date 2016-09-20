@@ -27,21 +27,24 @@ if ( ! function_exists( 'businessx_header_placeholder' ) ) {
 /* -- Logo setup  */
 if ( ! function_exists( 'businessx_logo_display' ) ) {
 	function businessx_logo_display( $footer = false ) {
+		$header_text	= get_theme_mod( 'header_text', 1 );
 		$custom_logo 	= get_theme_mod( 'custom_logo' );
 		$logo_type 		= get_theme_mod( 'logo_type_select', 'logo-text-type' );
 		$disabled		= get_theme_mod( 'footer_credits_logo_hide', false );
 
-		if( $footer && $disabled )
-			return;
+		if( $header_text ) {
+			if( $footer && $disabled )
+				return;
 
-		if( $custom_logo && $logo_type == 'logo-image-type' ) {
-			?>
-			<div class="logo-wrap"><?php the_custom_logo(); ?></div>
-			<?php
-		} else {
-			?>
-			<div class="logo-wrap"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-text"><?php echo get_bloginfo( 'name', 'display' ); ?></a></div>
-			<?php
+			if( $custom_logo && $logo_type == 'logo-image-type' ) {
+				?>
+				<div class="logo-wrap"><?php the_custom_logo(); ?></div>
+				<?php
+			} else {
+				?>
+				<div class="logo-wrap"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-text"><?php echo get_bloginfo( 'name', 'display' ); ?></a></div>
+				<?php
+			}
 		}
 	}
 }
@@ -50,7 +53,6 @@ if ( ! function_exists( 'businessx_logo_display' ) ) {
 /* -- Display main menu  */
 if ( ! function_exists( 'businessx_menu_main_area' ) ) {
 	function businessx_menu_main_area() {
-		 //if ( has_nav_menu( 'primary' ) ) :
 		 ?>
 			<nav class="main-menu-wrap" role="navigation" aria-label="<?php _e( 'Primary Menu', 'businessx' ); ?>">
 				<?php
@@ -65,7 +67,6 @@ if ( ! function_exists( 'businessx_menu_main_area' ) ) {
                 ?>
         	</nav>
          <?php
-		 //endif;
 	}
 }
 
@@ -125,9 +126,11 @@ if ( ! function_exists( 'businessx_search_button' ) ) {
 if ( ! function_exists( 'businessx_mobile_menu_button' ) ) {
 	function businessx_mobile_menu_button() {
 		$menu_btn = apply_filters( 'businessx_mobile_menu_button___text', $menu_btn = __( 'Menu', 'businessx' ) );
+		if ( has_nav_menu( 'primary' ) ) :
 		?>
         <span class="ac-btn-h ac-btn-mobile"><a href="#" class="ac-btn-mobile-menu"><?php businessx_icon( 'bars' ) ?> <?php echo esc_html( $menu_btn ); ?></a></span>
         <?php
+		endif;
 	}
 }
 
@@ -305,7 +308,7 @@ if ( ! function_exists( 'businessx_footer_creds_copyright' ) ) {
 				<?php
 				printf( esc_html__( '%1$s designed by %2$s.', 'businessx' ),
 					esc_html__( 'Businessx theme', 'businessx' ),
-					'<a href="http://www.acosmin.com" title="' . esc_attr__( 'Premium WordPress Themes &amp; Plugins by Acosmin', 'businessx' ) . '">' . esc_html__( 'Acosmin', 'businessx' ) . '</a>' 
+					'<a href="' . BUSINESSX_AC_URL . '" title="' . esc_attr__( 'Premium WordPress Themes &amp; Plugins by Acosmin', 'businessx' ) . '">' . esc_html__( 'Acosmin', 'businessx' ) . '</a>'
 				);
 				?>
 			</span>

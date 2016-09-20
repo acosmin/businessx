@@ -18,6 +18,10 @@ function businessx_customize_register( $wp_customize ) {
 	require_once( get_template_directory() . '/acosmin/customizer/controls/rgba/rgba-picker.php' ); // RGBA Color Picker
 	require_once( get_template_directory() . '/acosmin/customizer/controls/info/info.php' ); // Info control
 	require_once( get_template_directory() . '/acosmin/customizer/controls/button/button.php' ); // Button control
+	require_once( get_template_directory() . '/acosmin/customizer/controls/link/link.php' ); // Link section
+
+	// Register custom sections
+	$wp_customize->register_section_type( 'Businessx_Section_Link' );
 
 	// Add postMessage support for site title and description for the Customizer
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
@@ -53,6 +57,19 @@ function businessx_customize_register( $wp_customize ) {
 
 		/*  Add sections
 		/* ------------------------------------ */
+
+		/* ------------------------------------ */
+		/*  Custom links
+		/* ------------------------------------ */
+
+			/// Documentation
+			$wp_customize->add_section( new Businessx_Section_Link( $wp_customize, 'link-button', array(
+				'title'    	=> esc_html__( 'Businessx', 'businessx' ),
+				'link_text' => esc_html__( 'Documentation', 'businessx' ),
+				'link_url'  => BUSINESSX_AC_URL . 'documentation/businessx/?utm_campaign=businessx_docs_btn',
+				'priority'	=> 1
+			) ) );
+
 
 		/* ------------------------------------ */
 		/*  Header

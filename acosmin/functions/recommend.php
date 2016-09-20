@@ -2,10 +2,11 @@
 /* ------------------------------------------------------------------------- *
  *
  *  Recommend Businessx Extensions plugin (added dismiss button)
+ *  Dismissable with one click, never shows the message again.
  *  ________________
  *
- *	Based on Kirki's recommending function:
- *	https://gist.github.com/aristath/a42f51db02b9c1d22794
+ *  Based on Kirki's recommending function:
+ *  https://gist.github.com/aristath/a42f51db02b9c1d22794
  *
  *  ________________
  *
@@ -27,9 +28,8 @@ if ( ! function_exists( 'businessx_check_exts_state' ) ) {
 
 if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Businessx_Installer_Control' ) ) {
 	/**
-	 * A simple control that will render the installer <iframe>.
-	 * We'll apply some CSS in order to move the section to the top
-	 * as well as style the section & the iframe.
+	 * A simple control that will render the install button,
+	 * what we're installing and a dismiss notice button
 	 */
 	class Businessx_Installer_Control extends WP_Customize_Control {
 		public $type = 'businessx-installer';
@@ -137,9 +137,7 @@ if ( ! function_exists( 'businessx_installer_register' ) ) {
      * Registers the section, setting & control for the businessx installer.
      */
     function businessx_installer_register( $wp_customize ) {
-    	// Add the section/
-    	// You can add your description here.
-    	// Please note that the title will not be displayed.
+    	// Add the section
     	if ( ! businessx_check_exts_state() ) {
     		$wp_customize->add_section( 'businessx_installer', array(
     			'title'       => '',

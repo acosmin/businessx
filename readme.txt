@@ -32,11 +32,6 @@ License: Font Awesome licensed under SIL OFL 1.1 / Code licensed under MIT Licen
 Copyright: Dave Gandy, twitter.com/davegandy
 ____________
 
-imagesLoaded v3.1.8 jQuery script - http://imagesloaded.desandro.com/
-License: Distributed under the terms of the MIT license
-Copyright: Oliver Caldwell
-____________
-
 parallax.js v1.4.2 jQuery script - http://pixelcog.github.io/parallax.js/
 License: Distributed under the terms of the MIT license
 Copyright: PixelCog, Inc.

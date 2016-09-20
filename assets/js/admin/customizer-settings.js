@@ -1,12 +1,12 @@
 /* Customizer Settings Manager */
 ( function( api ) {
 
-	var	api = wp.customize, 
+	var	api = wp.customize,
 		bx_styles_template = wp.template( 'businessx-czr-settings-output' ),
 		bx_simple_settings = _.map( bx_customizer_settings, function( element, index ) { return index } ),
 		bx_settings_keys = bx_simple_settings,
 		bx_settings_values = bx_simple_settings;
-		
+
 
 	// Update function
 	function bx_update_css() {
@@ -29,5 +29,18 @@
 			new_value.bind( bx_update_css );
 		} );
 	} );
-	
+
+
+	// Link section
+	api.sectionConstructor['link-button'] = api.Section.extend( {
+
+		// No events for this type of section.
+		attachEvents: function () {},
+
+		// Always make the section active.
+		isContextuallyActive: function () {
+			return true;
+		}
+	} );
+
 } )( wp.customize );
