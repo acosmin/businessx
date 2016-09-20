@@ -10,6 +10,18 @@
 /* ------------------------------------------------------------------------- */
 
 
+
+/* ------------------------------------ *
+ *  Define some constants
+/* ------------------------------------ */
+if( ! defined( 'BUSINESSX_VERSION' ) ) {
+	define( 'BUSINESSX_VERSION', '1.0.3.2' ); }
+
+if( ! defined( 'BUSINESSX_AC_URL' ) ) {
+	define( 'BUSINESSX_AC_URL', 'http://www.acosmin.com/' ); }
+
+
+
 /* ------------------------------------ *
  *  WordPress Version Compare
 /* ------------------------------------ */
@@ -22,6 +34,7 @@ if ( ! function_exists( 'businessx_wp_version_compare' ) ) {
 		}
 	}
 }
+
 
 
 /* ------------------------------------------------------------------------- *
@@ -58,6 +71,7 @@ require_once ( get_template_directory() . '/partials/partial-template-hooks.php'
 /* ------------------------------------ */
 if ( ! function_exists( 'businessx_setup' ) ) {
 	function businessx_setup() {
+
 		// Make BusinessX available for translation.
 		load_theme_textdomain( 'businessx', get_template_directory() . '/languages' );
 
@@ -169,7 +183,7 @@ if ( ! function_exists( 'businessx_scripts' ) ) {
 		wp_enqueue_style( 'businessx-fonts', businessx_fonts_setup(), array(), null );
 
 		// Theme stylesheet
-		wp_enqueue_style( 'businessx-style', get_stylesheet_uri(), array(), businessx_get_local_version() );
+		wp_enqueue_style( 'businessx-style', get_stylesheet_uri(), array(), BUSINESSX_VERSION );
 
 		// Font Awesome
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/icons/css/font-awesome.min.css', array(), '4.6.3', 'all' );

@@ -308,7 +308,7 @@ if ( ! function_exists( 'businessx_footer_creds_copyright' ) ) {
 				<?php
 				printf( esc_html__( '%1$s designed by %2$s.', 'businessx' ),
 					esc_html__( 'Businessx theme', 'businessx' ),
-					'<a href="http://www.acosmin.com" title="' . esc_attr__( 'Premium WordPress Themes &amp; Plugins by Acosmin', 'businessx' ) . '">' . esc_html__( 'Acosmin', 'businessx' ) . '</a>'
+					'<a href="' . BUSINESSX_AC_URL . '" title="' . esc_attr__( 'Premium WordPress Themes &amp; Plugins by Acosmin', 'businessx' ) . '">' . esc_html__( 'Acosmin', 'businessx' ) . '</a>'
 				);
 				?>
 			</span>

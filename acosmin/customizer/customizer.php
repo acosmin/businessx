@@ -65,8 +65,8 @@ function businessx_customize_register( $wp_customize ) {
 			/// Documentation
 			$wp_customize->add_section( new Businessx_Section_Link( $wp_customize, 'link-button', array(
 				'title'    	=> esc_html__( 'Businessx', 'businessx' ),
-				'link_text' => esc_html__( 'Features and Support', 'businessx' ),
-				'link_url'  => 'http://www.acosmin.com/theme/businessx/?utm_source=bxcustomizer&utm_medium=customizer&utm_campaign=businessx_btn',
+				'link_text' => esc_html__( 'Documentation', 'businessx' ),
+				'link_url'  => BUSINESSX_AC_URL . 'documentation/businessx/?utm_campaign=businessx_docs_btn',
 				'priority'	=> 1
 			) ) );
 
