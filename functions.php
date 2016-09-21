@@ -20,6 +20,9 @@ if( ! defined( 'BUSINESSX_VERSION' ) ) {
 if( ! defined( 'BUSINESSX_AC_URL' ) ) {
 	define( 'BUSINESSX_AC_URL', 'http://www.acosmin.com/' ); }
 
+if( ! defined( 'BUSINESSX_AC_DOCS_URL' ) && ! defined( 'BUSINESSX_AC_URL' ) ) {
+	define( 'BUSINESSX_AC_DOCS_URL', BUSINESSX_AC_URL . 'documentation/businessx/' ); }
+
 
 
 /* ------------------------------------ *
