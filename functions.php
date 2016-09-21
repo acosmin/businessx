@@ -204,7 +204,7 @@ if ( ! function_exists( 'businessx_scripts' ) ) {
 			'businessx_scripts_data',
 			apply_filters( 'businessx_frontend_js_data_filter', array(
 				/* Search form placeholder */
-				'bx_search_placeholder'	=> esc_html__( 'Type the keywords you are searching for', 'businessx' ),
+				'bx_search_placeholder'	=> esc_attr__( 'Type the keywords you are searching for', 'businessx' ),
 			) )
 		);
 
