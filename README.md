@@ -3,6 +3,9 @@ Businessx is distributed under the terms of the GNU GPL v2.0.
 
 ### Changelog ###
 
+**v1.0.4**
+* Will be changes soon;
+
 **v1.0.3.3**
 * Defined some constants in functions.php and updated some links;
 * Added Upsell/Link section via Customizer API;
