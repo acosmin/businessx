@@ -141,7 +141,7 @@ if ( ! function_exists( 'businessx_installer_register' ) ) {
     	if ( ! businessx_check_exts_state() ) {
     		$wp_customize->add_section( 'businessx_installer', array(
     			'title'       => '',
-    			'description' => __( 'If you want to take full advantage of the options this theme has to provide <b><em>(Front Page sections)</em></b>, please install and activate the <b><em>Businessx Extensions</em></b> plugin.', 'businessx' ),
+                'description' => sprintf( __( 'If you want to take full advantage of the options this theme has to provide %s, please install and activate the %s plugin.', 'businessx' ), '<b><em><a target="_blank" href="' . BUSINESSX_AC_URL . 'documentation/businessx/#h10' . '">' . __( '(Front Page sections)', 'businessx' ) . '</a></em></b>', '<b><em>' . __( 'Businessx Extensions', 'businessx' ) . '</em></b>' ),
     			'priority'    => -10,
                 'active_callback' => 'businessx_installer_sec_callback',
     			'capability'  => 'install_plugins',
