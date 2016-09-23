@@ -159,8 +159,10 @@ add_action( 'after_setup_theme', 'businessx_setup' );
 
 /*  Handles JavaScript detection.
 /* ------------------------------------ */
-function businessx_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+if ( ! function_exists( 'businessx_javascript_detection' ) ) {
+	function businessx_javascript_detection() {
+		echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+	}
 }
 add_action( 'wp_head', 'businessx_javascript_detection', 0 );
 
