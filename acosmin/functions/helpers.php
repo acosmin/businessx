@@ -197,21 +197,6 @@ if ( ! function_exists( 'businessx_hide_sidebar' ) ) {
 /* ------------------------------------ */
 // Output the necessary data to enable the Parallax effect on.
 
-// Sections
-if ( ! function_exists( 'businessx_section_parallax' ) ) {
-	function businessx_section_parallax( $enabled, $bgimg, $return = false ) {
-		$background			= get_theme_mod( $bgimg, '' );
-		$parallax			= get_theme_mod( $enabled, false );
-		$output				= '';
-
-		if( $bgimg != '' && $parallax ) {
-			$output = ' data-parallax="scroll" data-speed="0.5" data-image-src="' . esc_url( $background ) . '" style="background: none !important;"';
-		}
-
-		if( $return ) { return $output; } else { echo $output; }
-	}
-}
-
 // Custom headers
 if ( ! function_exists( 'businessx_ch_parallax' ) ) {
 	function businessx_ch_parallax( $return = false ) {
