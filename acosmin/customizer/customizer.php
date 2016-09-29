@@ -2041,6 +2041,7 @@ function businessx_customizer_js_css() {
 	global $businessx_customizer_settings;
 
 	// Customizer Hacks
+	wp_enqueue_style( 'businessx-customizer-style', get_template_directory_uri() . '/assets/css/admin/customizer.css', array(), '20160412', 'all' );
 	wp_enqueue_script( 'businessx-customizer-js', get_template_directory_uri() . '/assets/js/admin/customizer.js', array(), '20160412', true );
 	wp_localize_script( 'businessx-customizer-js', 'businessx_customizer_js_vars',
 		apply_filters( 'businessx_customizer_js___vars', array(

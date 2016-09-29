@@ -223,11 +223,8 @@ add_action( 'wp_enqueue_scripts', 'businessx_scripts' );
 /* ------------------------------------ */
 if ( ! function_exists( 'businessx_admin_scripts' ) ) {
 	function businessx_admin_scripts() {
-		// CSS Files
-		wp_enqueue_style(  'businessx-admin-style', get_template_directory_uri() . '/assets/css/admin/admin.css', array(), '20160412', 'all' );
-
 		// JS Files
-		wp_enqueue_script(  'businessx-admin-scripts', get_template_directory_uri() . '/assets/js/admin/admin.js', array(), '20160412', FALSE );
+		wp_enqueue_script( 'businessx-admin-scripts', get_template_directory_uri() . '/assets/js/admin/admin.js', array(), '20160412', FALSE );
 	}
 }
 add_action( 'admin_enqueue_scripts', 'businessx_admin_scripts' );
