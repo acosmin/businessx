@@ -55,7 +55,6 @@ if ( businessx_wp_version_compare( '4.5' ) ) {
 require_once ( get_template_directory() . '/acosmin/customizer/customizer.php' );
 require_once ( get_template_directory() . '/acosmin/functions/tgmpa.php' );
 require_once ( get_template_directory() . '/acosmin/functions/sanitization.php' );
-require_once ( get_template_directory() . '/acosmin/functions/icons.php' );
 require_once ( get_template_directory() . '/acosmin/functions/helpers.php' );
 require_once ( get_template_directory() . '/acosmin/functions/preloader.php' );
 require_once ( get_template_directory() . '/acosmin/functions/post-options.php' );

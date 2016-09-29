@@ -32,6 +32,28 @@ if ( ! function_exists( 'businessx_fb_menu' ) ) {
 
 
 
+/*  Echo or return an icon.
+/*	You only need the icon's name witout "fa-" prefix.
+/*	Example businessx_icon( "play" );
+/*	Set the second parameter to false to return the icon.
+/*	Example businessx_icon( "play", false );
+/* ------------------------------------------------------------------------- */
+if ( ! function_exists( 'businessx_icon' ) ) {
+	function businessx_icon( $icon = '', $output = true, $fa_display = true ) {
+		if( $fa_display ) { $fa = 'fa-'; } else { $fa = ''; }
+		if( $icon != '' ) {
+			if( $output ) {
+				echo '<i class="fa ' . $fa . esc_attr( $icon ) . '"></i> ';
+			} else {
+				return '<i class="fa ' . $fa . esc_attr( $icon ) . '"></i> ';
+			}
+		}
+		return;
+	}
+}
+
+
+
 /*  Count widgets and get their #
 /*	position in sidebar
 /* ------------------------------------ */
