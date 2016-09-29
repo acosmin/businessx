@@ -61,6 +61,13 @@ if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Businessx_Instal
 				margin-left: -15px;
 				height: 158px;
 			}
+            .bx-not-activated {
+                color: #8a6d3b;
+                background-color: #fcf8e3;
+                border: 1px solid #ffd47b;
+                border-radius: 4px;
+                padding: 10px;
+            }
 			</style>
 			<?php
                 $plugins   = get_plugins();
@@ -91,7 +98,7 @@ if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Businessx_Instal
                 <br/></br>
     			<?php else : ?>
     				<hr>
-    				<p><?php printf( __( 'The plugin is installed but not activated. Please <a href="%s"><b>activate it</b></a>.', 'businessx' ), admin_url( 'plugins.php' ) ); ?></p>
+    				<p class="bx-not-activated"><?php printf( __( 'The plugin is installed but not activated. Please <a href="%s"><b>activate it</b></a>.', 'businessx' ), admin_url( 'plugins.php' ) ); ?></p>
                     <a href="#" id="bx-dismiss-rec-plugin" class="button-secondary button"><?php _e('Dismiss Notice', 'businessx' ) ?></a>
 
                     <br/><br/>
