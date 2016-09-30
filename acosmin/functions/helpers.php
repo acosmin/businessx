@@ -197,6 +197,19 @@ if ( ! function_exists( 'businessx_hide_sidebar' ) ) {
 /* ------------------------------------ */
 // Output the necessary data to enable the Parallax effect on.
 
+// Compatibility with older versions of Businessx Extensions
+// Will remove it in the near future
+if( defined( 'BUSINESSX_EXTS_VERSION' ) ) {
+	if( version_compare( BUSINESSX_EXTS_VERSION, '1.0.3', '<' ) ) {
+		function businessx_section_parallax( $enabled, $bgimg, $return = false ) {
+			$parallax = get_theme_mod( $enabled, false );
+			$output = '';
+			if( $parallax ) { $output = '><div style="text-align:center; color:orange">' . esc_html__( 'If this message appears you need to update Businessx Extensions', 'businessx' ) . '</div'; }
+			if( $return ) { return $output; } else { echo $output; }
+		}
+	}
+}
+
 // Custom headers
 if ( ! function_exists( 'businessx_ch_parallax' ) ) {
 	function businessx_ch_parallax( $return = false ) {
