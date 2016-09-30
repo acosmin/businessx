@@ -1,4 +1,4 @@
-/* Admin CSS Styles */
+/* Customizer CSS Styles */
 
 /* Dashicons */
 .bx-control-info-label:after {
@@ -71,32 +71,6 @@
 	display: none;
 	width: 100%;
 	display: inline-block;
-}
-
-/* Upsell + Docs in Customizer Header */
-.bx_btns-docs-upsell {
-	overflow: hidden;
-	padding: 0 20px 15px 20px;
-	background-color: #fff;
-}
-.bx_btns-docs-upsell .button {
-	width: 47%;
-	text-align: center;
-}
-.bx_btns-docs-upsell .bx_btn-prov, .bx_btns-docs-upsell .bx_btn-prov:hover {
-	float: left;
-    border-color: #bf1111;
-    background-color: rgba(247, 12, 12, 0.73);
-    box-shadow: 0 1px 0 #b50a0a;
-    color: #fff;
-	font-style: italic;
-}
-.bx_btns-docs-upsell .bx_btn-prov:hover {
-	border-color: #921919;
-	background-color: rgba(247, 12, 12, 0.63);
-}
-.bx_btns-docs-upsell .bx_btn-docs {
-	float: right;
 }
 
 /* Customizer Link Section */

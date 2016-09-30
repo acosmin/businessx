@@ -294,22 +294,25 @@ if ( ! function_exists( 'businessx_footer_creds_menu' ) ) {
 // -- Footer credits - copyright and credits
 if ( ! function_exists( 'businessx_footer_creds_copyright' ) ) {
 	function businessx_footer_creds_copyright() {
-		$allowed = array(
+		$allowed = apply_filters( 'businessx_theme_credits___allowed', array(
 			'a' => array(
 				'href' 	=> array(),
 				'title' => array()
 			),
-		);
+		) );
 		$copyright = get_theme_mod( 'footer_credits_creds_line', businessx_return_copyright_templ() );
 		?>
         <div class="footer-creds-copyright">
         	<span>
 				<span class="footer-copyright"><?php if( $copyright != '' ) { echo businessx_content_filter( $copyright, $allowed ); } ?></span>
 				<?php
-				printf( esc_html__( '%1$s designed by %2$s.', 'businessx' ),
-					esc_html__( 'Businessx theme', 'businessx' ),
-					'<a href="' . BUSINESSX_AC_URL . '" title="' . esc_attr__( 'Premium WordPress Themes &amp; Plugins by Acosmin', 'businessx' ) . '">' . esc_html__( 'Acosmin', 'businessx' ) . '</a>'
-				);
+				$show = apply_filters( 'businessx_theme_credits___show', true );
+				if( $show ) {
+					printf( esc_html__( '%1$s designed by %2$s.', 'businessx' ),
+						esc_html__( 'Businessx theme', 'businessx' ),
+						'<a href="' . BUSINESSX_AC_URL . '" title="' . esc_attr__( 'Premium WordPress Themes &amp; Plugins by Acosmin', 'businessx' ) . '">' . esc_html__( 'Acosmin', 'businessx' ) . '</a>'
+					);
+				}
 				?>
 			</span>
         </div>

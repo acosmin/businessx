@@ -61,6 +61,13 @@ if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Businessx_Instal
 				margin-left: -15px;
 				height: 158px;
 			}
+            .bx-not-activated {
+                color: #8a6d3b;
+                background-color: #fcf8e3;
+                border: 1px solid #ffd47b;
+                border-radius: 4px;
+                padding: 10px;
+            }
 			</style>
 			<?php
                 $plugins   = get_plugins();
@@ -91,7 +98,7 @@ if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Businessx_Instal
                 <br/></br>
     			<?php else : ?>
     				<hr>
-    				<p><?php printf( __( 'The plugin is installed but not activated. Please <a href="%s"><b>activate it</b></a>.', 'businessx' ), admin_url( 'plugins.php' ) ); ?></p>
+    				<p class="bx-not-activated"><?php printf( __( 'The plugin is installed but not activated. Please <a href="%s"><b>activate it</b></a>.', 'businessx' ), admin_url( 'plugins.php' ) ); ?></p>
                     <a href="#" id="bx-dismiss-rec-plugin" class="button-secondary button"><?php _e('Dismiss Notice', 'businessx' ) ?></a>
 
                     <br/><br/>
@@ -141,7 +148,7 @@ if ( ! function_exists( 'businessx_installer_register' ) ) {
     	if ( ! businessx_check_exts_state() ) {
     		$wp_customize->add_section( 'businessx_installer', array(
     			'title'       => '',
-    			'description' => __( 'If you want to take full advantage of the options this theme has to provide <b><em>(Front Page sections)</em></b>, please install and activate the <b><em>Businessx Extensions</em></b> plugin.', 'businessx' ),
+                'description' => sprintf( __( 'If you want to take full advantage of the options this theme has to provide %s, please install and activate the %s plugin.', 'businessx' ), '<b><em><a target="_blank" href="' . BUSINESSX_AC_DOCS_URL . '#h10' . '">' . __( '(Front Page sections)', 'businessx' ) . '</a></em></b>', '<b><em>' . __( 'Businessx Extensions', 'businessx' ) . '</em></b>' ),
     			'priority'    => -10,
                 'active_callback' => 'businessx_installer_sec_callback',
     			'capability'  => 'install_plugins',

@@ -15,10 +15,13 @@
  *  Define some constants
 /* ------------------------------------ */
 if( ! defined( 'BUSINESSX_VERSION' ) ) {
-	define( 'BUSINESSX_VERSION', '1.0.3.3' ); }
+	define( 'BUSINESSX_VERSION', '1.0.4' ); }
 
 if( ! defined( 'BUSINESSX_AC_URL' ) ) {
 	define( 'BUSINESSX_AC_URL', 'http://www.acosmin.com/' ); }
+
+if( ! defined( 'BUSINESSX_AC_DOCS_URL' ) && defined( 'BUSINESSX_AC_URL' ) ) {
+	define( 'BUSINESSX_AC_DOCS_URL', BUSINESSX_AC_URL . 'documentation/businessx/' ); }
 
 
 
@@ -52,7 +55,6 @@ if ( businessx_wp_version_compare( '4.5' ) ) {
 require_once ( get_template_directory() . '/acosmin/customizer/customizer.php' );
 require_once ( get_template_directory() . '/acosmin/functions/tgmpa.php' );
 require_once ( get_template_directory() . '/acosmin/functions/sanitization.php' );
-require_once ( get_template_directory() . '/acosmin/functions/icons.php' );
 require_once ( get_template_directory() . '/acosmin/functions/helpers.php' );
 require_once ( get_template_directory() . '/acosmin/functions/preloader.php' );
 require_once ( get_template_directory() . '/acosmin/functions/post-options.php' );
@@ -156,8 +158,10 @@ add_action( 'after_setup_theme', 'businessx_setup' );
 
 /*  Handles JavaScript detection.
 /* ------------------------------------ */
-function businessx_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+if ( ! function_exists( 'businessx_javascript_detection' ) ) {
+	function businessx_javascript_detection() {
+		echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+	}
 }
 add_action( 'wp_head', 'businessx_javascript_detection', 0 );
 
@@ -204,7 +208,7 @@ if ( ! function_exists( 'businessx_scripts' ) ) {
 			'businessx_scripts_data',
 			apply_filters( 'businessx_frontend_js_data_filter', array(
 				/* Search form placeholder */
-				'bx_search_placeholder'	=> esc_html__( 'Type the keywords you are searching for', 'businessx' ),
+				'bx_search_placeholder'	=> esc_attr__( 'Type the keywords you are searching for', 'businessx' ),
 			) )
 		);
 
@@ -218,11 +222,8 @@ add_action( 'wp_enqueue_scripts', 'businessx_scripts' );
 /* ------------------------------------ */
 if ( ! function_exists( 'businessx_admin_scripts' ) ) {
 	function businessx_admin_scripts() {
-		// CSS Files
-		wp_enqueue_style(  'businessx-admin-style', get_template_directory_uri() . '/assets/css/admin/admin.css', array(), '20160412', 'all' );
-
 		// JS Files
-		wp_enqueue_script(  'businessx-admin-scripts', get_template_directory_uri() . '/assets/js/admin/admin.js', array(), '20160412', FALSE );
+		wp_enqueue_script( 'businessx-admin-scripts', get_template_directory_uri() . '/assets/js/admin/admin.js', array(), '20160412', FALSE );
 	}
 }
 add_action( 'admin_enqueue_scripts', 'businessx_admin_scripts' );
