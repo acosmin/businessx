@@ -9,6 +9,7 @@ Businessx is distributed under the terms of the GNU GPL v2.0.
 * Added style for Businessx Extensions' notice if it's not activated;
 * Added checks (function_exists) for all functions;
 * Fixed bx_search_placeholder's escaping to esc_attr__;
+* Changed description for "Logo Type";
 * Removed home.php;
 * Removed admin.css and added its contents to customizer.css;
 * Removed businessx_section_parallax(), moved it to Businessx Extensions;
