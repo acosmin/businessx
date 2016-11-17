@@ -40,7 +40,8 @@ if ( ! function_exists( 'businessx_fb_menu' ) ) {
 /* ------------------------------------------------------------------------- */
 if ( ! function_exists( 'businessx_icon' ) ) {
 	function businessx_icon( $icon = '', $output = true, $fa_display = true ) {
-		if( $fa_display ) { $fa = 'fa-'; } else { $fa = ''; }
+		$icon_prefix = apply_filters( 'businessx_icon___prefix', 'fa-' );
+		if( $fa_display ) { $fa = $icon_prefix; } else { $fa = ''; }
 		if( $icon != '' ) {
 			if( $output ) {
 				echo '<i class="fa ' . $fa . esc_attr( $icon ) . '"></i> ';
