@@ -445,11 +445,7 @@ if ( ! function_exists( 'businessx_portfolio_page_masonry_sizers' ) ) {
 if ( ! function_exists( 'businessx_portfolio_page_masonry_script' ) ) {
 	function businessx_portfolio_page_masonry_script() {
 		$id = apply_filters( 'businessx_portfolio_page_masonry_script___id', 'sec-portfolio-wrap' );
-		?>
-		<script type='text/javascript'>
-			(function( $ ) { $( document ).ready(function() { var $sec_portwrap = $('#<?php echo esc_attr( $id ); ?>').masonry(); $sec_portwrap.imagesLoaded( function() { $sec_portwrap.masonry(); }); });})(jQuery);
-        </script>
-        <?php
+		wp_add_inline_script( 'jquery-masonry', '(function( $ ) { $( document ).ready(function() { var $sec_portwrap = $("#' . esc_attr( $id ) . ' ").masonry(); $sec_portwrap.imagesLoaded( function() { $sec_portwrap.masonry(); }); });})(jQuery);' );
 	}
 }
 
