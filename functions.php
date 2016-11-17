@@ -127,12 +127,7 @@ if ( ! function_exists( 'businessx_setup' ) ) {
 		add_filter( 'use_default_gallery_style', '__return_false' );
 
 		// Globals
-		global $businessx_sections, $businessx_info;
-
-		// Some info
-		$businessx_info = apply_filters( 'businessx_info', array(
-			'base_font_size' 	=> 18
-		) );
+		global $businessx_sections;
 
 		// Add front-page sections positions
 		$sections_position 		= get_theme_mod( 'businessx_sections_position' );
