@@ -3,6 +3,10 @@ Businessx is distributed under the terms of the GNU GPL v2.0.
 
 ### Changelog ###
 
+**v1.0.5**
+* Changed version from 1.0.4 to 1.0.5
+* Removed Theme Updater (everything related to this option)
+
 **v1.0.4**
 * Added filters for get_header() & get_footer();
 * Added filter to remove theme credits;
