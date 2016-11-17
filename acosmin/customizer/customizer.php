@@ -2143,7 +2143,6 @@ if ( ! function_exists( 'businessx_controller_info' ) ) {
 		global $wp_customize;
 		$wp_customize->add_setting( $setting_id, array(
 	    	'default'			=> '',
-			'sanitize_callback' => 'sanitize_text_field',
 	    	'capability'		=> 'edit_theme_options',
 		) );
 		$wp_customize->add_control( new Businessx_Control_Info( $wp_customize, $setting_id, array(
