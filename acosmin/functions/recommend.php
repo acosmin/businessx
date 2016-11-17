@@ -98,7 +98,7 @@ if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Businessx_Instal
                 <br/></br>
     			<?php else : ?>
     				<hr>
-    				<p class="bx-not-activated"><?php printf( __( 'The plugin is installed but not activated. Please <a href="%s"><b>activate it</b></a>.', 'businessx' ), admin_url( 'plugins.php' ) ); ?></p>
+    				<p class="bx-not-activated"><?php printf( __( 'The plugin is installed but not activated. Please <a href="%s"><b>activate it</b></a>.', 'businessx' ), esc_url( admin_url( 'plugins.php' ) ) ); ?></p>
                     <a href="#" id="bx-dismiss-rec-plugin" class="button-secondary button"><?php _e('Dismiss Notice', 'businessx' ) ?></a>
 
                     <br/><br/>
