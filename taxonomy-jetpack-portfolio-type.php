@@ -43,7 +43,6 @@ businessx_get_heading_templ( 'archive', 'full-width' );
 			endwhile;
 				if( $wp_query->max_num_pages > 1 ) { echo '<div class="grid-col grid-4x-col sec-portfolio-pmt"></div>'; }
 				businessx_paged( '<nav class="posts-pagination grid-col grid-4x-col fw-bold ta-center clearfix" role="navigation">', '', '', '', $wp_query->max_num_pages );
-				wp_reset_postdata();
 			else :
 			?>
             	<p class="ta-center grid-col msg-info alert alert-warning">
