@@ -312,8 +312,8 @@ if ( ! function_exists( 'businessx_fonts_setup' ) ) {
 
 		if ( $fonts ) {
 			$fonts_url = add_query_arg( array(
-				'family' => urlencode( implode( '|', $fonts ) ),
-				'subset' => urlencode( $subsets ),
+				'family' => urlencode( implode( '|', array_map( 'esc_attr', $fonts ) ) ),
+				'subset' => urlencode( esc_attr( $subsets ) ),
 			), 'https://fonts.googleapis.com/css' );
 		}
 
