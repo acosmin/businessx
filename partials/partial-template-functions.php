@@ -102,7 +102,7 @@ if ( ! function_exists( 'businessx_menu_action_btns' ) ) {
 			'menu_class'     	=> 'actions-menu clearfix"',
 			'container'			=> false,
 			'depth'				=> 1,
-			'fallback_cb'		=> false,
+			'fallback_cb'		=> '__return_false',
 			'echo'				=> false,
 		) );
 
@@ -282,7 +282,7 @@ if ( ! function_exists( 'businessx_footer_creds_menu' ) ) {
                     'theme_location'	=> 'footer',
                     'menu_class'     	=> 'footer-creds-menu clearfix"',
                     'container'			=> false,
-					'fallback_cb'		=> false,
+					'fallback_cb'		=> '__return_false',
                     'depth'				=> 1,
                  ) ) );
             ?>
