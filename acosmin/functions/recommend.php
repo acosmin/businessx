@@ -92,8 +92,8 @@ if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Businessx_Instal
                     $nonce_key = 'install-plugin_' . $plugin_slug;
                     $plugin_install_url = wp_nonce_url( $plugin_install_url, $nonce_key );
                 ?>
-                <a class="install-now button-primary button" data-slug="businessx-extensions" href="<?php echo esc_url( $plugin_install_url ); ?>" aria-label="<?php esc_attr_e( 'Install Businessx Extensions Now', 'businessx' ); ?>" data-name="<?php esc_attr_e( 'Businessx Extensions', 'businessx' ); ?>"><?php esc_html_e( 'Install Now', 'businessx' ); ?></a>
-                <a href="#" id="bx-dismiss-rec-plugin" class="button-secondary button" aria-label="<?php esc_attr_e( 'Dismiss Installer Message', 'businessx' ); ?>"><?php _e('Dismiss Notice', 'businessx' ) ?></a>
+                <a class="install-now button-primary button" data-slug="businessx-extensions" href="<?php echo esc_url( $plugin_install_url ); ?>" aria-label="<?php esc_attr_e( 'Install Businessx Extensions Now', 'businessx' ); ?>" data-name="<?php esc_attr_e( 'Businessx Extensions', 'businessx' ); ?>"><?php _ex( 'Install Now', 'businessx extensions recommend', 'businessx' ); ?></a>
+                <a href="#" id="bx-dismiss-rec-plugin" class="button-secondary button" aria-label="<?php esc_attr_e( 'Dismiss Installer Message', 'businessx' ); ?>"><?php _ex('Dismiss Notice', 'businessx extensions recommend', 'businessx' ) ?></a>
 
                 <br/></br>
     			<?php else : ?>

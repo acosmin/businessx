@@ -125,7 +125,7 @@ if ( ! function_exists( 'businessx_search_button' ) ) {
 /* -- Action buttons - Mobile menu */
 if ( ! function_exists( 'businessx_mobile_menu_button' ) ) {
 	function businessx_mobile_menu_button() {
-		$menu_btn = apply_filters( 'businessx_mobile_menu_button___text', $menu_btn = __( 'Menu', 'businessx' ) );
+		$menu_btn = apply_filters( 'businessx_mobile_menu_button___text', $menu_btn = _x( 'Menu', 'mobile anchor text', 'businessx' ) );
 		if ( has_nav_menu( 'primary' ) ) :
 		?>
         <span class="ac-btn-h ac-btn-mobile"><a href="#" class="ac-btn-mobile-menu"><?php businessx_icon( 'bars' ) ?> <?php echo esc_html( $menu_btn ); ?></a></span>
@@ -308,9 +308,9 @@ if ( ! function_exists( 'businessx_footer_creds_copyright' ) ) {
 				<?php
 				$show = apply_filters( 'businessx_theme_credits___show', true );
 				if( $show ) {
-					printf( esc_html__( '%1$s designed by %2$s.', 'businessx' ),
-						esc_html__( 'Businessx theme', 'businessx' ),
-						'<a href="' . BUSINESSX_AC_URL . '" title="' . esc_attr__( 'Premium WordPress Themes &amp; Plugins by Acosmin', 'businessx' ) . '">' . esc_html__( 'Acosmin', 'businessx' ) . '</a>'
+					printf( esc_html_x( '%1$s designed by %2$s.', 'credit text', 'businessx' ),
+						esc_html_x( 'Businessx theme', 'credit text - theme', 'businessx' ),
+						'<a href="' . esc_url( BUSINESSX_AC_URL ) . '" title="' . esc_attr__( 'Premium WordPress Themes &amp; Plugins by Acosmin', 'businessx' ) . '">' . esc_html_x( 'Acosmin', 'credit text - theme author', 'businessx' ) . '</a>'
 					);
 				}
 				?>

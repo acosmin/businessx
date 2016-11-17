@@ -266,11 +266,11 @@ if ( ! function_exists( 'businessx_parallax_check' ) ) {
 if ( ! function_exists( 'businessx_bg_options_repeat' ) ) {
 	function businessx_bg_options_repeat() {
 		$options = apply_filters( 'businessx_bg_options___repeat', $options = array(
-			'repeat' 	=> esc_html__( 'repeat', 'businessx' ),
-			'repeat-x' 	=> esc_html__( 'repeat-x', 'businessx' ),
-			'repeat-y' 	=> esc_html__( 'repeat-y', 'businessx' ),
-			'no-repeat' => esc_html__( 'no-repeat', 'businessx' ),
-			'initial' 	=> esc_html__( 'initial', 'businessx' ),
+			'repeat' 	=> esc_html_x( 'repeat', 'image background repeat', 'businessx' ),
+			'repeat-x' 	=> esc_html_x( 'repeat-x', 'image background repeat', 'businessx' ),
+			'repeat-y' 	=> esc_html_x( 'repeat-y', 'image background repeat', 'businessx' ),
+			'no-repeat' => esc_html_x( 'no-repeat', 'image background repeat', 'businessx' ),
+			'initial' 	=> esc_html_x( 'initial', 'image background repeat', 'businessx' ),
 		) );
 
 		return $options;
@@ -281,15 +281,15 @@ if ( ! function_exists( 'businessx_bg_options_repeat' ) ) {
 if ( ! function_exists( 'businessx_bg_options_position' ) ) {
 	function businessx_bg_options_position() {
 		$options = apply_filters( 'businessx_bg_options___position', $options = array(
-			'left top' 		=> esc_html__( 'left top', 'businessx' ),
-			'left center' 	=> esc_html__( 'left center', 'businessx' ),
-			'left bottom' 	=> esc_html__( 'left bottom', 'businessx' ),
-			'right top' 	=> esc_html__( 'right top', 'businessx' ),
-			'right center' 	=> esc_html__( 'right center', 'businessx' ),
-			'right bottom' 	=> esc_html__( 'right bottom', 'businessx' ),
-			'center top' 	=> esc_html__( 'center top', 'businessx' ),
-			'center center'	=> esc_html__( 'center center', 'businessx' ),
-			'center bottom'	=> esc_html__( 'center bottom', 'businessx' ),
+			'left top' 		=> esc_html_x( 'left top', 'image background position', 'businessx' ),
+			'left center' 	=> esc_html_x( 'left center', 'image background position', 'businessx' ),
+			'left bottom' 	=> esc_html_x( 'left bottom', 'image background position', 'businessx' ),
+			'right top' 	=> esc_html_x( 'right top', 'image background position', 'businessx' ),
+			'right center' 	=> esc_html_x( 'right center', 'image background position', 'businessx' ),
+			'right bottom' 	=> esc_html_x( 'right bottom', 'image background position', 'businessx' ),
+			'center top' 	=> esc_html_x( 'center top', 'image background position', 'businessx' ),
+			'center center'	=> esc_html_x( 'center center', 'image background position', 'businessx' ),
+			'center bottom'	=> esc_html_x( 'center bottom', 'image background position', 'businessx' ),
 		) );
 
 		return $options;
@@ -300,9 +300,9 @@ if ( ! function_exists( 'businessx_bg_options_position' ) ) {
 if ( ! function_exists( 'businessx_bg_options_size' ) ) {
 	function businessx_bg_options_size() {
 		$options = apply_filters( 'businessx_bg_options___size', $options = array(
-			'auto' 		=> esc_html__( 'auto', 'businessx' ),
-			'cover'		=> esc_html__( 'cover', 'businessx' ),
-			'contain' 	=> esc_html__( 'contain', 'businessx' ),
+			'auto' 		=> esc_html_x( 'auto', 'image background size', 'businessx' ),
+			'cover'		=> esc_html_x( 'cover', 'image background size', 'businessx' ),
+			'contain' 	=> esc_html_x( 'contain', 'image background size', 'businessx' ),
 		) );
 
 		return array_map( 'esc_attr', array_unique( $options ) );
@@ -322,73 +322,73 @@ if ( ! function_exists( 'businessx_opacity_options' ) ) {
 				$options = apply_filters( 'businessx_opacity_options___select_multi', $options = array(
 					array(
 						'value' 	=> "0",
-						'title'		=> esc_html__( 'Transparent', 'businessx' ),
+						'title'		=> esc_html_x( 'Transparent', 'background opacity option', 'businessx' ),
 						'disabled'	=> false
 					),
 					array(
 						'value' 	=> '0.1',
-						'title'		=> esc_html__( '10%', 'businessx' ),
+						'title'		=> esc_html_x( '10%', 'background opacity option', 'businessx' ),
 						'disabled'	=> false
 					),
 					array(
 						'value' 	=> '0.2',
-						'title'		=> esc_html__( '20%', 'businessx' ),
+						'title'		=> esc_html_x( '20%', 'background opacity option', 'businessx' ),
 						'disabled'	=> false
 					),
 					array(
 						'value' 	=> '0.3',
-						'title'		=> esc_html__( '30%', 'businessx' ),
+						'title'		=> esc_html_x( '30%', 'background opacity option', 'businessx' ),
 						'disabled'	=> false
 					),
 					array(
 						'value' 	=> '0.4',
-						'title'		=> esc_html__( '40%', 'businessx' ),
+						'title'		=> esc_html_x( '40%', 'background opacity option', 'businessx' ),
 						'disabled'	=> false
 					),
 					array(
 						'value' 	=> '0.5',
-						'title'		=> esc_html__( '50%', 'businessx' ),
+						'title'		=> esc_html_x( '50%', 'background opacity option', 'businessx' ),
 						'disabled'	=> false
 					),
 					array(
 						'value' 	=> '0.6',
-						'title'		=> esc_html__( '60%', 'businessx' ),
+						'title'		=> esc_html_x( '60%', 'background opacity option', 'businessx' ),
 						'disabled'	=> false
 					),
 					array(
 						'value' 	=> '0.7',
-						'title'		=> esc_html__( '70%', 'businessx' ),
+						'title'		=> esc_html_x( '70%', 'background opacity option', 'businessx' ),
 						'disabled'	=> false
 					),
 					array(
 						'value' 	=> '0.8',
-						'title'		=> esc_html__( '80%', 'businessx' ),
+						'title'		=> esc_html_x( '80%', 'background opacity option', 'businessx' ),
 						'disabled'	=> false
 					),
 					array(
 						'value' 	=> '0.9',
-						'title'		=> esc_html__( '90%', 'businessx' ),
+						'title'		=> esc_html_x( '90%', 'background opacity option', 'businessx' ),
 						'disabled'	=> false
 					),
 					array(
 						'value' 	=> "1",
-						'title'		=> esc_html__( '100%', 'businessx' ),
+						'title'		=> esc_html_x( '100%', 'background opacity option', 'businessx' ),
 						'disabled'	=> false
 					),
 				) );
 			} else {
 				$options = apply_filters( 'businessx_opacity_options___select', $options = array(
-					'.0'		=> esc_html__( 'Transparent', 'businessx' ),
-					'0.1'		=> esc_html__( '10%', 'businessx' ),
-					'0.2'		=> esc_html__( '20%', 'businessx' ),
-					'0.3'		=> esc_html__( '30%', 'businessx' ),
-					'0.4'		=> esc_html__( '40%', 'businessx' ),
-					'0.5'		=> esc_html__( '50%', 'businessx' ),
-					'0.6'		=> esc_html__( '60%', 'businessx' ),
-					'0.7'		=> esc_html__( '70%', 'businessx' ),
-					'0.8'		=> esc_html__( '80%', 'businessx' ),
-					'0.9'		=> esc_html__( '90%', 'businessx' ),
-					'1'			=> esc_html__( '100%', 'businessx' ),
+					'.0'		=> esc_html_x( 'Transparent', 'businessx' ),
+					'0.1'		=> esc_html_x( '10%', 'background opacity option', 'businessx' ),
+					'0.2'		=> esc_html_x( '20%', 'background opacity option', 'businessx' ),
+					'0.3'		=> esc_html_x( '30%', 'background opacity option', 'businessx' ),
+					'0.4'		=> esc_html_x( '40%', 'background opacity option', 'businessx' ),
+					'0.5'		=> esc_html_x( '50%', 'background opacity option', 'businessx' ),
+					'0.6'		=> esc_html_x( '60%', 'background opacity option', 'businessx' ),
+					'0.7'		=> esc_html_x( '70%', 'background opacity option', 'businessx' ),
+					'0.8'		=> esc_html_x( '80%', 'background opacity option', 'businessx' ),
+					'0.9'		=> esc_html_x( '90%', 'background opacity option', 'businessx' ),
+					'1'			=> esc_html_x( '100%', 'background opacity option', 'businessx' ),
 				) );
 			}
 		} else {
@@ -537,7 +537,7 @@ if ( ! function_exists( 'businessx_post_meta' ) ) {
 				'pre'		=> '<span class="fs-medium">',
 				'suf'		=> '</span>',
 				'icon'		=> '',
-				'by'		=> '<em>' . esc_html__( 'by', 'businessx' ) . '</em> ',
+				'by'		=> '<em>' . esc_html_x( 'by', 'post author', 'businessx' ) . '</em> ',
 			),
 			'date' 		=> array(
 				'show' 		=> $show_date,
@@ -662,8 +662,8 @@ if ( ! function_exists( 'businessx_paged' ) ) {
 			'current'  => businessx_get_paged(),
 			'mid_size' => 1,
 			'add_args' => array_map( 'urlencode', $query_args ),
-			'prev_text' => __( '&larr; Previous', 'businessx' ),
-			'next_text' => __( 'Next &rarr;', 'businessx' ),
+			'prev_text' => _x( '&larr; Previous', 'previous articles page', 'businessx' ),
+			'next_text' => _x( 'Next &rarr;', 'next articles page', 'businessx' ),
 		) );
 
 		if ( $links ) :
@@ -683,8 +683,8 @@ if ( ! function_exists( 'businessx_paged_post_args' ) ) {
 				'link_after'       => '</span>',
 				'next_or_number'   => 'number',
 				'separator'        => ' ',
-				'nextpagelink'     => __( 'Next page', 'businessx' ),
-				'previouspagelink' => __( 'Previous page', 'businessx' ),
+				'nextpagelink'     => _x( 'Next page', 'single view', 'businessx' ),
+				'previouspagelink' => _x( 'Previous page', 'single view', 'businessx' ),
 				'pagelink'         => '%',
 				'echo'             => 0
 			)
