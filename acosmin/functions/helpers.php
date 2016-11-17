@@ -219,7 +219,6 @@ if ( ! function_exists( 'businessx_ch_parallax' ) ) {
 		$output		= '';
 
 		if( ! empty( $ch ) && $parallax ) {
-			//$output = ' data-parallax="scroll" data-speed="0.5" data-image-src="' . esc_url( $ch ) . '" style="background: none !important;"';
 			$output = ' data-parallax="scroll" data-speed="0.5" data-image-src="' . esc_url( $ch ) . '"';
 		}
 
@@ -241,7 +240,6 @@ if ( ! function_exists( 'businessx_sp_parallax' ) ) {
 			$large_image = wp_get_attachment_image_src( get_post_thumbnail_id( $pid ), $size );
 			if ( ! empty( $large_image[0] ) ) {
 			   $large_image_url = $large_image[0];
-			   //$output = ' data-parallax="scroll" data-speed="0.5" data-image-src="' . esc_url( $large_image_url ) . '" style="background: none !important;"';
 			   $output = ' data-parallax="scroll" data-speed="0.5" data-image-src="' . esc_url( $large_image_url ) . '"';
 			}
 		}
