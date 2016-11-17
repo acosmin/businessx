@@ -516,29 +516,6 @@ if ( ! function_exists( 'businessx_sharedaddy_type_check' ) ) {
 
 
 
-/*  Px to em
-/* ------------------------------------ */
-if ( ! function_exists( 'businessx_pxtoem' ) ) {
-	function businessx_pxtoem( $target = 18, $base = 18, $echo = false ) {
-		$pattern = '/^(?:\d*\.)?\d+$/';
-
-		if( preg_match( $pattern, $base ) && $base > 0 ) {
-			if( preg_match( $pattern, $target ) && $target > 0 ) {
-				$quotient = $target / $base;
-				$result = number_format( $quotient, 4, '.', '' ) . 'em';
-
-				if( $echo ) {
-					echo esc_html( $result );
-				} else {
-					return esc_html( $result );
-				}
-			}
-		}
-	}
-}
-
-
-
 /*  Post meta
 /* ------------------------------------ */
 if ( ! function_exists( 'businessx_post_meta' ) ) {
