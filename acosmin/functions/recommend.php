@@ -155,7 +155,6 @@ if ( ! function_exists( 'businessx_installer_register' ) ) {
     		) );
     		// Add the setting. This is required by WordPress in order to add our control.
     		$wp_customize->add_setting( 'businessx_installer', array(
-    			'type'              => 'theme_mod',
     			'capability'        => 'install_plugins',
     			'default'           => '',
     			'sanitize_callback' => '__return_true',
