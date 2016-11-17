@@ -1,6 +1,6 @@
 <?php
 /* ------------------------------------------------------------------------- *
- *  Functions
+ *  Businessx Functions
  *  ________________
  *
  *	If you want to add/edit functions please use a child theme
