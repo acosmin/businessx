@@ -61,7 +61,6 @@ require_once ( get_template_directory() . '/acosmin/functions/post-options.php' 
 require_once ( get_template_directory() . '/acosmin/functions/page-options.php' );
 require_once ( get_template_directory() . '/acosmin/functions/portfolio-options.php' );
 require_once ( get_template_directory() . '/acosmin/functions/recommend.php' );
-require_once ( get_template_directory() . '/acosmin/functions/updater.php' );
 require_once ( get_template_directory() . '/partials/partial-template-css-classes.php' );
 require_once ( get_template_directory() . '/partials/partial-template-functions.php' );
 require_once ( get_template_directory() . '/partials/partial-template-helpers.php' );
@@ -215,18 +214,6 @@ if ( ! function_exists( 'businessx_scripts' ) ) {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'businessx_scripts' );
-
-
-
-/*  Enqueues admin scripts and styles.
-/* ------------------------------------ */
-if ( ! function_exists( 'businessx_admin_scripts' ) ) {
-	function businessx_admin_scripts() {
-		// JS Files
-		wp_enqueue_script( 'businessx-admin-scripts', get_template_directory_uri() . '/assets/js/admin/admin.js', array(), '20160412', FALSE );
-	}
-}
-add_action( 'admin_enqueue_scripts', 'businessx_admin_scripts' );
 
 
 

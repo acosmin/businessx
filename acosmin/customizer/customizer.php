@@ -1100,30 +1100,6 @@ if ( ! function_exists( 'businessx_customize_register' ) ) {
 						esc_html__( 'Preloader animation:', 'businessx' ), '', 'balls', false );
 
 
-			/* ------------------------------------ */
-			/*  Notifications
-			/* ------------------------------------ */
-
-				/// Notifications section
-				$wp_customize->add_section( 'notification_settings', array(
-					'title'	=> __( 'Notifications', 'businessx' ),
-					'panel'	=> 'settings_options'
-				) );
-
-					////// otifications - Options
-					businessx_controller_info(
-						'notification_info',
-						'notification_settings',
-						__( 'Updates Notifications', 'businessx' ),
-						__( '<p>If the theme has an update, we will display a frendly notification. You can dismiss it for 72 hours by clicking on "Hide Notice".</p><p>We are adding this notification because Businessx is not yet in the official WordPress.org directory and we do not have any way to let you know the theme has an update available.</p>', 'businessx') );
-
-					businessx_controller_checkbox(
-						'notification_disable',
-						'notification_settings',
-						esc_html__( 'Disable Update Notification', 'businessx' ),
-						esc_html__( 'If you do not want to view this notification.', 'businessx' ), false );
-
-
 
 			/*  Add custom options
 			/* ------------------------------------ */
