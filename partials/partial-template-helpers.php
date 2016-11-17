@@ -138,7 +138,7 @@ if ( ! function_exists( 'businessx_footer_sidebars_demo_widgets' ) ) {
 /* -- Return copyright info */
 if ( ! function_exists( 'businessx_return_copyright_templ' ) ) {
 	function businessx_return_copyright_templ() {
-		return '&copy; <a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html( get_bloginfo( 'name' ) ) . '</a> ' . date( 'Y' ) . '. ';
+		return '&copy; <a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html( get_bloginfo( 'name' ) ) . '</a> ' . date_i18n( 'Y' ) . '. ';
 	}
 }
 
