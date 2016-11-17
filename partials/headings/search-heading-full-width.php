@@ -9,7 +9,7 @@
     <?php do_action( 'businessx_shfw__inner_top' ); ?>
 	<div class="sec-hs-elements ta-center">
     	<?php do_action( 'businessx_shfw__heading_top' ); ?>
-        <h2 class="hs-primary-large"><?php printf( __( 'Search Results for: %s', 'businessx' ), '<span class="opaque--7">' . get_search_query() . '</span>' ); ?></h2>
+        <h1 class="hs-primary-large"><?php printf( __( 'Search Results for: %s', 'businessx' ), '<span class="opaque--7">' . get_search_query() . '</span>' ); ?></h1>
         <?php do_action( 'businessx_shfw__heading_bottom' ); ?>
     </div>
     <?php do_action( 'businessx_shfw__inner_bottom' ); ?>
