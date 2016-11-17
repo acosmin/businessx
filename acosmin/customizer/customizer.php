@@ -2180,7 +2180,7 @@ if ( ! function_exists( 'businessx_controller_txt' ) ) {
 			'settings'			=> $setting_id,
 			'priority'			=> intval( $priority ),
 		) );
-		if( $transport && $selective && ! businessx_wp_version_compare( '4.5' ) ) {
+		if( $transport && $selective ) {
 			$wp_customize->selective_refresh->add_partial( $setting_id, array(
 				'selector' => $selector,
 				'render_callback' => function() use ( &$setting_id ) {
@@ -2214,7 +2214,7 @@ if ( ! function_exists( 'businessx_controller_txt_area' ) ) {
 			'type'     			=> 'textarea',
 			'priority'			=> intval( $priority ),
 		) );
-		if( $transport && ! businessx_wp_version_compare( '4.5' ) ) {
+		if( $transport ) {
 			$wp_customize->selective_refresh->add_partial( $setting_id, array(
 				'selector' => $selector,
 				'render_callback' => function() use ( &$setting_id ) {

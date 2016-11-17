@@ -25,30 +25,6 @@ if( ! defined( 'BUSINESSX_AC_DOCS_URL' ) && defined( 'BUSINESSX_AC_URL' ) ) {
 
 
 
-/* ------------------------------------ *
- *  WordPress Version Compare
-/* ------------------------------------ */
-if ( ! function_exists( 'businessx_wp_version_compare' ) ) {
-	function businessx_wp_version_compare( $wp_version = '', $compare_sign = '<' ) {
-		if ( version_compare( $GLOBALS['wp_version'], $wp_version, $compare_sign ) ) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-}
-
-
-
-/* ------------------------------------------------------------------------- *
- *  Businessx only works in WordPress 4.5 or later.
-/* ------------------------------------------------------------------------- */
-if ( businessx_wp_version_compare( '4.5' ) ) {
-	require get_template_directory() . '/acosmin/functions/back-compat.php';
-}
-
-
-
 /* ------------------------------------------------------------------------- *
  *  Required Files
 /* ------------------------------------------------------------------------- */
