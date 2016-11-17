@@ -136,7 +136,7 @@ if ( ! function_exists( 'businessx_setup' ) ) {
 		if( empty( $sections_position ) && ! empty( $businessx_sections ) ) {
 			$sections = array();
 			foreach( $businessx_sections as $key => $value ) {
-				$sections[] = 'businessx_section__' . $value;
+				$sections[] = 'businessx_section__' . sanitize_key( $value );
 			}
 			set_theme_mod( 'businessx_sections_position', $sections );
 		}
