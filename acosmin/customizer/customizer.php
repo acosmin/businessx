@@ -2533,7 +2533,6 @@ if ( ! function_exists( 'businessx_controller_bg_parallax' ) ) {
 			'sanitize_callback' => 'businessx_sanitize_checkbox',
 			'default'			=> $default,
 			'capability'		=> 'edit_theme_options',
-			//'transport'         => 'postMessage',
 		) );
 		$wp_customize->add_control( $setting_id, array(
 			'label'    		=> $label,
