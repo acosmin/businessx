@@ -528,7 +528,7 @@ hr, .comments-title .fa {
 	background-color: rgba(0,0,0,.2);
 }
 /* Same Font Family */
-body, input, select, textarea {
+body, input, select, textarea, .logo-wrap {
 	font-family: 'Roboto', sans-serif;
 }
 h1, h2, h3, h4, h5, h6, .sec-pricing-box .package-pricing, .sec-pricing-box .package-badge .badge, .ac-btn, input[type=submit], input[type=reset], input[type=button], button, .posts-pagination, .comment-navigation {
@@ -2302,6 +2302,17 @@ body.no-sidebar .site-page {
 	display: inline-block;
 	margin-right: 2.500em;
 }
+.logo-wrap {
+	font-size: 1.333em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	color: #232323;
+	line-height: 1;
+}
+.logo-wrap a, .logo-wrap a:hover {
+	text-decoration: none;
+}
 .logo-wrap img {
 	max-height: 6.250em;
 	width: auto;
@@ -2312,14 +2323,6 @@ body.no-sidebar .site-page {
 }
 .logo-wrap.logo-display {
 	display: inline-block;
-}
-.main-header .logo-text {
-	font-size: 1.333em;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 0.02em;
-	color: #232323;
-	line-height: 1;
 }
 /* Header - Elements positions */
 .main-menu-wrap, .main-header-right {
@@ -2734,8 +2737,8 @@ body.nav-open .mobile-menu {
 	float:left;
 	display: inline-block;
 	margin-right: 2.500em;
-}
-.footer-creds .logo-text {
+
+	/* Font Style */
 	font-size: 1.333em;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -4255,13 +4258,13 @@ input:disabled {
 	.main-header .logo-wrap {
 		float: none;
     	margin-right: 0;
-		margin-bottom: 3em;
+		margin-bottom: 3rem;
 	}
 	.main-header-right {
 		width: 100%;
 	}
-	.main-header .logo-text {
-		font-size: 1.522em;
+	.logo-wrap, .footer-creds .logo-wrap {
+		font-size: 1.522rem;
 	}
 	.main-menu-wrap ul {
 		display: none;
@@ -4345,7 +4348,7 @@ input:disabled {
 	.footer-creds .logo-wrap {
 		float: none;
 		margin-right: 0;
-		margin-bottom: 1em;
+		margin-bottom: 1rem;
 	}
 	.footer-creds-menu-wrap, .footer-creds-copyright {
 		top: auto;

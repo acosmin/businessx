@@ -31,19 +31,29 @@ if ( ! function_exists( 'businessx_logo_display' ) ) {
 		$custom_logo 	= get_theme_mod( 'custom_logo' );
 		$logo_type 		= get_theme_mod( 'logo_type_select', 'logo-text-type' );
 		$disabled		= get_theme_mod( 'footer_credits_logo_hide', false );
+		$tag			= ( $footer ) ? 'div' : 'h1';
+		$tag			= ( is_front_page() && is_home() && !$footer ) ? 'h1' : 'div';
 
 		if( $header_text ) {
 			if( $footer && $disabled )
 				return;
 
 			if( $custom_logo && $logo_type == 'logo-image-type' ) {
-				?>
-				<div class="logo-wrap"><?php the_custom_logo(); ?></div>
-				<?php
+
+				// Image logo format
+				$format = '<%1$s class="logo-wrap">%2$s</%1$s>';
+				$output = sprintf( $format, $tag, get_custom_logo() );
+
+				echo apply_filters( 'businessx_logo___image', $output, $format, $tag );
+
 			} else {
-				?>
-				<div class="logo-wrap"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-text"><?php echo get_bloginfo( 'name', 'display' ); ?></a></div>
-				<?php
+
+				// Text link format
+				$format = '<%1$s class="logo-wrap"><a href="%2$s" rel="home" class="logo-text">%3$s</a></%1$s>';
+				$output = sprintf( $format, $tag, esc_url( home_url('/') ), get_bloginfo( 'name', 'display' ) );
+
+				echo apply_filters( 'businessx_logo___text', $output, $format, $tag );
+
 			}
 		}
 	}
