@@ -63,20 +63,22 @@ if ( ! function_exists( 'businessx_logo_display' ) ) {
 /* -- Display main menu  */
 if ( ! function_exists( 'businessx_menu_main_area' ) ) {
 	function businessx_menu_main_area() {
-		 ?>
-			<nav class="main-menu-wrap" role="navigation" aria-label="<?php _e( 'Primary Menu', 'businessx' ); ?>">
-				<?php
-                    $menu_args = apply_filters( 'businessx_menu___args', $menu_args = array(
-                        'theme_location'	=> 'primary',
-						'items_wrap'     	=> '<ul class="main-menu clearfix">%3$s<li class="close-menu"><a href="#" class="ac-btn btn-small ac-btn-mobile-close">' . businessx_icon( 'close', false ) . '</a></li></ul>',
-                        'container'			=> false,
-                        'fallback_cb'		=> 'businessx_fb_menu'
-                    ) );
+		if( has_nav_menu( 'primary' ) ) {
+		?>
+		<nav class="main-menu-wrap" role="navigation" aria-label="<?php _e( 'Primary Menu', 'businessx' ); ?>">
+			<?php
+                $menu_args = apply_filters( 'businessx_menu___args', $menu_args = array(
+                    'theme_location'	=> 'primary',
+					'items_wrap'     	=> '<ul class="main-menu clearfix">%3$s<li class="close-menu"><a href="#" class="ac-btn btn-small ac-btn-mobile-close">' . businessx_icon( 'close', false ) . '</a></li></ul>',
+                    'container'			=> false,
+                    'fallback_cb'		=> 'businessx_fb_menu'
+                ) );
 
-                    wp_nav_menu( $menu_args );
-                ?>
-        	</nav>
-         <?php
+                wp_nav_menu( $menu_args );
+            ?>
+    	</nav>
+		<?php
+		}
 	}
 }
 
@@ -285,6 +287,7 @@ if ( ! function_exists( 'businessx_footer_creds_wrapper' ) ) {
 // -- Footer credits - navigation/menu
 if ( ! function_exists( 'businessx_footer_creds_menu' ) ) {
 	function businessx_footer_creds_menu() {
+		if( has_nav_menu( 'footer' ) ) {
 		?>
         <nav class="footer-creds-menu-wrap" role="navigation" aria-label="<?php _e( 'Footer Menu', 'businessx' ); ?>">
 			<?php
@@ -292,12 +295,13 @@ if ( ! function_exists( 'businessx_footer_creds_menu' ) ) {
                     'theme_location'	=> 'footer',
                     'menu_class'     	=> 'footer-creds-menu clearfix"',
                     'container'			=> false,
-					'fallback_cb'		=> '__return_false',
+					'fallback_cb'		=> 'businessx_fb_menu',
                     'depth'				=> 1,
                  ) ) );
             ?>
         </nav>
         <?php
+		}
 	}
 }
 
