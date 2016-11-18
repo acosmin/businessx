@@ -107,7 +107,7 @@ if ( ! function_exists( 'businessx_html_tag_classes' ) ) {
 		$classes = array();
 
 		if( $check_preloader ) {
-			$classes[] = 'js';
+			$classes[] = 'bx-preloader';
 		}
 
 		if( has_filter( 'businessx_html_tag_classes___filter' )) {
