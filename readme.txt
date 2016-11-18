@@ -5,7 +5,7 @@ Theme URI: http://www.acosmin.com/theme/businessx/
 Contributors: acosmin
 Requires at least: WordPress 4.5
 Tested up to: WordPress 4.7
-Version: 1.0.4
+Version: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,6 +71,12 @@ Copyright: Chris Coyier - css-tricks.com + Dave Rupert - daverupert.com
 
 ----
 
+Normalize.css - http://necolas.github.com/normalize.css/
+License: Distributed under the terms of the MIT license
+Copyright: Nicolas Gallagher and Jonathan Neal
+
+----
+
 Font Awesome v4.6.3 icon set - http://fortawesome.github.io/Font-Awesome/
 License: Font Awesome licensed under SIL OFL 1.1 / Code licensed under MIT License
 Copyright: Dave Gandy, twitter.com/davegandy
@@ -92,6 +98,12 @@ Copyright: Caleb Troughton
 animate.css - 3.5.1 css styles - http://daneden.me/animate
 License: Distributed under the terms of the MIT license
 Copyright: Daniel Eden - daneden.me
+
+----
+
+The theme also uses a few code snippets from:
+ * TwentySixteen WordPress theme - GPLv2 license - by WordPress.org
+ * _s WordPress theme - GPLv2 license - by Automattic
 
 ----
 
