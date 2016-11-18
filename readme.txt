@@ -1,48 +1,99 @@
-﻿=====================
+﻿== Businessx ==
 
 Theme Name: Businessx
 Theme URI: http://www.acosmin.com/theme/businessx/
-Author: Alexandru Cosmin
+Contributors: acosmin
+Requires at least: WordPress 4.5
+Tested up to: WordPress 4.7
+Version: 1.0.4
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Businessx WordPress Theme, Copyright 2016 Acosmin.com
-Businessx is distributed under the terms of the GNU GPL
 
-=====================
+== Some links ==
 
 Documentation @ http://www.acosmin.com/documentation/businessx/
 Changelog @ http://changelog.acosmin.com/businessx/
 News & Updates @ http://www.acosmin.com/blog/
 
-=====================
 
-Resources:
+== Installation ==
+
+1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
+2. Type in Businessx in the search form and press the 'Enter' key on your keyboard.
+3. Click on the 'Activate' button to use your new theme right away.
+4. Go to http://www.acosmin.com/documentation/businessx/ for a guide on how to customize this theme.
+5. Navigate to Appearance > Customize in your admin panel and customize to taste.
+6. Also, to take full advantage of all the futures, please install Businessx Extensions, a free plugin hosted on WordPress.org:
+ * https://wordpress.org/plugins/businessx-extensions/
+
+
+== Notes ==
+1. Theme doesn't have support for website description;
+2. It includes a custom posts pagination function `businessx_paged()`, replacing `the_posts_pagination()`;
+
+
+== Copyright ==
+
+Businessx WordPress Theme, Copyright 2015-2017 Acosmin.com
+Businessx is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+Businessx Theme bundles the following third-party resources:
+
+----
 
 Owl carousel v2.1.0 jQuery script & Addons - http://www.owlcarousel.owlgraphic.com/
 License: Distributed under the terms of the MIT license
 Copyright: Bartosz Wojciechowski & David Deutsch
-____________
+
+This script also includes the following addons which are licensed the same:
+ * Navigation Addon - /assets/js/owl.navigation.js
+ * Animate Addon - /assets/js/owl.animate.js
+ * Autoheight Addon - /assets/js/owl.autoheight.js
+ * Autoplay Addon - /assets/js/owl.autoplay.js
+ * Support Addon - /assets/js/owl.support.js
+
+----
 
 FitVids v1.1 jQuery script - ​http://fitvidsjs.com/
 License: Distributed under the terms of the WTFPL license
 Copyright: Chris Coyier - css-tricks.com + Dave Rupert - daverupert.com
-____________
+
+----
 
 Font Awesome v4.6.3 icon set - http://fortawesome.github.io/Font-Awesome/
 License: Font Awesome licensed under SIL OFL 1.1 / Code licensed under MIT License
 Copyright: Dave Gandy, twitter.com/davegandy
-____________
+
+----
 
 parallax.js v1.4.2 jQuery script - http://pixelcog.github.io/parallax.js/
 License: Distributed under the terms of the MIT license
 Copyright: PixelCog, Inc.
-____________
+
+----
 
 Waypoints - 4.0.0 jQuery script - https://github.com/imakewebthings/waypoints/
 License: Distributed under the terms of the MIT license
 Copyright: Caleb Troughton
-____________
 
+----
 
+animate.css - 3.5.1 css styles - http://daneden.me/animate
+License: Distributed under the terms of the MIT license
+Copyright: Daniel Eden - daneden.me
+
+----
 
 Businessx Screenshot - Images used:
 https://unsplash.com/photos/e8jk-qruFRs
