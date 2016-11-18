@@ -577,7 +577,7 @@ if ( ! function_exists( 'businessx_post_meta' ) ) {
 		// Show "Read More" button
 		if( $more[ 'show' ] && ! is_single() ) {
 			$output .=
-				$item_pre . '<a href="' . esc_url( get_permalink() ) . '" rel="' . $more[ 'rel' ] . '" class="' . $more[ 'class' ] . '">' . $more[ 'anchor' ] . '</a>' . $item_suf; }
+				$item_pre . '<a href="' . esc_url( get_permalink() ) . '" rel="' . esc_attr( $more[ 'rel' ] ) . '" class="' . esc_attr( $more[ 'class' ] ) . '">' . $more[ 'anchor' ] . '</a>' . $item_suf; }
 
 		// Show author
 		if( $author[ 'show' ] ) {
@@ -585,7 +585,7 @@ if ( ! function_exists( 'businessx_post_meta' ) ) {
 
 		// Show date
 		if( $date[ 'show' ] ) {
-			$output .= $item_pre . $date[ 'pre' ] . businessx_icon( $date[ 'icon' ], false ) . get_the_date( 'M d, Y' ) . $date[ 'suf' ] . $item_suf; }
+			$output .= $item_pre . $date[ 'pre' ] . businessx_icon( $date[ 'icon' ], false ) . get_the_date() . $date[ 'suf' ] . $item_suf; }
 
 		// Show category
 		if( $cate[ 'show' ] && $categories_list != '' ) {
