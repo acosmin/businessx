@@ -40,8 +40,9 @@ if ( ! function_exists( 'businessx_sidebars_demo_widgets' ) ) {
 			// Display a friendly notice
 			if( $sidebar_name != '' && current_user_can( 'edit_theme_options' ) ) {
 				echo '<p class="alert alert-warning ta-center widget">';
-				printf( __( 'This sidebar is empty, you should add some widgets (in %s). Until then we are showing some default widgets.', 'businessx' ), '<strong>' . esc_html( $sidebar_name ) . '</strong>' );
-				echo '</p>'; }
+				printf( __( 'This sidebar is empty, you should add some widgets (in %s). Until then we are showing some default widgets. Only you can see this message', 'businessx' ), '<strong>' . esc_html( $sidebar_name ) . '</strong>' );
+				echo '</p>';
+			}
 
 			// Show Meta widget
 			the_widget( 'WP_Widget_Meta', array(),
