@@ -307,12 +307,12 @@ if ( ! function_exists( 'businessx_register_required_plugins' ) ) {
 
 		$plugins = array(
 			array(
-				'name'      => esc_html__( 'Businessx Extensions', 'businessx' ),
+				'name'      => 'Businessx Extensions',
 				'slug'      => 'businessx-extensions',
 				'required'  => false,
 			),
 			array(
-				'name'      => esc_html__( 'Jetpack by WordPress.com', 'businessx' ),
+				'name'      => 'Jetpack by WordPress.com',
 				'slug'      => 'jetpack',
 				'required'  => false,
 			),
