@@ -23,12 +23,15 @@ if( ! defined( 'BUSINESSX_AC_URL' ) ) {
 if( ! defined( 'BUSINESSX_AC_DOCS_URL' ) && defined( 'BUSINESSX_AC_URL' ) ) {
 	define( 'BUSINESSX_AC_DOCS_URL', BUSINESSX_AC_URL . 'documentation/businessx/' ); }
 
+if( ! defined( 'BUSINESSX_CUSTOMIZER_PATH' ) ) {
+	define( 'BUSINESSX_CUSTOMIZER_PATH', trailingslashit( get_template_directory() ) . 'acosmin/customizer/' ); }
+
 
 
 /* ------------------------------------------------------------------------- *
  *  Required Files
 /* ------------------------------------------------------------------------- */
-require_once ( get_template_directory() . '/acosmin/customizer/customizer.php' );
+require_once ( BUSINESSX_CUSTOMIZER_PATH . 'customizer.php' );
 require_once ( get_template_directory() . '/acosmin/functions/tgmpa.php' );
 require_once ( get_template_directory() . '/acosmin/functions/sanitization.php' );
 require_once ( get_template_directory() . '/acosmin/functions/helpers.php' );
