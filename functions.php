@@ -3,9 +3,9 @@
  *  Businessx Functions
  *  ________________
  *
- *	If you want to add/edit functions please use a child theme
- *	http://codex.wordpress.org/Child_Themes
- *	________________
+ *  If you want to add/edit functions please use a child theme
+ *  http://codex.wordpress.org/Child_Themes
+ *  ________________
  *
 /* ------------------------------------------------------------------------- */
 
@@ -26,24 +26,30 @@ if( ! defined( 'BUSINESSX_AC_DOCS_URL' ) && defined( 'BUSINESSX_AC_URL' ) ) {
 if( ! defined( 'BUSINESSX_CUSTOMIZER_PATH' ) ) {
 	define( 'BUSINESSX_CUSTOMIZER_PATH', trailingslashit( get_template_directory() ) . 'acosmin/customizer/' ); }
 
+if( ! defined( 'BUSINESSX_FUNCTIONS_PATH' ) ) {
+	define( 'BUSINESSX_FUNCTIONS_PATH', trailingslashit( get_template_directory() ) . 'acosmin/functions/' ); }
+
+if( ! defined( 'BUSINESSX_PARTIALS_PATH' ) ) {
+	define( 'BUSINESSX_PARTIALS_PATH', trailingslashit( get_template_directory() ) . 'partials/' ); }
+
 
 
 /* ------------------------------------------------------------------------- *
  *  Required Files
 /* ------------------------------------------------------------------------- */
 require_once ( BUSINESSX_CUSTOMIZER_PATH . 'customizer.php' );
-require_once ( get_template_directory() . '/acosmin/functions/tgmpa.php' );
-require_once ( get_template_directory() . '/acosmin/functions/sanitization.php' );
-require_once ( get_template_directory() . '/acosmin/functions/helpers.php' );
-require_once ( get_template_directory() . '/acosmin/functions/preloader.php' );
-require_once ( get_template_directory() . '/acosmin/functions/post-options.php' );
-require_once ( get_template_directory() . '/acosmin/functions/page-options.php' );
-require_once ( get_template_directory() . '/acosmin/functions/portfolio-options.php' );
-require_once ( get_template_directory() . '/acosmin/functions/recommend.php' );
-require_once ( get_template_directory() . '/partials/partial-template-css-classes.php' );
-require_once ( get_template_directory() . '/partials/partial-template-functions.php' );
-require_once ( get_template_directory() . '/partials/partial-template-helpers.php' );
-require_once ( get_template_directory() . '/partials/partial-template-hooks.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'tgmpa.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'sanitization.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'helpers.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'preloader.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'post-options.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'page-options.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'portfolio-options.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'recommend.php' );
+require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-css-classes.php' );
+require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-functions.php' );
+require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-helpers.php' );
+require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-hooks.php' );
 
 
 
