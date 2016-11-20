@@ -29,7 +29,7 @@ businessx_get_heading_templ( 'archive', 'full-width' );
 
         <?php do_action( 'businessx_index__inner_before' ); ?>
 
-        <main id="main" class="<?php businessx_occ( 'businessx_index___main_classes' ); ?>" role="main">
+		<main id="main" class="<?php businessx_occ( 'businessx_index___main_classes' ); ?>" role="main">
 			<?php
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post();
@@ -40,7 +40,7 @@ businessx_get_heading_templ( 'archive', 'full-width' );
 				get_template_part( 'partials/posts/content', 'none' );
 			endif;
 			?>
-        </main>
+		</main>
 
         <?php get_sidebar(); ?>
 
