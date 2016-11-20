@@ -1,6 +1,6 @@
 <?php
 /* -------------------------------------- */
-/*  CSS template for Customizer Previewer
+/* CSS template for Customizer Previewer
 /* -------------------------------------- */
 
 if ( ! function_exists( 'businessx_czr_output_css' ) ) {
