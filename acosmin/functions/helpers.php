@@ -380,7 +380,7 @@ if ( ! function_exists( 'businessx_opacity_options' ) ) {
 				) );
 			} else {
 				$options = apply_filters( 'businessx_opacity_options___select', $options = array(
-					'.0'		=> esc_html_x( 'Transparent', 'businessx' ),
+					'.0'		=> esc_html_x( 'Transparent', 'background opacity option', 'businessx' ),
 					'0.1'		=> esc_html_x( '10%', 'background opacity option', 'businessx' ),
 					'0.2'		=> esc_html_x( '20%', 'background opacity option', 'businessx' ),
 					'0.3'		=> esc_html_x( '30%', 'background opacity option', 'businessx' ),
