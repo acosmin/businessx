@@ -1,8 +1,11 @@
 <?php
-/* ------------------------------------------- */
-/*  Controllers - this are function wrappers
-/*  for Customzier add_setting & add_control
-/* ------------------------------------------- */
+/**
+ * Controllers
+ * ------
+ * These are function wrappers for Customzier's add_setting & add_control
+ * Some of these functions are used by Businessx Extensions
+ * ------
+ */
 
 
 /*  Button controller
