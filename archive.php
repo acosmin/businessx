@@ -9,6 +9,7 @@
  * section: grid-wrap
  * div: grid-container grid-1 padding-small clearfix
  * main: grid-col grid-posts-col site-main clearfix
+ * ------
  */
 
 // Header and Footer templates
