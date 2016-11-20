@@ -1,13 +1,11 @@
 <?php
-/* ------------------------------------------------------------------------- *
- *  Businessx Functions
- *  ________________
- *
- *  If you want to add/edit functions please use a child theme
- *  http://codex.wordpress.org/Child_Themes
- *  ________________
- *
-/* ------------------------------------------------------------------------- */
+/**
+ * Businessx Functions
+ * ------
+ * If you want to add/edit functions please use a child theme
+ * http://codex.wordpress.org/Child_Themes
+ * ------
+ */
 
 
 
@@ -115,8 +113,8 @@ if ( ! function_exists( 'businessx_setup' ) ) {
 		global $businessx_sections;
 
 		// Add front-page sections positions
-		$sections_position 		= get_theme_mod( 'businessx_sections_position' );
-		$businessx_sections 	= apply_filters( 'businessx_sections_filter', array() );
+		$sections_position	= get_theme_mod( 'businessx_sections_position' );
+		$businessx_sections	= apply_filters( 'businessx_sections_filter', array() );
 
 		if( empty( $sections_position ) && ! empty( $businessx_sections ) ) {
 			$sections = array();
@@ -169,7 +167,7 @@ if ( ! function_exists( 'businessx_scripts' ) ) {
 		wp_enqueue_style( 'businessx-style', get_stylesheet_uri(), array(), BUSINESSX_VERSION );
 
 		// Font Awesome
-		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/icons/css/font-awesome.min.css', array(), '4.6.3', 'all' );
+		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/icons/css/font-awesome.min.css', array(), '4.7.0', 'all' );
 
 		// Javascript
 		wp_enqueue_script( 'businessx-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '20160412', true );
@@ -187,7 +185,7 @@ if ( ! function_exists( 'businessx_scripts' ) ) {
 			'businessx_scripts_data',
 			apply_filters( 'businessx_frontend_js_data_filter', array(
 				/* Search form placeholder */
-				'search_placeholder'	=> esc_attr_x( 'Type the keywords you are searching for', 'search overlay placeholder', 'businessx' ),
+				'search_placeholder' => esc_attr_x( 'Type the keywords you are searching for', 'search overlay placeholder', 'businessx' ),
 			) )
 		);
 
