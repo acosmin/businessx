@@ -8,1016 +8,1640 @@ msgstr ""
 "Last-Translator: ACOSMIN <support@acosmin.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "#999 color:"
-msgstr ""
-
-#. Text in function
-#: businessx/partials/partial-template-functions.php:305
-msgid "%1$s designed by %2$s."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "2nd style button (hover)"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "2nd style button:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "2x class:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "<p>Applies to homepage/archives/paged templates.</p>"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "<p>Applies to pages templates.</p>"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "<p>Applies to post templates.</p>"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "<p>If the theme has an update, we will display a frendly notification. You can dismiss it for 72 hours by clicking on \"Hide Notice\".</p><p>We are adding this notification because Businessx is not yet in the official WordPress.org directory and we do not have any way to let you know the theme has an update available.</p>"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "<p>Like inputs, textarea, selects, buttons.</p>"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "<p>This displays a loading animation until the browser fetched the whole web content and will fade out the moment the page has been completely cached.</p>"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "<p>This only appears in mobile view. To test this you will need to click on the tablet button.</p>"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "<p>This will add a fade in animation on elements when you scroll down.</p>"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Action button border-color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Alternative style"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Animations"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Animations Options"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Arrow button background"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Background color"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Background color - focus:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Background color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Balls Beat"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Balls Pulse"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Balls Spinner"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Base color:"
-msgstr ""
-
-#. Text in function
-#: businessx/partials/posts/content.php:6
-msgid "Blog post: %s"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Body"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Border color - focus:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Border color for widgets title is located in \"Sidebars\""
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Border color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Border hover state:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Borders color"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Bottom border color:"
-msgstr ""
-
-#. Text in function
-#: businessx/partials/headings/index-heading-no-sections.php:18
-msgid "Businessx Extensions"
-msgstr ""
-
-#. Text in echo
-#: businessx/partials/headings/index-heading-no-sections.php:10
-msgid "Businessx Extensions is not activated!"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Buttons"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Close button"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Colored"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Colored Header"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Colored Sticky"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Colors"
-msgstr ""
-
-#. Text in echo
-#: businessx/comments.php:60
-msgid "Comments are closed."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Copyright line:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Custom Header Images"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Custom Header parallax"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Default color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Default state:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Default style"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Design style:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Disable Update Notification"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Disable demo widgets"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Disable footer credits area"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Disable footer sidebars area"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Disable sidebar globally"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Dismiss this notice"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Does not apply to links, just text. It will also change arrows color for sub-menus."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Enable Animations"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Enable Preloader"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Enable parallax effect on Custom Headers"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Enable parallax effect on Featured Images"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Example: search button"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Excerpt ending:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Excerpt length:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Featured Image parallax"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Focus/Active background color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Focus/Active state:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Font color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Font shadow"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Footer"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Footer Credits"
-msgstr ""
-
-#. Text in echo
-#: businessx/partials/partial-template-functions.php:276
-msgid "Footer Menu"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Footer credits"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Footer sidebars"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "For example: ..."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Forms elemenets"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "General options"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Header"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Header Heading"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Heading area"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Headings"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Headings and links:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hide \"Read More\" button"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hide by author"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hide category"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hide comments number"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hide date"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hide logo"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hide post meta"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hide search button"
-msgstr ""
-
-#. Text in echo
-#: businessx/acosmin/functions/post-options.php:32
-#: businessx/acosmin/functions/portfolio-options.php:42
-#: businessx/acosmin/functions/page-options.php:32
-msgid "Hide sidebar"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hide tags"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Homepage Heading"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Homepage main heading"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hover background color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hover state:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hover/Active/Focus state:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Hover/Focus/Active state:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "If links are present, what color should they be."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "If sidebars are empty, demo widgets will show up. Check this if you do not want to display them."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "If they are displayed at the bottom of the post."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "If you do not want to view this notification."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Image"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "In case no background image is set."
-msgstr ""
-
-#. Text in function
-#: businessx/sidebar.php:14
-msgid "Index Sidebar"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Index view"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Input Fields"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Inputs - background:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Inputs - border bottom:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Inputs - font color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Inputs:focus - background:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Inputs:focus - border bottom:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Install Plugins"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Install Required Plugins"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Installing Plugin: %s"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "It applies to some elements: blockquote cite/small, captions..."
-msgstr ""
-
-#. Text in echo
-#: businessx/404.php:29
+#: 404.php:34
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#. Text in echo
-#: businessx/partials/posts/content-none.php:6
-msgid "It looks like nothing was found!"
+#: comments.php:22
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Links"
+#: comments.php:27
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:60
+msgid "Comments are closed."
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Links color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Links hover state"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Links hover state:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Links state:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Loading #1"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Logo type:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Make sure you use the opacity slider if you want to blend colors"
-msgstr ""
-
-#. Text in function
-#: businessx/partials/partial-template-functions.php:119
-msgid "Menu"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Menu - links opacity:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Menu area"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Miscellaneous"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Mobile Menu"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Mobile Menu Colors"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "No action taken. Plugin %1$s was already active."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Notifications"
-msgstr ""
-
-#. Text in echo
-#: businessx/partials/headings/404-heading-full-width.php:12
-msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Opaque style"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Overlay background color"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Overlay top shadow:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/page-options.php:1
-msgid "Page Options:"
-msgstr ""
-
-#. Text in function
-#: businessx/sidebar-page.php:15
-msgid "Page Sidebar"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Page view"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Placeholder color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Please contact the administrator of this site for help."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Plugin activated successfully."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/portfolio-options.php:1
-msgid "Portfolio Item Options:"
-msgstr ""
-
-#. Text in function
-#: businessx/sidebar-portfolio.php:15
-msgid "Portfolio Sidebar"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Post & Portfolio view"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/post-options.php:1
-msgid "Post Options:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Post view"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Posts"
-msgstr ""
-
-#. Text in function
-#: businessx/sidebar-single.php:15
-msgid "Posts Sidebar"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Preloader"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Preloader Options"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Preloader animation:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Preloader fill color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Preloader opacity:"
-msgstr ""
-
-#. Text in echo
-#: businessx/partials/partial-template-functions.php:55
+#: functions.php:77 partials/partial-template-functions.php:68
 msgid "Primary Menu"
 msgstr ""
 
-#. Text in function
-#: businessx/taxonomy-jetpack-portfolio-tag.php:46
-#: businessx/template-jetpack-portfolio.php:55
-#: businessx/taxonomy-jetpack-portfolio-type.php:46
-msgid "Ready to publish your first project? <a href=\"%1$s\">Get started here</a>."
+#: functions.php:78
+msgid "Actions Menu"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Return to Required Plugins Installer"
+#: functions.php:79 partials/partial-template-functions.php:292
+msgid "Footer Menu"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Return to the Dashboard"
+#: functions.php:188
+msgctxt "search overlay placeholder"
+msgid "Type the keywords you are searching for"
 msgstr ""
 
-#. Text in function
-#: businessx/partials/headings/search-heading-full-width.php:12
-msgid "Search Results for: %s"
+#: functions.php:205 functions.php:207 sidebar.php:22
+msgid "Index Sidebar"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Select how you want your header to look."
+#: functions.php:215 sidebar-single.php:23
+msgid "Posts Sidebar"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Select whether to use a custom logo or your site title."
+#: functions.php:217
+msgid "This sidebar appears when you view a post"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Settings"
+#: functions.php:225 sidebar-page.php:23
+msgid "Page Sidebar"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Sidebars"
+#: functions.php:227
+msgid "This sidebar appears when you view a page"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Single view"
+#: functions.php:236 sidebar-portfolio.php:23
+msgid "Portfolio Sidebar"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Something went wrong with the plugin API."
+#: functions.php:238
+msgid "This sidebar appears when you view a Jetpack Portfolio item"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Submenu background color"
+#: functions.php:247
+msgid "Footer #1 Sidebar"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Submenu background color:"
+#: functions.php:249
+msgid "First footer sidebar"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Submenu borders color:"
+#: functions.php:257
+msgid "Footer #2 Sidebar"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Submenu shadow"
+#: functions.php:259
+msgid "Second footer sidebar"
 msgstr ""
 
-#. Text in function
-#: businessx/partials/partial-template-functions.php:441
-msgid "Tagged with: "
+#: functions.php:267
+msgid "Footer #3 Sidebar"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Text"
+#: functions.php:269
+msgid "Three footer sidebar"
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Text and links"
+#: taxonomy-jetpack-portfolio-tag.php:50 taxonomy-jetpack-portfolio-type.php:50
+#: template-jetpack-portfolio.php:60
+
+msgid ""
+"Ready to publish your first project? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Text and links color"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Text color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Text placeholder color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "The following plugin was activated successfully:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "There are one or more required or recommended plugins to install, update or activate."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "This class may be used on some buttons, it sets the opacity 2x times higher"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "This must be a number. For example, 35 will display 35 words. Leave empty for default."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "This plugin needs to be updated to be compatible with your theme."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "This will change the heading on your homepage/blog, leave empty for none."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "This will overwrite any option you select for each page."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "This will overwrite any option you select for each post."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Transparent"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Transparent Header"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Transparent Sticky"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Update Required"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Updates Notifications"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/functions/tgmpa.php:1
-msgid "Updating Plugin: %s"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Widget title - 2nd color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Widget title 2nd border color:"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "Widget title border color:"
-msgstr ""
-
-#. Text in echo
-#: businessx/acosmin/functions/post-options.php:32
-#: businessx/acosmin/functions/portfolio-options.php:42
-#: businessx/acosmin/functions/page-options.php:32
-msgid "You can hide it globally from the Customizer."
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "You can only preview this option on the live website, not in Customizer"
-msgstr ""
-
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
-msgid "You can use <a> tags"
-msgstr ""
-
-#. Text in function
-#: businessx/partials/headings/index-heading-no-sections.php:18
-msgid "You need %s activated to display sections. Activate the plugin first!"
-msgstr ""
-
-#. Text in echo
-#: businessx/taxonomy-jetpack-portfolio-tag.php:52
-#: businessx/template-jetpack-portfolio.php:61
-#: businessx/taxonomy-jetpack-portfolio-type.php:52
+#: taxonomy-jetpack-portfolio-tag.php:56 taxonomy-jetpack-portfolio-type.php:56
+#: template-jetpack-portfolio.php:66
 msgid "You need Jetpack - Portfolio module enabled to use this section."
 msgstr ""
 
-#. Text in function
-#: businessx/acosmin/customizer/customizer.php:1
+#: acosmin/customizer/controllers.php:306
+msgid "Background-size:"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:321
+msgid "Background-repeat:"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:336
+msgid "Background-position:"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:370
+msgid "Overlay background color:"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:382
+msgid "Background overlay opacity:"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:388
+#: acosmin/customizer/sections/settings-panel/header-options.php:21
+msgid "Transparent"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:389
+msgid "10%"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:390
+msgid "20%"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:391
+msgid "30%"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:392
+msgid "40%"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:393
+msgid "50%"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:394
+msgid "60%"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:395
+msgid "70%"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:396
+msgid "80%"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:397
+msgid "90%"
+msgstr ""
+
+#: acosmin/customizer/controllers.php:398
+msgid "100%"
+msgstr ""
+
+#: acosmin/customizer/customizer.php:44
+msgid "Colors"
+msgstr ""
+
+#: acosmin/customizer/customizer.php:50
+msgid "Settings"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:11
+msgid "Image"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:12
+msgid "Text"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:14
+msgid "Logo type:"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:15
+msgid ""
+"Select whether to use a custom logo or your site title. If a logo is not "
+"selected, the text one is displayed."
+msgstr ""
+
+#: acosmin/customizer/sections/docs-button.php:8
+msgid "Businessx"
+msgstr ""
+
+#: acosmin/customizer/sections/docs-button.php:9
+msgid "Documentation"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/body-options.php:8
+msgid "Body"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/body-options.php:16
+#: acosmin/customizer/sections/colors-panel/footer-credits-options.php:16
+#: acosmin/customizer/sections/colors-panel/footer-options.php:21
+#: acosmin/customizer/sections/colors-panel/footer-options.php:64
+#: acosmin/customizer/sections/colors-panel/footer-options.php:106
+#: acosmin/customizer/sections/colors-panel/header-options.php:77
+msgid "Background color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/body-options.php:22
+#: acosmin/customizer/sections/colors-panel/footer-credits-options.php:22
+#: acosmin/customizer/sections/colors-panel/footer-options.php:76
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:29
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:76
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:123
+msgid "Font color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/body-options.php:28
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:51
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:88
+#: acosmin/customizer/sections/colors-panel/footer-options.php:45
+#: acosmin/customizer/sections/colors-panel/footer-options.php:70
+msgid "Border color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/body-options.php:29
+msgid "Border color for widgets title is located in \"Sidebars\""
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/body-options.php:35
+msgid "#999 color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/body-options.php:36
+msgid "It applies to some elements: blockquote cite/small, captions..."
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:8
+#: acosmin/customizer/sections/colors-panel/footer-options.php:101
+msgid "Buttons"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:16
+msgid "Default style"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:21
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:45
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:82
+msgid "Default color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:27
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:57
+msgid "Hover state:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:33
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:63
+msgid "Focus/Active state:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:40
+msgid "Opaque style"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:69
+msgid "2x class:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:70
+msgid ""
+"This class may be used on some buttons, it sets the opacity 2x times higher"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:77
+msgid "Alternative style"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:94
+msgid "Hover/Focus/Active state:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/buttons-options.php:100
+msgid "Border hover state:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-credits-options.php:8
+msgid "Footer Credits"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-credits-options.php:28
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:55
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:102
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:149
+#: acosmin/customizer/sections/colors-panel/header-options.php:28
+msgid "Links color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:8
+#: acosmin/customizer/sections/settings-panel/footer-options.php:8
+msgid "Footer"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:16
+msgid "General options"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:27
+#: acosmin/customizer/sections/colors-panel/header-options.php:21
+msgid "Text color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:33
+msgid "Headings and links:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:39
+msgid "Links hover state:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:51
+msgid "Widget title - 2nd color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:58
+msgid "Forms elemenets"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:59
+msgid "<p>Like inputs, textarea, selects, buttons.</p>"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:82
+msgid "Background color - focus:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:88
+msgid "Border color - focus:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:94
+msgid "Text placeholder color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:112
+msgid "Hover background color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/footer-options.php:118
+msgid "Focus/Active background color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:8
+msgid "Header Heading"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:16
+#: acosmin/customizer/sections/settings-panel/posts-options.php:59
+msgid "Index view"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:17
+msgid "<p>Applies to homepage/archives/paged templates.</p>"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:22
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:69
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:116
+#: acosmin/customizer/sections/colors-panel/mobile-menu-options.php:22
+msgid "Background color"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:23
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:70
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:117
+msgid "In case no background image is set."
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:35
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:82
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:129
+msgid "Font shadow"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:41
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:88
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:135
+msgid "Overlay background color"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:42
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:49
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:89
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:96
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:136
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:143
+msgid "Make sure you use the opacity slider if you want to blend colors"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:48
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:95
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:142
+msgid "Overlay top shadow:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:56
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:103
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:150
+msgid "If links are present, what color should they be."
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:63
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:35
+msgid "Page view"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:64
+msgid "<p>Applies to pages templates.</p>"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:110
+#: acosmin/customizer/sections/settings-panel/posts-options.php:16
+msgid "Single view"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-heading-options.php:111
+msgid "<p>Applies to post templates.</p>"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:8
+#: acosmin/customizer/sections/settings-panel/header-options.php:7
+msgid "Header"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:16
+msgid "Transparent Header"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:22
+msgid ""
+"Does not apply to links, just text. It will also change arrows color for sub-"
+"menus."
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:34
+msgid "Menu - links opacity:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:40
+#: acosmin/customizer/sections/colors-panel/header-options.php:107
+msgid "2nd style button:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:41
+#: acosmin/customizer/sections/colors-panel/header-options.php:108
+msgid "Example: search button"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:47
+#: acosmin/customizer/sections/colors-panel/header-options.php:114
+msgid "2nd style button (hover)"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:53
+#: acosmin/customizer/sections/colors-panel/header-options.php:101
+msgid "Action button border-color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:59
+#: acosmin/customizer/sections/colors-panel/header-options.php:120
+msgid "Submenu background color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:65
+#: acosmin/customizer/sections/colors-panel/header-options.php:126
+msgid "Submenu borders color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:72
+msgid "Colored Header"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:83
+msgid "Bottom border color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:89
+msgid "Text and links color"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:95
+msgid "Links hover state"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/header-options.php:132
+msgid "Submenu shadow"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/headings-options.php:8
+msgid "Headings"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/headings-options.php:16
+msgid "Base color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/headings-options.php:22
+msgid "Links state:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/headings-options.php:28
+#: acosmin/customizer/sections/colors-panel/links-options.php:22
+msgid "Hover/Active/Focus state:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/inputs-options.php:8
+msgid "Input Fields"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/inputs-options.php:16
+msgid "Placeholder color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/inputs-options.php:22
+msgid "Inputs - border bottom:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/inputs-options.php:28
+msgid "Inputs - background:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/inputs-options.php:34
+msgid "Inputs - font color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/inputs-options.php:40
+msgid "Inputs:focus - border bottom:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/inputs-options.php:46
+msgid "Inputs:focus - background:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/links-options.php:8
+msgid "Links"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/links-options.php:16
+msgid "Default state:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/mobile-menu-options.php:8
+msgid "Mobile Menu"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/mobile-menu-options.php:16
+msgid "Mobile Menu Colors"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/mobile-menu-options.php:17
+msgid ""
+"<p>This only appears in mobile view. To test this you will need to click on "
+"the tablet button.</p>"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/mobile-menu-options.php:28
+msgid "Borders color"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/mobile-menu-options.php:34
+msgid "Text and links"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/mobile-menu-options.php:40
+msgid "Submenu background color"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/mobile-menu-options.php:41
 msgid "You should make this a transparent color, to keep the effect."
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/mobile-menu-options.php:47
+#: acosmin/customizer/sections/colors-panel/mobile-menu-options.php:53
+msgid "Arrow button background"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/mobile-menu-options.php:59
+msgid "Close button"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/sidebars-options.php:8
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:8
+msgid "Sidebars"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/sidebars-options.php:16
+msgid "Widget title border color:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/sidebars-options.php:22
+msgid "Widget title 2nd border color:"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/animations-options.php:8
+msgid "Animations"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/animations-options.php:16
+msgid "Animations Options"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/animations-options.php:17
+msgid ""
+"<p>This will add a fade in animation on elements when you scroll down.</p>"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/animations-options.php:22
+msgid "Enable Animations"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/animations-options.php:23
+msgid "You can only preview this option on the live website, not in Customizer"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/footer-options.php:16
+msgid "Footer sidebars"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/footer-options.php:21
+msgid "Disable footer sidebars area"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/footer-options.php:27
+msgid "Footer credits"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/footer-options.php:32
+msgid "Disable footer credits area"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/footer-options.php:37
+msgid "Hide logo"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/footer-options.php:42
+msgid "Copyright line:"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/footer-options.php:43
+msgid "You can use <a> tags"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:13
+msgid "Menu area"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:19
+msgid "Transparent Sticky"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:20
+msgid "Colored Sticky"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:22
+msgid "Colored"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:24
+msgid "Design style:"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:25
+msgid "Select how you want your header to look."
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:32
+msgid "Heading area"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:37
+msgid "Homepage main heading"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:38
+msgid ""
+"This will change the heading on your homepage/blog, leave empty for none."
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:39
+#: partials/partial-template-helpers.php:179
+msgid "Homepage Heading"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:46
+msgid "Miscellaneous"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:51
+msgid "Hide search button"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:57
+msgid "Custom Header Images"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:62
+msgid "Custom Header parallax"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/header-options.php:63
+msgid "Enable parallax effect on Custom Headers"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:8
+msgid "Posts"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:21
+msgid "Featured Image parallax"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:22
+msgid "Enable parallax effect on Featured Images"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:27
+msgid "Hide post meta"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:32
+msgid "Hide by author"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:37
+#: acosmin/customizer/sections/settings-panel/posts-options.php:69
+msgid "Hide date"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:42
+#: acosmin/customizer/sections/settings-panel/posts-options.php:74
+msgid "Hide category"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:47
+msgid "Hide comments number"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:52
+msgid "Hide tags"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:53
+msgid "If they are displayed at the bottom of the post."
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:64
+msgid "Hide \"Read More\" button"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:79
+msgid "Excerpt length:"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:80
+msgid ""
+"This must be a number. For example, 35 will display 35 words. Leave empty "
+"for default."
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:85
+msgid "Excerpt ending:"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/posts-options.php:86
+msgid "For example: ..."
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:8
+msgid "Preloader"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:16
+msgid "Preloader Options"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:17
+msgid ""
+"<p>This displays a loading animation until the browser fetched the whole web "
+"content and will fade out the moment the page has been completely cached. "
+"<br /><br /><b>It is best to check this on the live website after you make "
+"changes and save.</b></p>"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:22
+msgid "Enable Preloader"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:27
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:33
+msgid "Preloader fill color:"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:39
+msgid "Preloader opacity:"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:45
+msgid "Balls Beat"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:46
+msgid "Balls Pulse"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:47
+msgid "Balls Spinner"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:48
+msgid "Loading #1"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/preloader-options.php:50
+msgid "Preloader animation:"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:16
+msgid "Disable demo widgets"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:17
+msgid ""
+"If sidebars are empty, demo widgets will show up. Check this if you do not "
+"want to display them."
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:23
+msgid "Post & Portfolio view"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:23
+msgid "Post view"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:28
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:40
+msgid "Disable sidebar globally"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:29
+msgid "This will overwrite any option you select for each post."
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:41
+msgid "This will overwrite any option you select for each page."
+msgstr ""
+
+#: acosmin/functions/helpers.php:209
+msgid "If this message appears you need to update Businessx Extensions"
+msgstr ""
+
+#: acosmin/functions/helpers.php:270
+msgctxt "image background repeat"
+msgid "repeat"
+msgstr ""
+
+#: acosmin/functions/helpers.php:271
+msgctxt "image background repeat"
+msgid "repeat-x"
+msgstr ""
+
+#: acosmin/functions/helpers.php:272
+msgctxt "image background repeat"
+msgid "repeat-y"
+msgstr ""
+
+#: acosmin/functions/helpers.php:273
+msgctxt "image background repeat"
+msgid "no-repeat"
+msgstr ""
+
+#: acosmin/functions/helpers.php:274
+msgctxt "image background repeat"
+msgid "initial"
+msgstr ""
+
+#: acosmin/functions/helpers.php:285
+msgctxt "image background position"
+msgid "left top"
+msgstr ""
+
+#: acosmin/functions/helpers.php:286
+msgctxt "image background position"
+msgid "left center"
+msgstr ""
+
+#: acosmin/functions/helpers.php:287
+msgctxt "image background position"
+msgid "left bottom"
+msgstr ""
+
+#: acosmin/functions/helpers.php:288
+msgctxt "image background position"
+msgid "right top"
+msgstr ""
+
+#: acosmin/functions/helpers.php:289
+msgctxt "image background position"
+msgid "right center"
+msgstr ""
+
+#: acosmin/functions/helpers.php:290
+msgctxt "image background position"
+msgid "right bottom"
+msgstr ""
+
+#: acosmin/functions/helpers.php:291
+msgctxt "image background position"
+msgid "center top"
+msgstr ""
+
+#: acosmin/functions/helpers.php:292
+msgctxt "image background position"
+msgid "center center"
+msgstr ""
+
+#: acosmin/functions/helpers.php:293
+msgctxt "image background position"
+msgid "center bottom"
+msgstr ""
+
+#: acosmin/functions/helpers.php:304
+msgctxt "image background size"
+msgid "auto"
+msgstr ""
+
+#: acosmin/functions/helpers.php:305
+msgctxt "image background size"
+msgid "cover"
+msgstr ""
+
+#: acosmin/functions/helpers.php:306
+msgctxt "image background size"
+msgid "contain"
+msgstr ""
+
+#: acosmin/functions/helpers.php:327
+msgctxt "background opacity option"
+msgid "Transparent"
+msgstr ""
+
+#: acosmin/functions/helpers.php:332 acosmin/functions/helpers.php:384
+msgctxt "background opacity option"
+msgid "10%"
+msgstr ""
+
+#: acosmin/functions/helpers.php:337 acosmin/functions/helpers.php:385
+msgctxt "background opacity option"
+msgid "20%"
+msgstr ""
+
+#: acosmin/functions/helpers.php:342 acosmin/functions/helpers.php:386
+msgctxt "background opacity option"
+msgid "30%"
+msgstr ""
+
+#: acosmin/functions/helpers.php:347 acosmin/functions/helpers.php:387
+msgctxt "background opacity option"
+msgid "40%"
+msgstr ""
+
+#: acosmin/functions/helpers.php:352 acosmin/functions/helpers.php:388
+msgctxt "background opacity option"
+msgid "50%"
+msgstr ""
+
+#: acosmin/functions/helpers.php:357 acosmin/functions/helpers.php:389
+msgctxt "background opacity option"
+msgid "60%"
+msgstr ""
+
+#: acosmin/functions/helpers.php:362 acosmin/functions/helpers.php:390
+msgctxt "background opacity option"
+msgid "70%"
+msgstr ""
+
+#: acosmin/functions/helpers.php:367 acosmin/functions/helpers.php:391
+msgctxt "background opacity option"
+msgid "80%"
+msgstr ""
+
+#: acosmin/functions/helpers.php:372 acosmin/functions/helpers.php:392
+msgctxt "background opacity option"
+msgid "90%"
+msgstr ""
+
+#: acosmin/functions/helpers.php:377 acosmin/functions/helpers.php:393
+msgctxt "background opacity option"
+msgid "100%"
+msgstr ""
+
+#: acosmin/functions/helpers.php:383
+msgctxt "businessx"
+msgid "Transparent"
+msgstr ""
+
+#: acosmin/functions/helpers.php:535
+msgid "Read More"
+msgstr ""
+
+#: acosmin/functions/helpers.php:542
+msgctxt "post author"
+msgid "by"
+msgstr ""
+
+#: acosmin/functions/helpers.php:560
+msgid "Sticky Post"
+msgstr ""
+
+#: acosmin/functions/helpers.php:577
+msgid ", "
+msgstr ""
+
+#: acosmin/functions/helpers.php:667
+msgctxt "previous articles page"
+msgid "&larr; Previous"
+msgstr ""
+
+#: acosmin/functions/helpers.php:668
+msgctxt "next articles page"
+msgid "Next &rarr;"
+msgstr ""
+
+#: acosmin/functions/helpers.php:682
+msgid "Pages:"
+msgstr ""
+
+#: acosmin/functions/helpers.php:688
+msgctxt "single view"
+msgid "Next page"
+msgstr ""
+
+#: acosmin/functions/helpers.php:689
+msgctxt "single view"
+msgid "Previous page"
+msgstr ""
+
+#: acosmin/functions/helpers.php:704
+msgid "Older comments"
+msgstr ""
+
+#: acosmin/functions/helpers.php:705
+msgid "Newer comments"
+msgstr ""
+
+#: acosmin/functions/page-options.php:10
+msgid "Page Options:"
+msgstr ""
+
+#: acosmin/functions/page-options.php:35
+#: acosmin/functions/portfolio-options.php:45
+#: acosmin/functions/post-options.php:35
+msgid "Hide sidebar"
+msgstr ""
+
+#: acosmin/functions/page-options.php:35
+#: acosmin/functions/portfolio-options.php:45
+#: acosmin/functions/post-options.php:35
+msgid "You can hide it globally from the Customizer."
+msgstr ""
+
+#: acosmin/functions/portfolio-options.php:20
+msgid "Portfolio Item Options:"
+msgstr ""
+
+#: acosmin/functions/post-options.php:10
+msgid "Post Options:"
+msgstr ""
+
+#: acosmin/functions/recommend.php:95
+msgid "Install Businessx Extensions Now"
+msgstr ""
+
+#: acosmin/functions/recommend.php:95 acosmin/functions/recommend.php:151
+#: partials/headings/index-heading-no-sections.php:19
+msgid "Businessx Extensions"
+msgstr ""
+
+#: acosmin/functions/recommend.php:95
+msgctxt "businessx extensions recommend"
+msgid "Install Now"
+msgstr ""
+
+#: acosmin/functions/recommend.php:96
+msgid "Dismiss Installer Message"
+msgstr ""
+
+#: acosmin/functions/recommend.php:96
+msgctxt "businessx extensions recommend"
+msgid "Dismiss Notice"
+msgstr ""
+
+#: acosmin/functions/recommend.php:101
+
+msgid ""
+"The plugin is installed but not activated. Please <a href=\"%s\"><b>activate "
+"it</b></a>."
+msgstr ""
+
+#: acosmin/functions/recommend.php:102
+msgid "Dismiss Notice"
+msgstr ""
+
+#: acosmin/functions/recommend.php:130
+msgid "Permission denied"
+msgstr ""
+
+#: acosmin/functions/recommend.php:151
+
+msgid ""
+"If you want to take full advantage of the options this theme has to provide "
+"%s, please install and activate the %s plugin."
+msgstr ""
+
+#: acosmin/functions/recommend.php:151
+msgid "(Front Page sections)"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:330
+
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:332
+
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:336
+
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:342
+
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:348
+
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:354
+
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:360
+
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:366
+
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:371
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:376
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:381
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:386 acosmin/functions/tgmpa.php:827
+#: acosmin/functions/tgmpa.php:2533 acosmin/functions/tgmpa.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:387 acosmin/functions/tgmpa.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:388 acosmin/functions/tgmpa.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:390
+
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:392
+
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:394
+
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:523
+msgid "Update Required"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:934 acosmin/functions/tgmpa.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:1121 acosmin/functions/tgmpa.php:2948
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:1982
+
+msgid "TGMPA v%s"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2273
+msgid "Required"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2295
+msgid "External Source"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2321
+msgid "Active"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2342
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2388
+
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:2392
+
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:2396
+
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:2400
+
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: acosmin/functions/tgmpa.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2548
+msgid "Source"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2549
+msgid "Type"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2553
+msgid "Version"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2554
+msgid "Status"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2603
+
+msgid "Install %2$s"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2608
+
+msgid "Update %2$s"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2614
+
+msgid "Activate %2$s"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2717
+msgid "Install"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2723
+msgid "Update"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2726
+msgid "Activate"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3498
+
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3501
+
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3503
+
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3509
+
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3509 acosmin/functions/tgmpa.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3509 acosmin/functions/tgmpa.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3512
+
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3517
+
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#: acosmin/functions/tgmpa.php:3520
+
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: partials/partial-template-functions.php:140
+msgctxt "mobile anchor text"
+msgid "Menu"
+msgstr ""
+
+#: partials/partial-template-functions.php:325
+msgctxt "credit text"
+msgid "%1$s designed by %2$s."
+msgstr ""
+
+#: partials/partial-template-functions.php:326
+msgctxt "credit text - theme"
+msgid "Businessx theme"
+msgstr ""
+
+#: partials/partial-template-functions.php:327
+msgid "Premium WordPress Themes &amp; Plugins by Acosmin"
+msgstr ""
+
+#: partials/partial-template-functions.php:327
+msgctxt "credit text - theme author"
+msgid "Acosmin"
+msgstr ""
+
+#: partials/partial-template-functions.php:356
+#: partials/partial-template-functions.php:432
+msgid "Tagged with: "
+msgstr ""
+
+#: partials/partial-template-helpers.php:43
+
+msgid ""
+"This sidebar is empty, you should add some widgets (in %s). Until then we "
+"are showing some default widgets. Only you can see this message"
+msgstr ""
+
+#: partials/partial-template-helpers.php:87
+msgid "Calendar"
+msgstr ""
+
+#: partials/partial-template-helpers.php:103
+msgid "Demo Widgets"
+msgstr ""
+
+#: partials/partial-template-helpers.php:104
+msgid ""
+"<p>These are <strong>demo widgets</strong>, you can add your own in this "
+"sidebars: Footer #1 Sidebar, Footer #2 Sidebar and Footer #3 Sidebar.</"
+"p><p>You can also disable this entire section (widgetized footer) from "
+"<em>Customizer > Settings > Footer > Disable footer sidebars.</em></"
+"p><p>Simple stuff :D</p>"
+msgstr ""
+
+#: partials/partial-template-helpers.php:186
+msgid "Page #: %s of %s"
+msgstr ""
+
+#: partials/partial-template-helpers.php:203
+msgid "Portfolio Page #%s"
+msgstr ""
+
+#: partials/headings/404-heading-full-width.php:12
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: partials/headings/index-heading-no-sections.php:10
+msgid "Businessx Extensions is not activated!"
+msgstr ""
+
+#: partials/headings/index-heading-no-sections.php:19
+
+msgid "You need %s activated to display sections. Activate the plugin first!"
+msgstr ""
+
+#: partials/headings/index-heading-no-sections.php:19
+msgid "https://wordpress.org/plugins/businessx-extensions/"
+msgstr ""
+
+#: partials/headings/search-heading-full-width.php:12
+msgid "Search Results for: %s"
+msgstr ""
+
+#: partials/posts/content-none.php:6
+msgid "It looks like nothing was found!"
+msgstr ""
+
+#: partials/posts/content.php:6
+msgid "Blog post: %s"
 msgstr ""

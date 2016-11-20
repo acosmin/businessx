@@ -1,13 +1,11 @@
 <?php
-/* ------------------------------------------------------------------------- *
- *  Functions
- *  ________________
- *
- *	If you want to add/edit functions please use a child theme
- *	http://codex.wordpress.org/Child_Themes
- *	________________
- *
-/* ------------------------------------------------------------------------- */
+/**
+ * Businessx Functions
+ * ------
+ * If you want to add/edit functions please use a child theme
+ * http://codex.wordpress.org/Child_Themes
+ * ------
+ */
 
 
 
@@ -15,7 +13,7 @@
  *  Define some constants
 /* ------------------------------------ */
 if( ! defined( 'BUSINESSX_VERSION' ) ) {
-	define( 'BUSINESSX_VERSION', '1.0.4' ); }
+	define( 'BUSINESSX_VERSION', '1.0.5' ); }
 
 if( ! defined( 'BUSINESSX_AC_URL' ) ) {
 	define( 'BUSINESSX_AC_URL', 'http://www.acosmin.com/' ); }
@@ -23,49 +21,33 @@ if( ! defined( 'BUSINESSX_AC_URL' ) ) {
 if( ! defined( 'BUSINESSX_AC_DOCS_URL' ) && defined( 'BUSINESSX_AC_URL' ) ) {
 	define( 'BUSINESSX_AC_DOCS_URL', BUSINESSX_AC_URL . 'documentation/businessx/' ); }
 
+if( ! defined( 'BUSINESSX_CUSTOMIZER_PATH' ) ) {
+	define( 'BUSINESSX_CUSTOMIZER_PATH', trailingslashit( get_template_directory() ) . 'acosmin/customizer/' ); }
 
+if( ! defined( 'BUSINESSX_FUNCTIONS_PATH' ) ) {
+	define( 'BUSINESSX_FUNCTIONS_PATH', trailingslashit( get_template_directory() ) . 'acosmin/functions/' ); }
 
-/* ------------------------------------ *
- *  WordPress Version Compare
-/* ------------------------------------ */
-if ( ! function_exists( 'businessx_wp_version_compare' ) ) {
-	function businessx_wp_version_compare( $wp_version = '', $compare_sign = '<' ) {
-		if ( version_compare( $GLOBALS['wp_version'], $wp_version, $compare_sign ) ) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-}
-
-
-
-/* ------------------------------------------------------------------------- *
- *  Businessx only works in WordPress 4.5 or later.
-/* ------------------------------------------------------------------------- */
-if ( businessx_wp_version_compare( '4.5' ) ) {
-	require get_template_directory() . '/acosmin/functions/back-compat.php';
-}
+if( ! defined( 'BUSINESSX_PARTIALS_PATH' ) ) {
+	define( 'BUSINESSX_PARTIALS_PATH', trailingslashit( get_template_directory() ) . 'partials/' ); }
 
 
 
 /* ------------------------------------------------------------------------- *
  *  Required Files
 /* ------------------------------------------------------------------------- */
-require_once ( get_template_directory() . '/acosmin/customizer/customizer.php' );
-require_once ( get_template_directory() . '/acosmin/functions/tgmpa.php' );
-require_once ( get_template_directory() . '/acosmin/functions/sanitization.php' );
-require_once ( get_template_directory() . '/acosmin/functions/helpers.php' );
-require_once ( get_template_directory() . '/acosmin/functions/preloader.php' );
-require_once ( get_template_directory() . '/acosmin/functions/post-options.php' );
-require_once ( get_template_directory() . '/acosmin/functions/page-options.php' );
-require_once ( get_template_directory() . '/acosmin/functions/portfolio-options.php' );
-require_once ( get_template_directory() . '/acosmin/functions/recommend.php' );
-require_once ( get_template_directory() . '/acosmin/functions/updater.php' );
-require_once ( get_template_directory() . '/partials/partial-template-css-classes.php' );
-require_once ( get_template_directory() . '/partials/partial-template-functions.php' );
-require_once ( get_template_directory() . '/partials/partial-template-helpers.php' );
-require_once ( get_template_directory() . '/partials/partial-template-hooks.php' );
+require_once ( BUSINESSX_CUSTOMIZER_PATH . 'customizer.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'tgmpa.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'sanitization.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'helpers.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'preloader.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'post-options.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'page-options.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'portfolio-options.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'recommend.php' );
+require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-css-classes.php' );
+require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-functions.php' );
+require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-helpers.php' );
+require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-hooks.php' );
 
 
 
@@ -128,21 +110,16 @@ if ( ! function_exists( 'businessx_setup' ) ) {
 		add_filter( 'use_default_gallery_style', '__return_false' );
 
 		// Globals
-		global $businessx_sections, $businessx_info;
-
-		// Some info
-		$businessx_info = apply_filters( 'businessx_info', array(
-			'base_font_size' 	=> 18
-		) );
+		global $businessx_sections;
 
 		// Add front-page sections positions
-		$sections_position 		= get_theme_mod( 'businessx_sections_position' );
-		$businessx_sections 	= apply_filters( 'businessx_sections_filter', array() );
+		$sections_position	= get_theme_mod( 'businessx_sections_position' );
+		$businessx_sections	= apply_filters( 'businessx_sections_filter', array() );
 
 		if( empty( $sections_position ) && ! empty( $businessx_sections ) ) {
 			$sections = array();
 			foreach( $businessx_sections as $key => $value ) {
-				$sections[] = 'businessx_section__' . $value;
+				$sections[] = 'businessx_section__' . sanitize_key( $value );
 			}
 			set_theme_mod( 'businessx_sections_position', $sections );
 		}
@@ -190,7 +167,7 @@ if ( ! function_exists( 'businessx_scripts' ) ) {
 		wp_enqueue_style( 'businessx-style', get_stylesheet_uri(), array(), BUSINESSX_VERSION );
 
 		// Font Awesome
-		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/icons/css/font-awesome.min.css', array(), '4.6.3', 'all' );
+		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/icons/css/font-awesome.min.css', array(), '4.7.0', 'all' );
 
 		// Javascript
 		wp_enqueue_script( 'businessx-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '20160412', true );
@@ -208,25 +185,13 @@ if ( ! function_exists( 'businessx_scripts' ) ) {
 			'businessx_scripts_data',
 			apply_filters( 'businessx_frontend_js_data_filter', array(
 				/* Search form placeholder */
-				'bx_search_placeholder'	=> esc_attr__( 'Type the keywords you are searching for', 'businessx' ),
+				'search_placeholder' => esc_attr_x( 'Type the keywords you are searching for', 'search overlay placeholder', 'businessx' ),
 			) )
 		);
 
 	}
 }
 add_action( 'wp_enqueue_scripts', 'businessx_scripts' );
-
-
-
-/*  Enqueues admin scripts and styles.
-/* ------------------------------------ */
-if ( ! function_exists( 'businessx_admin_scripts' ) ) {
-	function businessx_admin_scripts() {
-		// JS Files
-		wp_enqueue_script( 'businessx-admin-scripts', get_template_directory_uri() . '/assets/js/admin/admin.js', array(), '20160412', FALSE );
-	}
-}
-add_action( 'admin_enqueue_scripts', 'businessx_admin_scripts' );
 
 
 
@@ -330,8 +295,8 @@ if ( ! function_exists( 'businessx_fonts_setup' ) ) {
 
 		if ( $fonts ) {
 			$fonts_url = add_query_arg( array(
-				'family' => urlencode( implode( '|', $fonts ) ),
-				'subset' => urlencode( $subsets ),
+				'family' => urlencode( implode( '|', array_map( 'esc_attr', $fonts ) ) ),
+				'subset' => urlencode( esc_attr( $subsets ) ),
 			), 'https://fonts.googleapis.com/css' );
 		}
 
@@ -349,12 +314,12 @@ if ( ! function_exists( 'businessx_register_required_plugins' ) ) {
 
 		$plugins = array(
 			array(
-				'name'      => esc_html__( 'Businessx Extensions', 'businessx' ),
+				'name'      => 'Businessx Extensions',
 				'slug'      => 'businessx-extensions',
 				'required'  => false,
 			),
 			array(
-				'name'      => esc_html__( 'Jetpack by WordPress.com', 'businessx' ),
+				'name'      => 'Jetpack by WordPress.com',
 				'slug'      => 'jetpack',
 				'required'  => false,
 			),

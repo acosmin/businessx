@@ -6,7 +6,7 @@
  *	If you want to add/edit functions please use a child theme
  *	http://codex.wordpress.org/Child_Themes
  *	________________
- *	
+ *
  *	Check this function: businessx_occ() in ../acosmin/functions/helpers.php
  *	________________
  *
@@ -27,7 +27,7 @@ if ( ! function_exists( 'businessx_header_classes' ) ) {
 		$default = apply_filters( 'businessx_option___header_type_select_default', 'menu-tf' );
 		$style = get_theme_mod( 'header_type_select', $default );
 		$classes[] = 'main-header';
-		
+
 		switch( $style ) {
 			case 'menu-tf' : // Fixed & transparent
 				$classes[] = 'mh-fixed';
@@ -44,17 +44,17 @@ if ( ! function_exists( 'businessx_header_classes' ) ) {
 				$classes[] = 'mh-nontransparent';
 				break;
 		}
-		
+
 		$css_classes = array_map( 'esc_attr', array_unique( apply_filters( 'businessx_header___css_classes', $classes ) ) );
-		
+
 		$new_classes = join( ' ', $css_classes );
-		
+
 		if( $echo ) {
-			echo 'class="' . $new_classes . '"';	
+			echo 'class="' . $new_classes . '"';
 		} else {
 			return 'class="' . $new_classes . '"';
 		}
-		
+
 	}
 }
 
@@ -80,7 +80,7 @@ add_filter( 'businessx_header___inner_wrap', 'businessx_header_inner_wrap_classe
 if ( ! function_exists( 'businessx_body_classes' ) ) {
 	function businessx_body_classes( $classes ) {
 		$new_classes = array();
-		
+
 		// Sidebar options
 		if( businessx_hide_sidebar( 'single' ) ) {
 			$new_classes[] = 'no-sidebar';
@@ -91,9 +91,9 @@ if ( ! function_exists( 'businessx_body_classes' ) ) {
 		if( businessx_hide_sidebar( 'portfolio' ) ) {
 			$new_classes[] = 'no-sidebar';
 		}
-		
+
 		//$new_classes[] = 'fader-reset'; // ADD OPTION
-		
+
 		// From select a header type
 		$header_type = get_theme_mod( 'header_type_select', 'menu-tf' );
 		switch( $header_type ) {
@@ -108,13 +108,13 @@ if ( ! function_exists( 'businessx_body_classes' ) ) {
 			$new_classes[] = $header_type;
 			// Colored
 			case 'menu-nn' :
-			$new_classes[] = $header_type;	
+			$new_classes[] = $header_type;
 		}
-		
+
 		$new_classes = apply_filters( 'businessx_body_classes_filter', $new_classes );
-		
-		$classes = array_merge( $classes, $new_classes );
-		
+
+		$classes = array_map( 'esc_attr', array_unique( array_merge( $classes, $new_classes ) ) );
+
 		return $classes;
 	}
 }
@@ -133,28 +133,28 @@ if ( ! function_exists( 'businessx_post_classes' ) ) {
 	function businessx_post_classes( $classes ) {
 		$new_classes = array();
 		$new_classes[] = 'clearfix';
-		
+
 		if( ! is_single() && ! is_page() ) {
 			$new_classes[] = 'post-index';
-			
+
 			// Sharedaddy classes
 			if( businessx_jetpack_check( 'sharedaddy' ) && businessx_sharedaddy_type_check( 'index' ) ) {
 				$new_classes[] = 'sd-index-on';
 			}
 		} else {
-			$new_classes[] = 'post-single'; 
+			$new_classes[] = 'post-single';
 		}
-		
+
 		if( is_page_template( 'template-blog.php' ) ) {
 			$remove = array_search( 'post-single', $new_classes );
 			unset( $new_classes[$remove] );
 			$new_classes[] = 'post-index';
 		}
-		
+
 		$new_classes = apply_filters( 'businessx_post_classes___filter', $new_classes );
-		
+
 		$classes = array_map( 'esc_attr', array_merge( $classes, $new_classes ) );
-		
+
 		return $classes;
 	}
 }
@@ -343,7 +343,7 @@ if ( ! function_exists( 'businessx_portfolio_page_wrap_classes' ) ) {
 }
 add_filter( 'businessx_portfolio_page___wrap_classes', 'businessx_portfolio_page_wrap_classes' );
 
-// -- Main classes 
+// -- Main classes
 if ( ! function_exists( 'businessx_portfolio_main_classes' ) ) {
 	function businessx_portfolio_main_classes( $classes ) {
 		$classes[] = 'grid-col';
@@ -363,7 +363,7 @@ endif; // Jetpack Check
 
 
 /* ------------------------------------------------------------------------- *
- *  404 Page - 404.php 
+ *  404 Page - 404.php
 /* ------------------------------------------------------------------------- */
 
 // -- Section classes
@@ -403,7 +403,7 @@ add_filter( 'businessx_404___main_classes', 'businessx_404_main_classes' );
 
 
 /* ------------------------------------------------------------------------- *
- *  Search Page - search.php 
+ *  Search Page - search.php
 /* ------------------------------------------------------------------------- */
 
 // -- Section classes
@@ -511,17 +511,17 @@ if ( ! function_exists( 'businessx_index_archives_animations' ) ) {
 	function businessx_index_archives_animations( $new_classes ) {
 		$anim = businessx_anim_classes( true );
 		$anim_classes = array();
-		
+
 		if( $anim != '' ) {
-			$anim_classes = explode( ' ', $anim );	
+			$anim_classes = explode( ' ', $anim );
 		}
-		
+
 		if( ! is_single() && ! is_page() ) {
-			foreach( $anim_classes as $key => $value ) { 
-				$new_classes[] = $value; 
+			foreach( $anim_classes as $key => $value ) {
+				$new_classes[] = $value;
 			}
 		}
-		
+
 		return $new_classes;
 	}
 }

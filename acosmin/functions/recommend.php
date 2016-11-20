@@ -92,13 +92,13 @@ if ( class_exists( 'WP_Customize_Section' ) && ! class_exists( 'Businessx_Instal
                     $nonce_key = 'install-plugin_' . $plugin_slug;
                     $plugin_install_url = wp_nonce_url( $plugin_install_url, $nonce_key );
                 ?>
-                <a class="install-now button-primary button" data-slug="businessx-extensions" href="<?php echo esc_url( $plugin_install_url ); ?>" aria-label="<?php esc_attr_e( 'Install Businessx Extensions Now', 'businessx' ); ?>" data-name="<?php esc_attr_e( 'Businessx Extensions', 'businessx' ); ?>"><?php esc_html_e( 'Install Now', 'businessx' ); ?></a>
-                <a href="#" id="bx-dismiss-rec-plugin" class="button-secondary button" aria-label="<?php esc_attr_e( 'Dismiss Installer Message', 'businessx' ); ?>"><?php _e('Dismiss Notice', 'businessx' ) ?></a>
+                <a class="install-now button-primary button" data-slug="businessx-extensions" href="<?php echo esc_url( $plugin_install_url ); ?>" aria-label="<?php esc_attr_e( 'Install Businessx Extensions Now', 'businessx' ); ?>" data-name="<?php esc_attr_e( 'Businessx Extensions', 'businessx' ); ?>"><?php _ex( 'Install Now', 'businessx extensions recommend', 'businessx' ); ?></a>
+                <a href="#" id="bx-dismiss-rec-plugin" class="button-secondary button" aria-label="<?php esc_attr_e( 'Dismiss Installer Message', 'businessx' ); ?>"><?php _ex('Dismiss Notice', 'businessx extensions recommend', 'businessx' ) ?></a>
 
                 <br/></br>
     			<?php else : ?>
     				<hr>
-    				<p class="bx-not-activated"><?php printf( __( 'The plugin is installed but not activated. Please <a href="%s"><b>activate it</b></a>.', 'businessx' ), admin_url( 'plugins.php' ) ); ?></p>
+    				<p class="bx-not-activated"><?php printf( __( 'The plugin is installed but not activated. Please <a href="%s"><b>activate it</b></a>.', 'businessx' ), esc_url( admin_url( 'plugins.php' ) ) ); ?></p>
                     <a href="#" id="bx-dismiss-rec-plugin" class="button-secondary button"><?php _e('Dismiss Notice', 'businessx' ) ?></a>
 
                     <br/><br/>
@@ -155,7 +155,6 @@ if ( ! function_exists( 'businessx_installer_register' ) ) {
     		) );
     		// Add the setting. This is required by WordPress in order to add our control.
     		$wp_customize->add_setting( 'businessx_installer', array(
-    			'type'              => 'theme_mod',
     			'capability'        => 'install_plugins',
     			'default'           => '',
     			'sanitize_callback' => '__return_true',

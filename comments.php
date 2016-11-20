@@ -1,6 +1,6 @@
 <?php
 /* ------------------------------------------------------------------------- *
- *	Comments template					
+ * Comments template					
 /* ------------------------------------------------------------------------- */
 if ( post_password_required() ) {
 	return;
@@ -14,7 +14,7 @@ if ( post_password_required() ) {
 			<?php
 				/* Comments icon */
 				businessx_icon( 'comments' );
-				
+
 				/* Display title */
 				$comments_number = get_comments_number();
 				if ( 1 === $comments_number ) {

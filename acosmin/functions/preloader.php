@@ -13,7 +13,7 @@ if ( ! function_exists( 'businessx_preloader_css' ) ) {
 
 		$preloaders = array(
 			'balls' => array(
-				'css' => '.js div#bx-preloader .ac-loader { position: absolute; width: 171px; height: 45px; display: inline-block; top: 50%; left: 50%; margin-top: -22px; margin-left: -85px; }
+				'css' => '.bx-preloader div#bx-preloader .ac-loader { position: absolute; width: 171px; height: 45px; display: inline-block; top: 50%; left: 50%; margin-top: -22px; margin-left: -85px; }
 							@-webkit-keyframes ball-beat {
 							50% {
 								opacity: 0.2;
@@ -51,7 +51,7 @@ if ( ! function_exists( 'businessx_preloader_css' ) ) {
 								  -webkit-animation-delay: -0.35s !important;
 										  animation-delay: -0.35s !important; }
 							@media screen and (max-width: 1140px) {
-								.js div#bx-preloader .ac-loader { width: 114px; height: 30px; margin-top: -15px; margin-left: -57px; }
+								.bx-preloader div#bx-preloader .ac-loader { width: 114px; height: 30px; margin-top: -15px; margin-left: -57px; }
 								div#bx-preloader .ac-loader.ac-ball-beat > div {
 									width: 30px;
 									height: 30px;
@@ -61,7 +61,7 @@ if ( ! function_exists( 'businessx_preloader_css' ) ) {
 			), // Bubbles
 
 			'balls2' => array(
-				'css' => '.js div#bx-preloader .ac-loader { position: absolute; width: 171px; height: 45px; display: inline-block; top: 50%; left: 50%; margin-top: -22px; margin-left: -85px; }
+				'css' => '.bx-preloader div#bx-preloader .ac-loader { position: absolute; width: 171px; height: 45px; display: inline-block; top: 50%; left: 50%; margin-top: -22px; margin-left: -85px; }
 							@-webkit-keyframes scale {
 								0% {
 									-webkit-transform: scale(1);
@@ -116,7 +116,7 @@ if ( ! function_exists( 'businessx_preloader_css' ) ) {
 								display: inline-block;
 							}
 							@media screen and (max-width: 1140px) {
-								.js div#bx-preloader .ac-loader { width: 114px; height: 30px; margin-top: -15px; margin-left: -57px; }
+								.bx-preloader div#bx-preloader .ac-loader { width: 114px; height: 30px; margin-top: -15px; margin-left: -57px; }
 								div#bx-preloader .ac-loader.ac-ball-pulse > div {
 									width: 30px;
 									height: 30px;
@@ -223,8 +223,9 @@ if ( ! function_exists( 'businessx_preloader_output_css' ) ) {
 
 		// Preloader CSS Output
 		?>
-		<style type="text/css"> .js div#bx-preloader { position: fixed; left: 0; top: 0; z-index: 99999; width: 100%; height: 100%; overflow: visible; background-color: rgba(<?php esc_attr( businessx_hex2rgba( $bg, $op, false ) ) ?>); }
-		<?php echo preg_replace('/\s\s+/', ' ', wp_strip_all_tags( $preloader ) ); ?> </style>
+		<style type="text/css"> .bx-preloader div#bx-preloader { position: fixed; left: 0; top: 0; z-index: 99999; width: 100%; height: 100%; overflow: visible; background-color: rgba(<?php esc_attr( businessx_hex2rgba( $bg, $op, false ) ) ?>); }
+		<?php
+		echo businessx_sanitize_css( $preloader ); ?> </style>
 		<?php
 	}
 }
