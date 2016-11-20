@@ -33,7 +33,7 @@ businessx_get_heading_templ( 'page', 'full-width' );
 		<main id="main" class="<?php businessx_occ( 'businessx_page___main_classes' ); ?>" role="main">
 			<?php
 			while ( have_posts() ) : the_post();
-			    // Page template
+				// Page template
 				get_template_part( 'partials/posts/content', 'page' );
 
 				// If comments are open or we have at least one comment, load up the comment template
