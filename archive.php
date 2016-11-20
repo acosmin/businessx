@@ -3,13 +3,13 @@
  *	Archive template
 /* ------------------------------------------------------------------------- */
 
-/*  Filtered CSS classes
- *	---
- *	section: grid-wrap
- *	div: grid-container grid-1 padding-small clearfix
- *	main: grid-col grid-posts-col site-main clearfix
- *	---
-*/
+/**
+ * Filtered CSS classes
+ * ------
+ * section: grid-wrap
+ * div: grid-container grid-1 padding-small clearfix
+ * main: grid-col grid-posts-col site-main clearfix
+ */
 
 // Header and Footer templates
 $businessx_header_tmpl = apply_filters( 'businessx_header___tmpl', '' );
