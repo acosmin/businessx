@@ -3,13 +3,14 @@
  *	404 template
 /* ------------------------------------------------------------------------- */
 
-/*  Filtered CSS classes
- *	---
- *	section: grid-wrap
- *	div: grid-container grid-1 padding-small clearfix
- *	main: grid-col grid-4x-col site-404 clearfix
- *	---
-*/
+/**
+ * Filtered CSS classes
+ * ------
+ * section: grid-wrap
+ * div: grid-container grid-1 padding-small clearfix
+ * main: grid-col grid-4x-col site-404 clearfix
+ * ------
+ */
 
 // Header and Footer templates
 $businessx_header_tmpl = apply_filters( 'businessx_header___tmpl', '' );
