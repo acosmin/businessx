@@ -14,7 +14,7 @@
 			'preloader_info',
 			'preloader_settings',
 			__( 'Preloader Options', 'businessx' ),
-			__( '<p>This displays a loading animation until the browser fetched the whole web content and will fade out the moment the page has been completely cached.</p>', 'businessx') );
+			__( '<p>This displays a loading animation until the browser fetched the whole web content and will fade out the moment the page has been completely cached. <br /><br /><b>It is best to check this on the live website after you make changes and save.</b></p>', 'businessx') );
 
 		businessx_controller_checkbox(
 			'preloader_enable',
