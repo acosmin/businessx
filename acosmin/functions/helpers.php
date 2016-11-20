@@ -57,6 +57,7 @@ if ( ! function_exists( 'businessx_icon' ) ) {
 
 /*  Count widgets and get their #
 /*	position in sidebar
+/*  Used by Businessx Extensions
 /* ------------------------------------ */
 if ( ! function_exists( 'businessx_get_widget_position' ) ) {
 	function businessx_get_widget_position( $sidebar_name, $widget_base_ID ) {
