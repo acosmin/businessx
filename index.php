@@ -47,7 +47,7 @@ businessx_get_heading_templ( 'index', 'full-width' );
 
 		<?php do_action( 'businessx_index__inner_after' ); ?>
 
-    </div>
+	</div>
 
     <?php do_action( 'businessx_index__inner_sec_bottom' ); ?>
 </section>
