@@ -312,6 +312,7 @@ if ( ! function_exists( 'businessx_bg_options_size' ) ) {
 
 
 /*  Opacity options
+/*  Used by Businessx Extensions
 /* ------------------------------------ */
 if ( ! function_exists( 'businessx_opacity_options' ) ) {
 	function businessx_opacity_options( $multi = false, $simple = false ) {

@@ -241,19 +241,8 @@ if ( ! function_exists( 'businessx_controller_simple_opacity' ) ) {
 			'description'		=> $description,
 			'type'       		=> 'select',
 			'width'				=> '100',
-			'choices'			=> apply_filters( 'businessx_' . $setting_id . '_opacity_select_filter', array(
-										'0' 			=> esc_html__( 'Transparent', 'businessx' ),
-										'0.1'			=> esc_html__( '10%', 'businessx' ),
-										'0.2'			=> esc_html__( '20%', 'businessx' ),
-										'0.3' 			=> esc_html__( '30%', 'businessx' ),
-										'0.4' 			=> esc_html__( '40%', 'businessx' ),
-										'0.5' 			=> esc_html__( '50%', 'businessx' ),
-										'0.6' 			=> esc_html__( '60%', 'businessx' ),
-										'0.7' 			=> esc_html__( '70%', 'businessx' ),
-										'0.8' 			=> esc_html__( '80%', 'businessx' ),
-										'0.9' 			=> esc_html__( '90%', 'businessx' ),
-										'1' 			=> esc_html__( '100%', 'businessx' ),
-		) ) ) );
+			'choices'			=> businessx_opacity_options()
+		) );
 	}
 }
 
