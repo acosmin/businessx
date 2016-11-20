@@ -1,15 +1,16 @@
 <?php
 /* ------------------------------------------------------------------------- *
- *	Search template
+ * Search template
 /* ------------------------------------------------------------------------- */
 
-/*  Filtered CSS classes
- *	---
- *	section: grid-wrap
- *	div: grid-container grid-1 padding-small clearfix
- *	main: grid-col grid-posts-col site-search clearfix
- *	---
-*/
+/**
+ * Filtered CSS classes
+ * ------
+ * section: grid-wrap
+ * div: grid-container grid-1 padding-small clearfix
+ * main: grid-col grid-posts-col site-search clearfix
+ * ------
+ */
 
 // Header and Footer templates
 $businessx_header_tmpl = apply_filters( 'businessx_header___tmpl', '' );
@@ -27,9 +28,9 @@ businessx_get_heading_templ( 'search', 'full-width' );
 
 	<div class="<?php businessx_occ( 'businessx_search___container_classes' ); ?>">
 
-        <?php do_action( 'businessx_search__inner_before' ); ?>
+		<?php do_action( 'businessx_search__inner_before' ); ?>
 
-        <main id="main" class="<?php businessx_occ( 'businessx_search___main_classes' ); ?>" role="main">
+		<main id="main" class="<?php businessx_occ( 'businessx_search___main_classes' ); ?>" role="main">
 			<?php
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post();
@@ -40,13 +41,13 @@ businessx_get_heading_templ( 'search', 'full-width' );
 				get_template_part( 'partials/posts/content', 'none' );
 			endif;
 			?>
-        </main>
+		</main>
 
-        <?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
 
-        <?php do_action( 'businessx_search__inner_after' ); ?>
+		<?php do_action( 'businessx_search__inner_after' ); ?>
 
-    </div>
+	</div>
 
     <?php do_action( 'businessx_search__inner_sec_bottom' ); ?>
 </section>

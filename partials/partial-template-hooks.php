@@ -85,6 +85,6 @@ add_action( 'businessx_portfolio_content_after', 'businessx_portfolio_tags_displ
 add_action( 'businessx_portfolio_page__inner_items_wrap_top', 'businessx_portfolio_page_masonry_sizers' ); // Output masonry sizers
 
 /* -- Projects container inner bottom */
-add_action( 'businessx_portfolio_page__inner_container_bottom', 'businessx_portfolio_page_masonry_script' ); // Output masonry script
+add_action( 'wp_enqueue_scripts', 'businessx_portfolio_page_masonry_script' ); // Output masonry script
 
 endif; // Jetpack check

@@ -1,15 +1,16 @@
 <?php
 /* ------------------------------------------------------------------------- *
- *	Archive template
+ * Archive template
 /* ------------------------------------------------------------------------- */
 
-/*  Filtered CSS classes
- *	---
- *	section: grid-wrap
- *	div: grid-container grid-1 padding-small clearfix
- *	main: grid-col grid-posts-col site-main clearfix
- *	---
-*/
+/**
+ * Filtered CSS classes
+ * ------
+ * section: grid-wrap
+ * div: grid-container grid-1 padding-small clearfix
+ * main: grid-col grid-posts-col site-main clearfix
+ * ------
+ */
 
 // Header and Footer templates
 $businessx_header_tmpl = apply_filters( 'businessx_header___tmpl', '' );
@@ -29,7 +30,7 @@ businessx_get_heading_templ( 'archive', 'full-width' );
 
         <?php do_action( 'businessx_index__inner_before' ); ?>
 
-        <main id="main" class="<?php businessx_occ( 'businessx_index___main_classes' ); ?>" role="main">
+		<main id="main" class="<?php businessx_occ( 'businessx_index___main_classes' ); ?>" role="main">
 			<?php
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post();
@@ -40,7 +41,7 @@ businessx_get_heading_templ( 'archive', 'full-width' );
 				get_template_part( 'partials/posts/content', 'none' );
 			endif;
 			?>
-        </main>
+		</main>
 
         <?php get_sidebar(); ?>
 

@@ -31,19 +31,29 @@ if ( ! function_exists( 'businessx_logo_display' ) ) {
 		$custom_logo 	= get_theme_mod( 'custom_logo' );
 		$logo_type 		= get_theme_mod( 'logo_type_select', 'logo-text-type' );
 		$disabled		= get_theme_mod( 'footer_credits_logo_hide', false );
+		$tag			= ( $footer ) ? 'div' : 'h1';
+		$tag			= ( is_front_page() && is_home() && !$footer ) ? 'h1' : 'div';
 
 		if( $header_text ) {
 			if( $footer && $disabled )
 				return;
 
 			if( $custom_logo && $logo_type == 'logo-image-type' ) {
-				?>
-				<div class="logo-wrap"><?php the_custom_logo(); ?></div>
-				<?php
+
+				// Image logo format
+				$format = '<%1$s class="logo-wrap">%2$s</%1$s>';
+				$output = sprintf( $format, $tag, get_custom_logo() );
+
+				echo apply_filters( 'businessx_logo___image', $output, $format, $tag );
+
 			} else {
-				?>
-				<div class="logo-wrap"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-text"><?php echo get_bloginfo( 'name', 'display' ); ?></a></div>
-				<?php
+
+				// Text link format
+				$format = '<%1$s class="logo-wrap"><a href="%2$s" rel="home" class="logo-text">%3$s</a></%1$s>';
+				$output = sprintf( $format, $tag, esc_url( home_url('/') ), get_bloginfo( 'name', 'display' ) );
+
+				echo apply_filters( 'businessx_logo___text', $output, $format, $tag );
+
 			}
 		}
 	}
@@ -53,20 +63,22 @@ if ( ! function_exists( 'businessx_logo_display' ) ) {
 /* -- Display main menu  */
 if ( ! function_exists( 'businessx_menu_main_area' ) ) {
 	function businessx_menu_main_area() {
-		 ?>
-			<nav class="main-menu-wrap" role="navigation" aria-label="<?php _e( 'Primary Menu', 'businessx' ); ?>">
-				<?php
-                    $menu_args = apply_filters( 'businessx_menu___args', $menu_args = array(
-                        'theme_location'	=> 'primary',
-						'items_wrap'     	=> '<ul class="main-menu clearfix">%3$s<li class="close-menu"><a href="#" class="ac-btn btn-small ac-btn-mobile-close">' . businessx_icon( 'close', false ) . '</a></li></ul>',
-                        'container'			=> false,
-                        'fallback_cb'		=> 'businessx_fb_menu'
-                    ) );
+		if( has_nav_menu( 'primary' ) ) {
+		?>
+		<nav class="main-menu-wrap" role="navigation" aria-label="<?php _e( 'Primary Menu', 'businessx' ); ?>">
+			<?php
+                $menu_args = apply_filters( 'businessx_menu___args', $menu_args = array(
+                    'theme_location'	=> 'primary',
+					'items_wrap'     	=> '<ul class="main-menu clearfix">%3$s<li class="close-menu"><a href="#" class="ac-btn btn-small ac-btn-mobile-close">' . businessx_icon( 'close', false ) . '</a></li></ul>',
+                    'container'			=> false,
+                    'fallback_cb'		=> 'businessx_fb_menu'
+                ) );
 
-                    wp_nav_menu( $menu_args );
-                ?>
-        	</nav>
-         <?php
+                wp_nav_menu( $menu_args );
+            ?>
+    	</nav>
+		<?php
+		}
 	}
 }
 
@@ -102,7 +114,7 @@ if ( ! function_exists( 'businessx_menu_action_btns' ) ) {
 			'menu_class'     	=> 'actions-menu clearfix"',
 			'container'			=> false,
 			'depth'				=> 1,
-			'fallback_cb'		=> false,
+			'fallback_cb'		=> '__return_false',
 			'echo'				=> false,
 		) );
 
@@ -125,7 +137,7 @@ if ( ! function_exists( 'businessx_search_button' ) ) {
 /* -- Action buttons - Mobile menu */
 if ( ! function_exists( 'businessx_mobile_menu_button' ) ) {
 	function businessx_mobile_menu_button() {
-		$menu_btn = apply_filters( 'businessx_mobile_menu_button___text', $menu_btn = __( 'Menu', 'businessx' ) );
+		$menu_btn = apply_filters( 'businessx_mobile_menu_button___text', $menu_btn = _x( 'Menu', 'mobile anchor text', 'businessx' ) );
 		if ( has_nav_menu( 'primary' ) ) :
 		?>
         <span class="ac-btn-h ac-btn-mobile"><a href="#" class="ac-btn-mobile-menu"><?php businessx_icon( 'bars' ) ?> <?php echo esc_html( $menu_btn ); ?></a></span>
@@ -275,6 +287,7 @@ if ( ! function_exists( 'businessx_footer_creds_wrapper' ) ) {
 // -- Footer credits - navigation/menu
 if ( ! function_exists( 'businessx_footer_creds_menu' ) ) {
 	function businessx_footer_creds_menu() {
+		if( has_nav_menu( 'footer' ) ) {
 		?>
         <nav class="footer-creds-menu-wrap" role="navigation" aria-label="<?php _e( 'Footer Menu', 'businessx' ); ?>">
 			<?php
@@ -282,12 +295,13 @@ if ( ! function_exists( 'businessx_footer_creds_menu' ) ) {
                     'theme_location'	=> 'footer',
                     'menu_class'     	=> 'footer-creds-menu clearfix"',
                     'container'			=> false,
-					'fallback_cb'		=> false,
+					'fallback_cb'		=> 'businessx_fb_menu',
                     'depth'				=> 1,
                  ) ) );
             ?>
         </nav>
         <?php
+		}
 	}
 }
 
@@ -308,9 +322,9 @@ if ( ! function_exists( 'businessx_footer_creds_copyright' ) ) {
 				<?php
 				$show = apply_filters( 'businessx_theme_credits___show', true );
 				if( $show ) {
-					printf( esc_html__( '%1$s designed by %2$s.', 'businessx' ),
-						esc_html__( 'Businessx theme', 'businessx' ),
-						'<a href="' . BUSINESSX_AC_URL . '" title="' . esc_attr__( 'Premium WordPress Themes &amp; Plugins by Acosmin', 'businessx' ) . '">' . esc_html__( 'Acosmin', 'businessx' ) . '</a>'
+					printf( esc_html_x( '%1$s designed by %2$s.', 'credit text', 'businessx' ),
+						esc_html_x( 'Businessx theme', 'credit text - theme', 'businessx' ),
+						'<a href="' . esc_url( BUSINESSX_AC_URL ) . '" title="' . esc_attr__( 'Premium WordPress Themes &amp; Plugins by Acosmin', 'businessx' ) . '">' . esc_html_x( 'Acosmin', 'credit text - theme author', 'businessx' ) . '</a>'
 					);
 				}
 				?>
@@ -445,11 +459,7 @@ if ( ! function_exists( 'businessx_portfolio_page_masonry_sizers' ) ) {
 if ( ! function_exists( 'businessx_portfolio_page_masonry_script' ) ) {
 	function businessx_portfolio_page_masonry_script() {
 		$id = apply_filters( 'businessx_portfolio_page_masonry_script___id', 'sec-portfolio-wrap' );
-		?>
-		<script type='text/javascript'>
-			(function( $ ) { $( document ).ready(function() { var $sec_portwrap = $('#<?php echo esc_attr( $id ); ?>').masonry(); $sec_portwrap.imagesLoaded( function() { $sec_portwrap.masonry(); }); });})(jQuery);
-        </script>
-        <?php
+		wp_add_inline_script( 'jquery-masonry', '(function( $ ) { $( document ).ready(function() { var $sec_portwrap = $("#' . esc_attr( $id ) . ' ").masonry(); $sec_portwrap.imagesLoaded( function() { $sec_portwrap.masonry(); }); });})(jQuery);' );
 	}
 }
 

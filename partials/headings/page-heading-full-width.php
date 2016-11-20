@@ -9,7 +9,7 @@
     <?php do_action( 'businessx_phfw__inner_top' ); ?>
 	<div class="sec-hs-elements ta-center">
     	<?php do_action( 'businessx_phfw__heading_top' ); ?>
-    		<?php the_title( '<h2 class="hs-primary-large">', '</h2>' ); ?>
+    		<?php the_title( '<h1 class="hs-primary-large">', '</h1>' ); ?>
         <?php do_action( 'businessx_phfw__heading_bottom' ); ?>
     </div>
     <?php do_action( 'businessx_phfw__inner_bottom' ); ?>

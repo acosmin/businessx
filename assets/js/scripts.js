@@ -250,7 +250,7 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 				setTimeout(function(){
 					search_field.focus();
 				}, 100);
-				search_field.attr('placeholder', businessx_scripts_data['bx_search_placeholder'] );
+				search_field.attr('placeholder', businessx_scripts_data['search_placeholder'] );
 			});
 
 			search_field.on('touchend click', function( event ){
