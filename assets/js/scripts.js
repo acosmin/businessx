@@ -184,6 +184,7 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 							hasScrolled();
 							didScroll = false;
 						}
+					}, 250);
 
 					if( $window.scrollTop() > 0 ) { $header.removeClass( transp_class ); $logo_wrap.hide(); };
 
