@@ -144,37 +144,49 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 				moving_class	= 'mh-moving',
 				wHeight, wScrollCurrent, wScrollBefore, wScrollDiff, dHeight = 0;
 
+
+
 			if( $fixed_menu.length ) {
+				var dHeight				= $document.height(),
+					wHeight				= $window.height(),
+					didScroll;
+
 					$window.on( 'scroll', function() {
-						dHeight			= $document.height();
-						wHeight			= $window.height();
-						wScrollCurrent	= $window.scrollTop();
-						wScrollDiff		= wScrollBefore - wScrollCurrent;
+						didScroll = true;
+					});
+
+					function hasScrolled() {
+						var wScrollCurrent	= $window.scrollTop();
+						var wScrollDiff		= wScrollBefore - wScrollCurrent;
 
 						if( wScrollCurrent <= 0 ) {
-							$logo_wrap.fadeIn(300).css('display','');
+							$logo_wrap.fadeIn(100).css('display','');
 							if( $body.hasClass( 'menu-ff' ) ) {
-								$fixed_menu.removeClass( hidden_class ).removeClass( moving_class );
+								$fixed_menu.removeClass( moving_class );
 							} else if( $body.hasClass( 'menu-tf' ) ) {
-								$fixed_menu.removeClass( hidden_class ).addClass( transp_class ).removeClass( moving_class );
+								$fixed_menu.addClass( transp_class ).removeClass( moving_class );
 							};
 
-						} else if( wScrollDiff > 0 && $fixed_menu.hasClass( hidden_class ) ) {
-							$fixed_menu.removeClass( hidden_class );
-
 						} else if( wScrollDiff < 0 ) {
-							if( $body.hasClass( 'menu-tf' ) ) { $fixed_menu.removeClass( transp_class ); }
-							$logo_wrap.fadeOut(0);
-							if( wScrollCurrent + wHeight >= dHeight && $fixed_menu.hasClass( hidden_class ) ) {
-								$fixed_menu.removeClass( hidden_class );
+							if( $body.hasClass( 'menu-tf' ) ) {
+								$fixed_menu.removeClass( transp_class );
+								$logo_wrap.fadeOut(0);
 							} else {
-								$fixed_menu.addClass( moving_class ).addClass( hidden_class );
+								$logo_wrap.fadeOut(100);
 							}
 						}
 
 						wScrollBefore = wScrollCurrent;
+					}
 
-					});
+					setInterval(function () {
+						if (didScroll) {
+							hasScrolled();
+							didScroll = false;
+						}
+
+					if( $window.scrollTop() > 0 ) { $header.removeClass( transp_class ); $logo_wrap.hide(); };
+
 			}
 		} // Sticky menu
 		ac_FixedMenu();

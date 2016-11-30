@@ -2226,19 +2226,9 @@ body.no-sidebar .site-page {
     top: 0;
     left: 0;
 
-	-webkit-transition-duration: .3s;
-    transition-duration: .3s;
-
-    -webkit-transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
-    transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
-
-    -webkit-transition-property: -webkit-transform;
-    transition-property: transform;
-}
-.main-header.mh-hidden {
-    -webkit-transform: 	translateY( -100% );
-    -ms-transform: 		translateY( -100% );
-    transform: 			translateY( -100% );
+	-webkit-transition: padding-top 0.3s ease-in-out;
+    -moz-transition: padding-top 0.3s ease-in-out;
+    transition: padding-top 0.3s ease-in-out;
 }
 .main-header.mh-fixed.mh-transparent {
 	position: fixed;
@@ -2254,7 +2244,7 @@ body.no-sidebar .site-page {
 /* Transparent header */
 .main-header.mh-transparent {
 	position: absolute;
-	top: 1.111em;
+	padding-top: 2.778em;
 	background-color: transparent !important;
 	border: none !important;
 	box-shadow: none !important;
@@ -2301,6 +2291,7 @@ body.no-sidebar .site-page {
 	float:left;
 	display: inline-block;
 	margin-right: 2.500em;
+	padding-top: 3px;
 }
 .logo-wrap {
 	font-size: 1.333em;
