@@ -709,3 +709,79 @@ if ( ! function_exists( 'businessx_paged_comments_args' ) ) {
 		return (array) $args;
 	}
 }
+
+
+
+/*  Some Businessx Extensions helpers
+/* ------------------------------------ */
+
+// Check if Businessx Extensions is installed
+if ( ! function_exists( 'businessx_check_exts_installed' ) ) {
+	function businessx_check_exts_installed() {
+		if ( ! function_exists( 'get_plugins' ) ) {
+		    require_once ABSPATH . 'wp-admin/includes/plugin.php'; }
+		$plugins   = get_plugins();
+		$installed = false;
+
+		foreach ( $plugins as $plugin ) {
+			if ( 'Businessx Extensions' == $plugin['Name'] ) {
+				$installed = true;
+			}
+		}
+
+		return $installed;
+	}
+}
+
+// Check if Businessx Extensions plugin exists
+if ( ! function_exists( 'businessx_check_exts_state' ) ) {
+	function businessx_check_exts_state() {
+		if( function_exists( 'businessx_extensions_sections' ) ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+// Plugin install url
+if ( ! function_exists( 'businessx_create_exts_install_url' ) ) {
+	function businessx_create_exts_install_url() {
+		$plugin_slug = 'businessx-extensions';
+		$plugin_install_url = add_query_arg(
+			array(
+				'action' => 'install-plugin',
+				'plugin' => $plugin_slug,
+			),
+			self_admin_url( 'update.php' )
+		);
+		$nonce_key = 'install-plugin_' . $plugin_slug;
+		return $plugin_install_url = wp_nonce_url( $plugin_install_url, $nonce_key );
+	}
+}
+
+// Hide or show installer - section active_callback
+if ( ! function_exists( 'businessx_installer_sec_callback' ) ) {
+    function businessx_installer_sec_callback() {
+        $notice = get_theme_mod( 'dismiss_ext_notice', false );
+        return ( $notice ? false : true );
+    }
+}
+
+// Sets a theme mod to remember if the user selected to dismiss the
+// installer message.
+if ( ! function_exists( 'businessx_dismiss_ext_action' ) ) {
+    function businessx_dismiss_ext_action() {
+        // Check nonce
+        if( ! isset( $_POST[ 'businessx_dismiss_ext_nonce' ] ) || ! wp_verify_nonce( $_POST[ 'businessx_dismiss_ext_nonce' ], 'businessx_dismiss_ext_nonce' ) )
+            die( esc_html__( 'Permission denied', 'businessx' ) );
+
+        // Add theme mod - true or false
+        if( current_user_can( 'edit_theme_options' ) ) {
+            set_theme_mod( 'dismiss_ext_notice', true );
+        }
+        die();
+    }
+}
+add_action( 'wp_ajax_businessx_dismiss_ext', 'businessx_dismiss_ext_action' );
+add_action( 'wp_ajax_nopriv_businessx_dismiss_ext', 'businessx_dismiss_ext_action' );

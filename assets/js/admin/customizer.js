@@ -18,7 +18,7 @@ jQuery( document ).ready( function( $ ) {
 				businessx_dismiss_ext_nonce: businessx_customizer_js_vars.dismiss_ext_nonce,
 			}
 		}).done( function( data ) {
-			wp.customize.section( 'businessx_installer' ).deactivate();
+			wp.customize.section( 'bxext-installer' ).deactivate();
 		});
 	});
 

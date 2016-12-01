@@ -89,3 +89,11 @@
 	margin-left:  0;
 	margin-right: 8px;
 }
+
+/* Customizer Installer */
+.notice-bxext-installer {
+	border-bottom: 1px solid #eee;
+    overflow: hidden;
+    padding: 0 14px;
+    background-color: #f6f6f6;
+}
