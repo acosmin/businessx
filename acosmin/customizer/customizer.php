@@ -20,9 +20,11 @@ if ( ! function_exists( 'businessx_customize_register' ) ) {
 		require_once( BUSINESSX_CUSTOMIZER_PATH . 'controls/info/info.php' ); // Info control
 		require_once( BUSINESSX_CUSTOMIZER_PATH . 'controls/button/button.php' ); // Button control
 		require_once( BUSINESSX_CUSTOMIZER_PATH . 'controls/link/link.php' ); // Link section
+		require_once( BUSINESSX_CUSTOMIZER_PATH . 'controls/recommend/recommend.php' ); // Recommend Businessx Extensions
 
 		// Register custom sections
 		$wp_customize->register_section_type( 'Businessx_Section_Link' );
+		$wp_customize->register_section_type( 'Businessx_Installer_Section' );
 
 		// Add postMessage support for site title and description for the Customizer
 		$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
@@ -56,6 +58,7 @@ if ( ! function_exists( 'businessx_customize_register' ) ) {
 			/* ------------------------------------ */
 
 			require_once( BUSINESSX_CUSTOMIZER_PATH . 'sections/docs-button.php' ); // Documentation button
+			require_once( BUSINESSX_CUSTOMIZER_PATH . 'sections/recommend.php' ); // Businessx Extensions Recommendation
 			require_once( BUSINESSX_CUSTOMIZER_PATH . 'custom-options/options.php' ); // Custom options
 
 			$sections = array(

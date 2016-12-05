@@ -33,7 +33,18 @@
 
 	// Link section
 	api.sectionConstructor['link-button'] = api.Section.extend( {
+		// No events for this type of section.a
+		attachEvents: function () {},
 
+		// Always make the section active.
+		isContextuallyActive: function () {
+			return true;
+		}
+	} );
+
+
+	// Businessx Extensions installer
+	api.sectionConstructor['bxext-installer'] = api.Section.extend( {
 		// No events for this type of section.
 		attachEvents: function () {},
 

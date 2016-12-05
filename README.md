@@ -3,6 +3,12 @@ Businessx is distributed under the terms of the GNU GPL v2.0.
 
 ### Changelog ###
 
+**v1.0.5.1**
+* Updated license to GPLv3;
+* Updated screenshot.jpg;
+* Remade the menu script;
+* Fixed issues regarding WordPress v4.7;
+
 **v1.0.5**
 * Changed version from 1.0.4 to 1.0.5;
 * Removed Theme Updater (everything related to this option);

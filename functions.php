@@ -13,10 +13,10 @@
  *  Define some constants
 /* ------------------------------------ */
 if( ! defined( 'BUSINESSX_VERSION' ) ) {
-	define( 'BUSINESSX_VERSION', '1.0.5' ); }
+	define( 'BUSINESSX_VERSION', '1.0.5.1' ); }
 
 if( ! defined( 'BUSINESSX_AC_URL' ) ) {
-	define( 'BUSINESSX_AC_URL', 'http://www.acosmin.com/' ); }
+	define( 'BUSINESSX_AC_URL', '//www.acosmin.com/' ); }
 
 if( ! defined( 'BUSINESSX_AC_DOCS_URL' ) && defined( 'BUSINESSX_AC_URL' ) ) {
 	define( 'BUSINESSX_AC_DOCS_URL', BUSINESSX_AC_URL . 'documentation/businessx/' ); }
@@ -43,7 +43,6 @@ require_once ( BUSINESSX_FUNCTIONS_PATH . 'preloader.php' );
 require_once ( BUSINESSX_FUNCTIONS_PATH . 'post-options.php' );
 require_once ( BUSINESSX_FUNCTIONS_PATH . 'page-options.php' );
 require_once ( BUSINESSX_FUNCTIONS_PATH . 'portfolio-options.php' );
-require_once ( BUSINESSX_FUNCTIONS_PATH . 'recommend.php' );
 require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-css-classes.php' );
 require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-functions.php' );
 require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-helpers.php' );
@@ -204,7 +203,7 @@ if ( ! function_exists( 'businessx_sidebars_and_widgets' ) ) {
 		register_sidebar( array( // Index sidebar
 			'name'          => __( 'Index Sidebar', 'businessx' ),
 			'id'            => 'sidebar-index',
-			'description'   => __( 'Index Sidebar', 'businessx' ),
+			'description'   => __( 'This sidebar appears where the index/arhives views are shown.', 'businessx' ),
 			'before_widget' => '<aside id="%1$s" class="%2$s widget clearfix">',
 			'after_widget'  => '</aside><!-- END .widget -->',
 			'before_title'  => '<h3 class="widget-title hs-secondary-smallest ls-min"><span>',
@@ -266,7 +265,7 @@ if ( ! function_exists( 'businessx_sidebars_and_widgets' ) ) {
 		register_sidebar( array( // Footer #3 sidebar
 			'name'          => __( 'Footer #3 Sidebar', 'businessx' ),
 			'id'            => 'sidebar-footer-3',
-			'description'   => __( 'Three footer sidebar', 'businessx' ),
+			'description'   => __( 'Third footer sidebar', 'businessx' ),
 			'before_widget' => '<aside id="%1$s" class="%2$s widget clearfix">',
 			'after_widget'  => '</aside><!-- END .widget -->',
 			'before_title'  => '<h3 class="widget-title hs-secondary-smallest ls-min"><span>',
