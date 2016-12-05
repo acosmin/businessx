@@ -7,7 +7,7 @@ Requires at least: WordPress 4.5
 Tested up to: WordPress 4.7
 Version: 1.0.5.1
 License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 
 == Some links ==
