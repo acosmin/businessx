@@ -510,6 +510,15 @@ span > object {
 		top: 66px;
 	}
 }
+@media screen and (max-width: 600px) {
+	.admin-bar .search-wrap,
+	.admin-bar .main-header.mh-fixed {
+		top: 0px;
+	}
+	.admin-bar .main-header.mh-transparent {
+		top: 46px;
+	}
+}
 
 
 /**
