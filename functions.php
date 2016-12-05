@@ -203,7 +203,7 @@ if ( ! function_exists( 'businessx_sidebars_and_widgets' ) ) {
 		register_sidebar( array( // Index sidebar
 			'name'          => __( 'Index Sidebar', 'businessx' ),
 			'id'            => 'sidebar-index',
-			'description'   => __( 'Index Sidebar', 'businessx' ),
+			'description'   => __( 'This sidebar appears where the index/arhives views are shown.', 'businessx' ),
 			'before_widget' => '<aside id="%1$s" class="%2$s widget clearfix">',
 			'after_widget'  => '</aside><!-- END .widget -->',
 			'before_title'  => '<h3 class="widget-title hs-secondary-smallest ls-min"><span>',
@@ -265,7 +265,7 @@ if ( ! function_exists( 'businessx_sidebars_and_widgets' ) ) {
 		register_sidebar( array( // Footer #3 sidebar
 			'name'          => __( 'Footer #3 Sidebar', 'businessx' ),
 			'id'            => 'sidebar-footer-3',
-			'description'   => __( 'Three footer sidebar', 'businessx' ),
+			'description'   => __( 'Third footer sidebar', 'businessx' ),
 			'before_widget' => '<aside id="%1$s" class="%2$s widget clearfix">',
 			'after_widget'  => '</aside><!-- END .widget -->',
 			'before_title'  => '<h3 class="widget-title hs-secondary-smallest ls-min"><span>',
