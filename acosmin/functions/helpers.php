@@ -158,8 +158,8 @@ if ( ! function_exists( 'businessx_hide_sidebar' ) ) {
 	function businessx_hide_sidebar( $sidebar_type = NULL ) {
 		global $post;
 		$sidebar = (string) $sidebar_type;
-		$post_global 		= get_theme_mod( 'sidebars_post_disable', false );
-		$page_global 		= get_theme_mod( 'sidebars_page_disable', false );
+		$post_global = get_theme_mod( 'sidebars_post_disable', false );
+		$page_global = get_theme_mod( 'sidebars_page_disable', false );
 
 		if( ! empty( $post ) ) {
 			$pid = $post->ID;
@@ -187,6 +187,22 @@ if ( ! function_exists( 'businessx_hide_sidebar' ) ) {
 				}
 			} else {
 				return true;
+			}
+		}
+
+		if( businessx_wco_is_activated() ) {
+			$wooc_global = get_theme_mod( 'sidebars_page_disable', false ); // MADE CHANGES
+
+			if( is_woocommerce() ) {
+				if( $wooc_global != true ) {
+					if( isset( $display_sidebar ) ) {
+						return (bool) $display_sidebar;
+					} else {
+						return false;
+					}
+				} else {
+					return true;
+				}
 			}
 		}
 
@@ -785,3 +801,15 @@ if ( ! function_exists( 'businessx_dismiss_ext_action' ) ) {
 }
 add_action( 'wp_ajax_businessx_dismiss_ext', 'businessx_dismiss_ext_action' );
 add_action( 'wp_ajax_nopriv_businessx_dismiss_ext', 'businessx_dismiss_ext_action' );
+
+
+
+/*  Some WooCommerce helpers
+/* ------------------------------------ */
+
+// Check if plugin is active/exists
+if ( ! function_exists( 'businessx_wco_is_activated' ) ) {
+	function businessx_wco_is_activated() {
+		if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
+	}
+}

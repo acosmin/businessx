@@ -464,3 +464,37 @@ if ( ! function_exists( 'businessx_portfolio_page_masonry_script' ) ) {
 }
 
 endif; // Jetpack check
+
+
+
+/* ------------------------------------------------------------------------- *
+ *  WooCommerce
+/* ------------------------------------------------------------------------- */
+
+if( businessx_wco_is_activated() ) {
+
+/* -- Change number or products per row to 3 */
+if ( ! function_exists( 'businessx_wco_loop_columns' ) ) {
+	function businessx_wco_loop_columns() {
+		if( ! businessx_hide_sidebar( 'shop' ) ) {
+			return 3;
+		} else {
+			return 4;
+		}
+	}
+}
+
+/* Before shop loop */
+if ( ! function_exists( 'businessx_wco_before_shop_loop_start' ) ) {
+	function businessx_wco_before_shop_loop_start() {
+		echo '<div class="before-shop-loop clearfix">';
+	}
+}
+
+if ( ! function_exists( 'businessx_wco_before_shop_loop_end' ) ) {
+	function businessx_wco_before_shop_loop_end() {
+		echo '</div>';
+	}
+}
+
+} // WooCommerce Activated/Exists

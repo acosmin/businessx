@@ -126,6 +126,9 @@ if ( ! function_exists( 'businessx_setup' ) ) {
 		// Widgets selective refresh
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// WooCommerce theme support
+		add_theme_support( 'woocommerce' );
+
 	}
 }
 add_action( 'after_setup_theme', 'businessx_setup' );

@@ -88,3 +88,28 @@ add_action( 'businessx_portfolio_page__inner_items_wrap_top', 'businessx_portfol
 add_action( 'wp_enqueue_scripts', 'businessx_portfolio_page_masonry_script' ); // Output masonry script
 
 endif; // Jetpack check
+
+
+
+/* ------------------------------------------------------------------------- *
+ *  WooCommerce
+/* ------------------------------------------------------------------------- */
+
+if( businessx_wco_is_activated() ) {
+
+/* -- Breadcrumbs */
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+add_action( 'businessx_woocom_hfw__heading_bottom', 'woocommerce_breadcrumb', 20 );
+add_action( 'businessx_woocom_shfw__heading_bottom', 'woocommerce_breadcrumb', 20 );
+
+/* -- Before shop loop */
+add_action( 'woocommerce_before_shop_loop', 'businessx_wco_before_shop_loop_start', 1 );
+add_action( 'woocommerce_before_shop_loop', 'businessx_wco_before_shop_loop_end', 999 );
+
+/* -- Products list */
+add_filter( 'loop_shop_columns', 'businessx_wco_loop_columns' ); // Number of products per row
+
+/* -- Product page */
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+
+} // WooCommerce Activated/Exists
