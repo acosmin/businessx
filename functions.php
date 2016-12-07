@@ -275,6 +275,18 @@ if ( ! function_exists( 'businessx_sidebars_and_widgets' ) ) {
 			'after_title'   => '</span></h3>',
 		) );
 
+		if( businessx_wco_is_activated() ) {
+			register_sidebar( array( // Shop sidebar
+				'name'          => __( 'Shop Sidebar', 'businessx' ),
+				'id'            => 'sidebar-shop',
+				'description'   => __( 'Shop sidebar - index/archive view', 'businessx' ),
+				'before_widget' => '<aside id="%1$s" class="%2$s widget clearfix">',
+				'after_widget'  => '</aside><!-- END .widget -->',
+				'before_title'  => '<h3 class="widget-title hs-secondary-smallest ls-min"><span>',
+				'after_title'   => '</span></h3>',
+			) );
+		}
+
 	}
 }
 add_action( 'widgets_init', 'businessx_sidebars_and_widgets', 20 );

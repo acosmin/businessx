@@ -472,6 +472,24 @@ if ( ! function_exists( 'businessx_sidebar_single_classes' ) ) {
 }
 add_filter( 'businessx_sidebar___single_classes', 'businessx_sidebar_single_classes' );
 
+// -- Shop sidebar
+if( businessx_wco_is_activated() ) {
+
+if ( ! function_exists( 'businessx_sidebar_shop_classes' ) ) {
+	function businessx_sidebar_shop_classes( $classes ) {
+		$classes[] = 'grid-col';
+		$classes[] = 'grid-sidebar-col';
+		$classes[] = 'last-col';
+		$classes[] = 'sidebar';
+		$classes[] = 'sidebar-shop';
+		$classes[] = 'clearfix';
+		return $classes;
+	}
+}
+add_filter( 'businessx_sidebar___shop_classes', 'businessx_sidebar_shop_classes' );
+
+}
+
 // -- Page sidebar
 if ( ! function_exists( 'businessx_sidebar_page_classes' ) ) {
 	function businessx_sidebar_page_classes( $classes ) {

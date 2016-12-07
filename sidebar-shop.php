@@ -6,24 +6,24 @@
 /**
  * Filtered CSS classes
  * ------
- * div#sidebar-single: grid-col grid-sidebar-col last-col sidebar sidebar-single clearfix
+ * div#sidebar-single: grid-col grid-sidebar-col last-col sidebar sidebar-shop clearfix
  * ------
  */
 
 if( ! businessx_hide_sidebar( 'shop' ) ) :
 ?>
-<div id="sidebar-single" role="complementary" class="<?php businessx_occ( 'businessx_sidebar___single_classes' ); ?>">
+<div id="sidebar-shop" role="complementary" class="<?php businessx_occ( 'businessx_sidebar___shop_classes' ); ?>">
 	<?php
-	do_action( 'businessx_sidebar_single__index_top' );
+	do_action( 'businessx_sidebar_shop__index_top' );
 
 		// Display widgets
-		if ( is_active_sidebar( 'sidebar-single' ) ) {
-			dynamic_sidebar( 'sidebar-single' );
+		if ( is_active_sidebar( 'sidebar-shop' ) ) {
+			dynamic_sidebar( 'sidebar-shop' );
 		} else {
-			businessx_sidebars_demo_widgets( __( 'Posts Sidebar', 'businessx' ) );
+			businessx_sidebars_demo_widgets( __( 'Shop Sidebar', 'businessx' ) );
 		}
 
-	do_action( 'businessx_sidebar_single__index_bottom' );
+	do_action( 'businessx_sidebar_shop__index_bottom' );
 	?>
 </div>
 <?php endif; ?>
