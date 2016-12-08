@@ -10,7 +10,7 @@
  * ------
  */
 
-if( ! businessx_hide_sidebar( 'shop' ) ) :
+if( ! businessx_hide_sidebar( 'product' ) ) :
 ?>
 <div id="sidebar-shop" role="complementary" class="<?php businessx_occ( 'businessx_sidebar___shop_classes' ); ?>">
 	<?php

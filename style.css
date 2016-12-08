@@ -9,7 +9,7 @@ Description: Businessx is a modern one page WordPress theme, perfect for any bus
 Version: 1.0.5.1
 License: GNU General Public License version 3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags: custom-header, grid-layout, right-sidebar, sticky-post, translation-ready, threaded-comments, featured-images, custom-menu, theme-options, footer-widgets, portfolio, blog, news
+Tags: custom-header, grid-layout, right-sidebar, sticky-post, translation-ready, threaded-comments, featured-images, custom-menu, theme-options, footer-widgets, portfolio, blog, e-commerce
 Text Domain: businessx
 
 ========================================================================
@@ -4239,6 +4239,14 @@ input:disabled {
 .woocommerce.no-sidebar ul.products li.product,
 .woocommerce-page.no-sidebar ul.products li.product {
 	width: 22.05%;
+}
+@media only screen and (max-width: 768px) {
+	.woocommerce.no-sidebar ul.products li.product,
+	.woocommerce-page.no-sidebar ul.products li.product,
+	.woocommerce-page[class*=columns-].no-sidebar ul.products li.product,
+	.woocommerce[class*=columns-].no-sidebar ul.products li.product {
+		width: 48%;
+	}
 }
 .woocommerce .term-description {
 	font-family: serif;

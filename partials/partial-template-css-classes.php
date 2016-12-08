@@ -91,6 +91,9 @@ if ( ! function_exists( 'businessx_body_classes' ) ) {
 		if( businessx_hide_sidebar( 'portfolio' ) ) {
 			$new_classes[] = 'no-sidebar';
 		}
+		if( businessx_hide_sidebar( 'product' ) ) {
+			$new_classes[] = 'no-sidebar';
+		}
 
 		//$new_classes[] = 'fader-reset'; // ADD OPTION
 

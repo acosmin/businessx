@@ -42,6 +42,7 @@ require_once ( BUSINESSX_FUNCTIONS_PATH . 'helpers.php' );
 require_once ( BUSINESSX_FUNCTIONS_PATH . 'preloader.php' );
 require_once ( BUSINESSX_FUNCTIONS_PATH . 'post-options.php' );
 require_once ( BUSINESSX_FUNCTIONS_PATH . 'page-options.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'product-options.php' ); /* MADE CHANGES */
 require_once ( BUSINESSX_FUNCTIONS_PATH . 'portfolio-options.php' );
 require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-css-classes.php' );
 require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-functions.php' );

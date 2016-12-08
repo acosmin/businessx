@@ -476,19 +476,18 @@ if( businessx_wco_is_activated() ) {
 /* -- Change number or products per row to 3 */
 if ( ! function_exists( 'businessx_wco_loop_columns' ) ) {
 	function businessx_wco_loop_columns() {
-		if( ! businessx_hide_sidebar( 'shop' ) ) {
-			return 3;
-		} else {
-			return 4;
-		}
+		return ( ! businessx_hide_sidebar( 'product' ) ) ? 3 : 4;
 	}
 }
 
 /* -- Related products */
 if ( ! function_exists( 'businessx_wco_related_loop_columns' ) ) {
 	function businessx_wco_related_loop_columns( $args ) {
-		$args['posts_per_page'] = apply_filters( 'businessx_wco_filter_related___ppp', 3 );
-		$args['columns'] = apply_filters( 'businessx_wco_filter_related___columns', 3 );
+		$cols = ( ! businessx_hide_sidebar( 'product' ) ) ? 3 : 4;
+
+		$args['posts_per_page'] = apply_filters( 'businessx_wco_filter_related___ppp', $cols );
+		$args['columns'] = apply_filters( 'businessx_wco_filter_related___columns', $cols );
+
 		return $args;
 	}
 }
@@ -523,7 +522,7 @@ if ( ! function_exists( 'businessx_wco_cart_link' ) ) {
 	function businessx_wco_cart_link() {
 		?>
 		<span class="ac-btn-h shopping-button">
-			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'businessx' ); ?>">
 				<?php businessx_icon( 'shopping-bag' ) ?><span class="count"><?php echo absint( WC()->cart->get_cart_contents_count() ); ?></span>
 			</a>
 		</span>
