@@ -131,6 +131,10 @@ $businessx_cs_no_filters = array(
 	'colors_footer_credits_text' => '#7a7a7a',
 	'colors_footer_credits_links' => '#ffffff',
 
+	/* Colors - WooCommerce */
+	'colors_woocommerce_accent' => '#76bc1c',
+	'colors_woocommerce_accent2' => '#1c82bc',
+
 );
 
 if( ! empty( $businessx_cs_no_filters ) ) {

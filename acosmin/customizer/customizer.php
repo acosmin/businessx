@@ -67,7 +67,7 @@ if ( ! function_exists( 'businessx_customize_register' ) ) {
 				),
 				'colors' => array(
 					'body', 'links', 'headings', 'inputs', 'buttons', 'header', 'header-heading',
-					'mobile-menu', 'sidebars', 'footer', 'footer-credits'
+					'mobile-menu', 'sidebars', 'footer', 'footer-credits', 'woocommerce'
 				)
 			);
 

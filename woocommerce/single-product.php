@@ -7,7 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'shop' ); ?>
+$businessx_header_tmpl = apply_filters( 'businessx_header___tmpl', '' );
+$businessx_footer_tmpl = apply_filters( 'businessx_footer___tmpl', '' );
+
+get_header( $businessx_header_tmpl ); ?>
 
 	<?php
 	if ( apply_filters( 'woocommerce_show_page_title', true ) ) :
@@ -23,7 +26,7 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-		<main id="main" class="<?php businessx_occ( 'businessx_single___main_classes' ); ?>" role="main">
+		<main id="main" class="<?php businessx_occ( 'businessx_wc_single___main_classes' ); ?>" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -51,4 +54,4 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_after_main_content' );
 	?>
 
-<?php get_footer( 'shop' ); ?>
+<?php get_footer( $businessx_footer_tmpl ); ?>

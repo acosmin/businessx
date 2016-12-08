@@ -179,11 +179,11 @@ if ( ! function_exists( 'businessx_hide_sidebar' ) ) {
 		}
 
 		if( businessx_wco_is_activated() ) {
-			$wooc_global = get_theme_mod( 'sidebars_woocommerce_disable', false ); // MADE CHANGES
+			$wooc_global = get_theme_mod( 'sidebars_woocommerce_disable', false );
 
 			if( is_woocommerce() ) {
 				if( $wooc_global != true ) {
-					if( isset( $display_sidebar ) ) { // Product metabox
+					if( isset( $display_sidebar ) ) {
 						return (bool) $display_sidebar;
 					} else {
 						return false;

@@ -292,12 +292,12 @@ del {
 table,
 th,
 td,
-.woocommerce table.shop_table { /* MADE CHANGES */
+.woocommerce table.shop_table {
 	border-width: 1px;
 	border-style: solid;
 }
 table,
-.woocommerce table.shop_table { /* MADE CHANGES */
+.woocommerce table.shop_table {
 	border-collapse: separate;
 	border-spacing: 0;
 	border-width: 1px 0 0 1px;
@@ -529,7 +529,7 @@ span > object {
  */
 /* Same Background Color */
 body, .comment-reply-title,
-.woocommerce div.product .woocommerce-tabs ul.tabs li.active { /* MADE CHANGES */
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
 	background-color: #ffffff;
 }
 .comment-reply-title:after {
@@ -537,16 +537,16 @@ body, .comment-reply-title,
 	border-color: transparent;
 	border-bottom-color: #fff;
 }
-.woocommerce div.product .woocommerce-tabs ul.tabs li.active { /* MADE CHANGES */
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
 	border-bottom-color: #fff;
 }
-.woocommerce .widget_price_filter .ui-slider .ui-slider-handle { /* MADE CHANGES */
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
 	box-shadow: 0 0 0 2px #fff;
 }
 hr, .comments-title .fa {
 	background-color: rgba(0,0,0,.2);
 }
-.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content { /* MADE CHANGES */
+.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
 	background-color: #e1e1e1;
 }
 /* Same Font Family */
@@ -556,15 +556,15 @@ body, input, select, textarea, .logo-wrap {
 h1, h2, h3, h4, h5, h6, .sec-pricing-box .package-pricing, .sec-pricing-box .package-badge .badge, .ac-btn, input[type=submit], input[type=reset], input[type=button], button, .posts-pagination, .comment-navigation,
 .woocommerce-breadcrumb,
 .woocommerce-pagination,
-.woocommerce a.button, /* MADE CHANGES */
+.woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button,
 .woocommerce #respond input#submit,
-.woocommerce a.button.alt, /* MADE CHANGES */
+.woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt,
 .woocommerce #respond input#submit.alt,
-.main-header-btns .ac-btn-h.shopping-button .count { /* MADE CHANGES */
+.main-header-btns .ac-btn-h.shopping-button .count {
 	font-family: 'Poppins', sans-serif;
 }
 .main-menu > li.menu-item-has-children > a:after, .main-menu .sub-menu li.menu-item-has-children:before, .widget_contact_info > div:not(.contact-map):before, .mobile-menu .mobile-arrow {
@@ -591,7 +591,7 @@ a:hover, a:focus, a:active,
 .woocommerce nav.woocommerce-pagination ul li a:hover,
 .woocommerce nav.woocommerce-pagination ul li span.current,
 .woocommerce div.product .woocommerce-tabs ul.tabs li a,
-.woocommerce-MyAccount-navigation li.is-active a { /* MADE CHANGES */
+.woocommerce-MyAccount-navigation li.is-active a {
 	color: #000000; /* #000000 */
 }
 h1, h2, h3, h4, h5, h6 {
@@ -603,19 +603,19 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
 h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus,
 h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active,
-.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover, /* MADE CHANGES */
+.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:focus,
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:active,
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
 	color: #444444; /* #444444 */
 }
 blockquote cite, blockquote small, .wp-caption .wp-caption-text, .gallery-caption, .comment-notes, .logged-in-as, .form-allowed-tags,
-.woocommerce .star-rating:before { /* MADE CHANGES */
+.woocommerce .star-rating:before {
 	color: #999999; /* #999999 */
 }
 .woocommerce ul.products li.product .price,
 .woocommerce div.product p.price,
-.woocommerce div.product span.price { /* MADE CHANGES */
+.woocommerce div.product span.price {
 	color: #76bc1c;
 }
 /* Same border color */
@@ -625,7 +625,7 @@ blockquote, pre, abbr, acronym, table, th, td, fieldset, .tagcloud a, .post-inde
 .woocommerce div.product .woocommerce-tabs ul.tabs:before,
 .woocommerce div.product .woocommerce-tabs ul.tabs li,
 .woocommerce table.shop_table, #add_payment_method .cart-collaterals .cart_totals table td, #add_payment_method .cart-collaterals .cart_totals table th, .woocommerce-cart .cart-collaterals .cart_totals table td, .woocommerce-cart .cart-collaterals .cart_totals table th, .woocommerce-checkout .cart-collaterals .cart_totals table td, .woocommerce-checkout .cart-collaterals .cart_totals table th, #add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods, .woocommerce-checkout-payment, .woocommerce-MyAccount-navigation ul,
-.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register { /* MADE CHANGES */
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
 	border-color: #e1e1e1; /* #e1e1e1 */
 }
 .comment-reply-title:before {
@@ -670,7 +670,7 @@ blockquote, pre, abbr, acronym, table, th, td, fieldset, .tagcloud a, .post-inde
 	opacity: .7;
 }
 /* Same Animations */
-a, input, select, textarea, .main-menu li ul, .sec-slider .active .sec-hs-elements, .sec-slider .ss-prev, .sec-slider .ss-next, .sec-slider .owl-dot, .sec-clients-nav-btns a, .main-header-btns .ac-btn-h, .sec-team-member .sec-team-member-avatar img, .search-wrap, .post-index .entry-thumbnail img, .mobile-menu .sub-menu, .woocommerce .woocommerce-breadcrumb { /* MADE CHANGES */
+a, input, select, textarea, .main-menu li ul, .sec-slider .active .sec-hs-elements, .sec-slider .ss-prev, .sec-slider .ss-next, .sec-slider .owl-dot, .sec-clients-nav-btns a, .main-header-btns .ac-btn-h, .sec-team-member .sec-team-member-avatar img, .search-wrap, .post-index .entry-thumbnail img, .mobile-menu .sub-menu, .woocommerce .woocommerce-breadcrumb {
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	-ms-transition: all .2s ease-in-out;
@@ -918,7 +918,7 @@ ins,
 .woocommerce div.product span.price ins,
 .woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
 .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
-.woocommerce span.onsale { /* MADE CHANGES */
+.woocommerce span.onsale {
 	background: #1c82bc;
 	color: #fff;
 	padding: 0.125em 0.25em;
@@ -1024,7 +1024,7 @@ big {
 	width: 100%;
 }
 .grid-1	.grid-posts-col,
-.grid-1	.grid-woocommerce-col { /* MADE CHANGES */
+.grid-1	.grid-woocommerce-col {
 	width: 66.09375%;
 }
 .grid-1 .grid-sidebar-col {
@@ -1034,12 +1034,14 @@ big {
 	padding-bottom: 5.222em;
 }
 body.no-sidebar .site-single,
+body.no-sidebar .site-wc-single,
 body.no-sidebar .site-page,
 body.no-sidebar .site-portfolio,
 body.no-sidebar .info-full {
 	max-width: 58.889em;
 }
 body.no-sidebar .site-single,
+body.no-sidebar .site-wc-single,
 body.no-sidebar .site-portfolio,
 body.no-sidebar .site-page {
 	display: block;
@@ -2004,7 +2006,7 @@ body.no-sidebar .site-page {
 }*/
 .sec-hs-elements .hs-primary-large, .sec-hs-elements .sec-hs-description, .sec-hs-elements .ac-btns-or,
 .single-heading .entry-meta-list, .index-heading .entry-meta-list, .page-heading .entry-meta-list,
-.woocommerce .term-description, .woocommerce .woocommerce-breadcrumb { /* MADE CHANGES */
+.woocommerce .term-description, .woocommerce .woocommerce-breadcrumb {
 	text-shadow: 0 1px 2px rgba(0,0,0,0.75);
 }
 .sec-hs-buttons {
@@ -2945,7 +2947,7 @@ body.nav-open .mobile-menu {
 }
 .single-heading a:not(.ac-btn), .single-heading a:not(.ac-btn):hover, .single-heading a:not(.ac-btn):focus, .single-heading a:not(.ac-btn):active,
 .index-heading a:not(.ac-btn), .index-heading a:not(.ac-btn):hover, .index-heading a:not(.ac-btn):focus, .index-heading a:not(.ac-btn):active,
-.page-heading a:not(.ac-btn), .page-heading a:not(.ac-btn):hover, .page-heading a:not(.ac-btn):focus, .page-heading a:not(.ac-btn):active, .woocommerce .woocommerce-breadcrumb { /* MADE CHANGES */
+.page-heading a:not(.ac-btn), .page-heading a:not(.ac-btn):hover, .page-heading a:not(.ac-btn):focus, .page-heading a:not(.ac-btn):active, .woocommerce .woocommerce-breadcrumb {
 	color: #fff;
 }
 .single-heading a:not(.ac-btn):hover,
@@ -3536,12 +3538,12 @@ body.nav-open .mobile-menu {
  */
 /* Default btn */
 .ac-btn, input[type=submit], input[type=reset], input[type=button], button,
-.woocommerce a.button, /* MADE CHANGES */
+.woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button,
 .woocommerce input[type=submit].button,
 .woocommerce #respond input#submit,
-.woocommerce a.button.alt, /* MADE CHANGES */
+.woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt,
 .woocommerce #respond input#submit.alt {
@@ -3561,16 +3563,15 @@ input[type=submit], input[type=reset], input[type=button], button {
 	outline: none;
 }
 .ac-btn:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, button:hover,
-.woocommerce a.button:hover, /* MADE CHANGES */
+.woocommerce a.button:hover,
 .woocommerce button.button:hover,
 .woocommerce input.button:hover,
 .woocommerce input[type=submit].button:hover,
 .woocommerce #respond input#submit:hover,
-.woocommerce a.button.alt:hover, /* MADE CHANGES */
+.woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
 .woocommerce input.button.alt:hover,
 .woocommerce #respond input#submit.alt:hover,
-/* MADE CHANGES */
 .woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled], .woocommerce a.button.disabled, .woocommerce a.button:disabled, .woocommerce a.button:disabled[disabled], .woocommerce button.button.disabled, .woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce input.button.disabled, .woocommerce input.button:disabled, .woocommerce input.button:disabled[disabled],
 .woocommerce #respond input#submit.disabled:hover, .woocommerce #respond input#submit:disabled:hover, .woocommerce #respond input#submit:disabled[disabled]:hover, .woocommerce a.button.disabled:hover, .woocommerce a.button:disabled:hover, .woocommerce a.button:disabled[disabled]:hover, .woocommerce button.button.disabled:hover, .woocommerce button.button:disabled:hover, .woocommerce button.button:disabled[disabled]:hover, .woocommerce input.button.disabled:hover, .woocommerce input.button:disabled:hover, .woocommerce input.button:disabled[disabled]:hover,
 .woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce input.button.alt.disabled:hover, .woocommerce input.button.alt:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover {
@@ -3581,22 +3582,22 @@ input[type=submit], input[type=reset], input[type=button], button {
 
 }
 .ac-btn:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=button]:focus, button:focus,
-.woocommerce a.button:focus, /* MADE CHANGES */
+.woocommerce a.button:focus,
 .woocommerce button.button:focus,
 .woocommerce input.button:focus,
 .woocommerce input[type=submit].button:focus,
 .woocommerce #respond input#submit:focus,
-.woocommerce a.button.alt:focus, /* MADE CHANGES */
+.woocommerce a.button.alt:focus,
 .woocommerce button.button.alt:focus,
 .woocommerce input.button.alt:focus,
 .woocommerce #respond input#submit.alt:focus,
 .ac-btn:active, input[type=submit]:active, input[type=reset]:active, input[type=button]:focus, button:active,
-.woocommerce a.button:active, /* MADE CHANGES */
+.woocommerce a.button:active,
 .woocommerce button.button:active,
 .woocommerce input.button:active,
 .woocommerce input[type=submit].button:active,
 .woocommerce #respond input#submit:active,
-.woocommerce a.button.alt:active, /* MADE CHANGES */
+.woocommerce a.button.alt:active,
 .woocommerce button.button.alt:active,
 .woocommerce input.button.alt:active,
 .woocommerce #respond input#submit.alt:active {
@@ -3666,12 +3667,12 @@ input[type=submit], input[type=reset], input[type=button], button {
 }
 /* Default btn sizes */
 .btn-biggest, .btn-big, .btn-small, input[type=submit], input[type=reset], input[type=button], button,
-.woocommerce a.button, /* MADE CHANGES */
+.woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button,
 .woocommerce input[type=submit].button,
 .woocommerce #respond input#submit,
-.woocommerce a.button.alt, /* MADE CHANGES */
+.woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt,
 .woocommerce #respond input#submit.alt {
@@ -3682,32 +3683,32 @@ input[type=submit], input[type=reset], input[type=button], button {
 	line-height: 3.750em;
 }
 .btn-big, input[type=submit], input[type=reset], input[type=button], button,
-.woocommerce a.button, /* MADE CHANGES */
+.woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button,
 .woocommerce #respond input#submit {
 	line-height: 3.375em;
 }
-.woocommerce a.button.alt, /* MADE CHANGES */
+.woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt,
 .woocommerce #respond input#submit.alt {
 	line-height: 3.225em !important;
 }
 .btn-small, .btn-smallest,
-.woocommerce a.button, /* MADE CHANGES */
+.woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button,
 .woocommerce #respond input#submit {
 	padding: 0 0.875em;
 }
 .btn-small,
-.woocommerce a.button, /* MADE CHANGES */
+.woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button,
 .woocommerce input[type=submit].button,
 .woocommerce #respond input#submit,
-.woocommerce a.button.alt, /* MADE CHANGES */
+.woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt,
 .woocommerce #respond input#submit.alt {
@@ -3953,12 +3954,12 @@ a.simple-social[href=""] i:before {
  * 10.2 - Posts Pagination
  */
 .posts-pagination.grid-col,
-.woocommerce-pagination { /* MADE CHANGES */
+.woocommerce-pagination {
 	font-size: 1.222em;
 	margin-bottom: 0;
 }
 .posts-pagination .paging-wrap,
-.woocommerce nav.woocommerce-pagination ul { /* MADE CHANGES */
+.woocommerce nav.woocommerce-pagination ul {
 	display: inline-block;
 	border-width: 2px;
 	border-style: solid;
@@ -3975,14 +3976,14 @@ a.simple-social[href=""] i:before {
 .woocommerce nav.woocommerce-pagination ul li span,
 .woocommerce nav.woocommerce-pagination ul li a:focus,
 .woocommerce nav.woocommerce-pagination ul li a:hover,
-.woocommerce nav.woocommerce-pagination ul li span.current { /* MADE CHANGES */
+.woocommerce nav.woocommerce-pagination ul li span.current {
 	float: left;
 	line-height: 2.818em;
 	border: none;
 	background: none;
 }
 .woocommerce nav.woocommerce-pagination ul li a,
-.woocommerce nav.woocommerce-pagination ul li span { /* MADE CHANGES */
+.woocommerce nav.woocommerce-pagination ul li span {
 	padding-top: 0;
 	padding-bottom: 0;
 	font-weight: 700;
@@ -3992,7 +3993,7 @@ a.simple-social[href=""] i:before {
 .posts-pagination.in-post a,
 .woocommerce nav.woocommerce-pagination ul,
 .woocommerce nav.woocommerce-pagination ul li a,
-.woocommerce nav.woocommerce-pagination ul li span { /* MADE CHANGES */
+.woocommerce nav.woocommerce-pagination ul li span {
 	padding: 0 0.682em;
 }
 .posts-pagination.in-post a span {
@@ -4058,7 +4059,7 @@ select,
 textarea,
 #add_payment_method table.cart td.actions .coupon .input-text,
 .woocommerce-cart table.cart td.actions .coupon .input-text,
-.woocommerce-checkout table.cart td.actions .coupon .input-text { /* MADE CHANGES */
+.woocommerce-checkout table.cart td.actions .coupon .input-text {
 	border: none;
     border-bottom-width: 2px;
 	border-bottom-style: solid;
@@ -4153,7 +4154,7 @@ select:focus,
 textarea:focus,
 #add_payment_method table.cart td.actions .coupon .input-text:focus,
 .woocommerce-cart table.cart td.actions .coupon .input-text:focus,
-.woocommerce-checkout table.cart td.actions .coupon .input-text:focus { /* MADE CHANGES */
+.woocommerce-checkout table.cart td.actions .coupon .input-text:focus {
 	border-bottom-width: 2px;
     border-color: #76bc1c;
 	background-color: #fcfcfc;
@@ -4244,7 +4245,9 @@ input:disabled {
 	.woocommerce.no-sidebar ul.products li.product,
 	.woocommerce-page.no-sidebar ul.products li.product,
 	.woocommerce-page[class*=columns-].no-sidebar ul.products li.product,
-	.woocommerce[class*=columns-].no-sidebar ul.products li.product {
+	.woocommerce[class*=columns-].no-sidebar ul.products li.product,
+	.woocommerce ul.products li.product,
+	.woocommerce-page ul.products li.product {
 		width: 48%;
 	}
 }
@@ -4454,6 +4457,17 @@ input:disabled {
 	border-radius: 6px;
 	padding: 1.4em;
 }
+.woocommerce form.login {
+	font-size: 1.222em;
+	width: 50%;
+	min-width: 250px;
+	border-width: 2px;
+	margin-left: auto;
+	margin-right:  auto;
+}
+.woocommerce-account .woocommerce > h2 {
+	text-align: center;
+}
 
 
 /**
@@ -4586,7 +4600,7 @@ input:disabled {
 
 	/* Grids */
 	.grid-1	.grid-posts-col,
-	.grid-1	.grid-woocommerce-col, /* MADE CHANGES */
+	.grid-1	.grid-woocommerce-col,
 	.grid-1 .grid-sidebar-col,
 	.grid-1 .grid-2x3-col {
 		width: 100%;

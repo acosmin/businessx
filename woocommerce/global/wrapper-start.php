@@ -6,6 +6,14 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
+
+/**
+ * Filtered CSS classes
+ * ------
+ * section: grid-wrap gw-woocommerce
+ * div: grid-container gc-woocommerce grid-1 padding-small clearfix
+ * ------
+ */
 ?>
-<section role="main" id="content" class="grid-wrap">
-	<div class="grid-container grid-1 padding-small clearfix">
+<section id="content" class="<?php businessx_occ( 'businessx_wc_wrapper___section_classes' ); ?>">
+	<div class="<?php businessx_occ( 'businessx_wc_wrapper___container_classes' ); ?>">

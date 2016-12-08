@@ -40,7 +40,7 @@
 			esc_html__( 'Disable sidebar globally', 'businessx' ),
 			esc_html__( 'This will overwrite any option you select for each page.', 'businessx' ), false );
 
-		////// Sidebars - WooCommerce /* MADE CHANGES */
+		////// Sidebars - WooCommerce
 		if( businessx_wco_is_activated() ) {
 		businessx_controller_info(
 			'sidebars_woocommerce_info',

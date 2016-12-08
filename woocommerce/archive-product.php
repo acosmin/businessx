@@ -1,26 +1,16 @@
 <?php
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
- *
- * This template can be overridden by copying it to yourtheme/woocommerce/archive-product.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     2.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'shop' ); ?>
+$businessx_header_tmpl = apply_filters( 'businessx_header___tmpl', '' );
+$businessx_footer_tmpl = apply_filters( 'businessx_footer___tmpl', '' );
+
+get_header( $businessx_header_tmpl ); ?>
 
 	<?php
 	if ( apply_filters( 'woocommerce_show_page_title', true ) ) :
@@ -38,7 +28,15 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_before_main_content' );
 	?>
 
-		<main id="main" class="grid-col grid-woocommerce-col site-main clearfix" role="main">
+		<?php
+		/**
+		 * Filtered CSS classes
+		 * ------
+		 * main: grid-col grid-woocommerce-col site-main clearfix
+		 * ------
+		 */
+		?>
+		<main id="main" class="<?php businessx_occ( 'businessx_wc_archive___main_classes' ); ?>" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -99,4 +97,4 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_after_main_content' );
 	?>
 
-<?php get_footer( 'shop' ); ?>
+<?php get_footer( $businessx_footer_tmpl ); ?>

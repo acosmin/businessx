@@ -254,7 +254,7 @@ if ( ! function_exists( 'businessx_header_bg_options' ) ) {
 			}
 		} else { $show_ch = true; }
 
-		// WooCommerce Category thumbnail MADE CHANGES
+		// WooCommerce Category thumbnail
 		if( businessx_wco_is_activated() ) {
 			if ( is_product_category() ) {
 				$category = get_queried_object();
