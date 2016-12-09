@@ -5,6 +5,7 @@ Businessx is distributed under the terms of the GNU GPL v2.0.
 
 **v1.0.5.2**
 * Added WooCommerce support;
+* Changed screenshot;
 
 **v1.0.5.1**
 * Updated license to GPLv3;
