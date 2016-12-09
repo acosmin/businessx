@@ -7,6 +7,7 @@
 $wp_customize->add_section( 'colors_woocommerce', array(
 	'title'				=> __( 'WooCommerce', 'businessx' ),
 	'panel'				=> 'colors_options',
+	'active_callback'	=> 'businessx_wco_is_activated',
 ) );
 
 	////// WooCommerce Colors
