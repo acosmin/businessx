@@ -1,6 +1,6 @@
 <?php
 /* -------------------------------------- */
-/* CSS template for Customizer Previewer
+/* CSS template for Customizer Previewera
 /* -------------------------------------- */
 
 if ( ! function_exists( 'businessx_czr_output_css' ) ) {
@@ -20,7 +20,7 @@ if ( ! function_exists( 'businessx_czr_output_css' ) ) {
 		/* CSS GOES HERE */
 
 		/* Colors - Body */
-		body, .comment-reply-title {
+		body, .comment-reply-title, .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
 			background-color: {$settings['colors_body_background']};
 			color: {$settings['colors_body_font']};
 		}
@@ -29,13 +29,28 @@ if ( ! function_exists( 'businessx_czr_output_css' ) ) {
 			border-color: transparent;
 			border-bottom-color: {$settings['colors_body_background']};
 		}
-		blockquote, pre, abbr, acronym, table, th, td, fieldset, .tagcloud a, .post-index.sticky, .comments-title, .comment, .pingback, .comment-reply-title, .tags-display, .posts-pagination .paging-wrap {
+		.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+			border-bottom-color: {$settings['colors_body_background']};
+		}
+		.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+			box-shadow: 0 0 0 2px {$settings['colors_body_background']};
+		}
+		blockquote, pre, abbr, acronym, table, th, td, fieldset, .tagcloud a, .post-index.sticky, .comments-title, .comment, .pingback, .comment-reply-title, .tags-display, .posts-pagination .paging-wrap,
+		.woocommerce div.product form.cart .variations,
+		.woocommerce nav.woocommerce-pagination ul,
+		.woocommerce div.product .woocommerce-tabs ul.tabs:before,
+		.woocommerce div.product .woocommerce-tabs ul.tabs li,
+		.woocommerce table.shop_table, #add_payment_method .cart-collaterals .cart_totals table td, #add_payment_method .cart-collaterals .cart_totals table th, .woocommerce-cart .cart-collaterals .cart_totals table td, .woocommerce-cart .cart-collaterals .cart_totals table th, .woocommerce-checkout .cart-collaterals .cart_totals table td, .woocommerce-checkout .cart-collaterals .cart_totals table th, #add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods, .woocommerce-checkout-payment, .woocommerce-MyAccount-navigation ul,
+		.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
 			border-color: {$settings['colors_body_border']};
+		}
+		.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
+			background-color: {$settings['colors_body_border']};
 		}
 		.comment-reply-title:before {
 			border-bottom-color: {$settings['colors_body_border']};
 		}
-		blockquote cite, blockquote small, .wp-caption .wp-caption-text, .gallery-caption, .comment-notes, .logged-in-as, .form-allowed-tags {
+		blockquote cite, blockquote small, .wp-caption .wp-caption-text, .gallery-caption, .comment-notes, .logged-in-as, .form-allowed-tags, .woocommerce .star-rating:before {
 			color: {$settings['colors_body_999']};
 		}
 
@@ -43,7 +58,12 @@ if ( ! function_exists( 'businessx_czr_output_css' ) ) {
 		a {
 			color: {$settings['colors_links_default']};
 		}
-		a:hover, a:focus, a:active {
+		a:hover, a:focus, a:active,
+		.woocommerce nav.woocommerce-pagination ul li a:focus,
+		.woocommerce nav.woocommerce-pagination ul li a:hover,
+		.woocommerce nav.woocommerce-pagination ul li span.current,
+		.woocommerce div.product .woocommerce-tabs ul.tabs li a,
+		.woocommerce-MyAccount-navigation li.is-active a {
 			color: {$settings['colors_links_other']};
 		}
 
@@ -54,7 +74,7 @@ if ( ! function_exists( 'businessx_czr_output_css' ) ) {
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 			color: {$settings['colors_headings_default']};
 		}
-		h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus, h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+		h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus, h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,  .woocommerce div.product .woocommerce-tabs ul.tabs li a:focus, .woocommerce div.product .woocommerce-tabs ul.tabs li a:active, .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
 			color: {$settings['colors_headings_other']};
 		}
 
@@ -89,7 +109,10 @@ if ( ! function_exists( 'businessx_czr_output_css' ) ) {
 		input[type=month],
 		input[type=number],
 		select,
-		textarea {
+		textarea,
+		#add_payment_method table.cart td.actions .coupon .input-text,
+		.woocommerce-cart table.cart td.actions .coupon .input-text,
+		.woocommerce-checkout table.cart td.actions .coupon .input-text {
 			border-color: {$settings['colors_inputs_border_bottom']};
 			background-color: {$settings['colors_inputs_background']};
 			color: {$settings['colors_inputs_color']};
@@ -114,19 +137,42 @@ if ( ! function_exists( 'businessx_czr_output_css' ) ) {
 		input[type=month]:focus,
 		input[type=number]:focus,
 		select:focus,
-		textarea:focus {
+		textarea:focus,
+		#add_payment_method table.cart td.actions .coupon .input-text:focus, .woocommerce-cart table.cart td.actions .coupon .input-text:focus, .woocommerce-checkout table.cart td.actions .coupon .input-text:focus {
 			border-color: {$settings['colors_inputs_f_border_bottom']};
 			background-color: {$settings['colors_inputs_f_background']};
 		}
 
 		/* Colors - Default Button */
-		.ac-btn, input[type=submit], input[type=reset], input[type=button], button {
+		.ac-btn, input[type=submit], input[type=reset], input[type=button], button,
+		.woocommerce a.button,
+		.woocommerce button.button,
+		.woocommerce input.button,
+		.woocommerce input[type=submit].button,
+		.woocommerce #respond input#submit,
+		.woocommerce a.button.alt,
+		.woocommerce button.button.alt,
+		.woocommerce input.button.alt,
+		.woocommerce #respond input#submit.alt {
 			background-color: {$settings['colors_btn_def_default']};
 		}
-		.ac-btn:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, button:hover {
+		.ac-btn:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, button:hover,
+		.woocommerce a.button:hover,
+		.woocommerce button.button:hover,
+		.woocommerce input.button:hover,
+		.woocommerce input[type=submit].button:hover,
+		.woocommerce #respond input#submit:hover,
+		.woocommerce a.button.alt:hover,
+		.woocommerce button.button.alt:hover,
+		.woocommerce input.button.alt:hover,
+		.woocommerce #respond input#submit.alt:hover,
+		.woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled], .woocommerce a.button.disabled, .woocommerce a.button:disabled, .woocommerce a.button:disabled[disabled], .woocommerce button.button.disabled, .woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce input.button.disabled, .woocommerce input.button:disabled, .woocommerce input.button:disabled[disabled],
+		.woocommerce #respond input#submit.disabled:hover, .woocommerce #respond input#submit:disabled:hover, .woocommerce #respond input#submit:disabled[disabled]:hover, .woocommerce a.button.disabled:hover, .woocommerce a.button:disabled:hover, .woocommerce a.button:disabled[disabled]:hover, .woocommerce button.button.disabled:hover, .woocommerce button.button:disabled:hover, .woocommerce button.button:disabled[disabled]:hover, .woocommerce input.button.disabled:hover, .woocommerce input.button:disabled:hover, .woocommerce input.button:disabled[disabled]:hover,
+		.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce input.button.alt.disabled:hover, .woocommerce input.button.alt:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover {
 			background-color: {$settings['colors_btn_def_hover']};
 		}
-		.ac-btn:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=button]:focus, button:focus, .ac-btn:active, input[type=submit]:active, input[type=reset]:active, input[type=button]:focus, button:active {
+		.ac-btn:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=button]:focus, button:focus, .ac-btn:active, input[type=submit]:active, input[type=reset]:active, input[type=button]:focus, button:active, .woocommerce a.button:focus,
+		.woocommerce button.button:focus, .woocommerce input.button:focus, .woocommerce input[type=submit].button:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button.alt:focus, .woocommerce button.button.alt:focus, .woocommerce input.button.alt:focus, .woocommerce #respond input#submit.alt:focus, .ac-btn:active, input[type=submit]:active, input[type=reset]:active, input[type=button]:focus, button:active, .woocommerce a.button:active, .woocommerce button.button:active, .woocommerce input.button:active, .woocommerce input[type=submit].button:active, .woocommerce #respond input#submit:active, .woocommerce a.button.alt:active, .woocommerce button.button.alt:active, .woocommerce input.button.alt:active, .woocommerce #respond input#submit.alt:active {
 			background-color: {$settings['colors_btn_def_other']};
 		}
 
@@ -311,7 +357,7 @@ if ( ! function_exists( 'businessx_czr_output_css' ) ) {
 			background: -webkit-linear-gradient(top, {$settings['colors_header_heading_page_overlay_shadow']} 0%, rgba(0,0,0,0) 100%);
 			background: linear-gradient(to bottom, {$settings['colors_header_heading_page_overlay_shadow']} 0%, rgba(0,0,0,0) 100%);
 		}
-		.page-heading a:not(.ac-btn), .page-heading a:not(.ac-btn):hover, .page-heading a:not(.ac-btn):focus, .page-heading a:not(.ac-btn):active {
+		.page-heading a:not(.ac-btn), .page-heading a:not(.ac-btn):hover, .page-heading a:not(.ac-btn):focus, .page-heading a:not(.ac-btn):active, .woocommerce .woocommerce-breadcrumb {
 			color: {$settings['colors_header_heading_page_links']};
 		}
 
@@ -326,7 +372,11 @@ if ( ! function_exists( 'businessx_czr_output_css' ) ) {
 		.single-heading .sec-hs-elements .hs-primary-large,
 		.single-heading .sec-hs-elements .sec-hs-description,
 		.single-heading .sec-hs-elements .ac-btns-or,
-		.single-heading .entry-meta-list {
+		.single-heading .entry-meta-list,
+		.index-heading .entry-meta-list,
+		.page-heading .entry-meta-list,
+		.woocommerce .term-description,
+		.woocommerce .woocommerce-breadcrumb {
 			text-shadow: 0 1px 2px {$settings['colors_header_heading_single_text_shadow']};
 		}
 		.single-heading .grid-overlay {
@@ -409,6 +459,23 @@ if ( ! function_exists( 'businessx_czr_output_css' ) ) {
 		}
 		.footer-creds a, .footer-creds a:hover, .footer-creds a:focus, .footer-creds a:active {
 			color: {$settings['colors_footer_credits_links']};
+		}
+
+		/* Colors - WooCommerce */
+		mark,
+		ins,
+		.woocommerce ul.products li.product .price ins,
+		.woocommerce div.product p.price ins,
+		.woocommerce div.product span.price ins,
+		.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
+		.woocommerce .widget_price_filter .ui-slider .ui-slider-range,
+		.woocommerce span.onsale {
+			background-color: {$settings['colors_woocommerce_accent2']};
+		}
+		.woocommerce ul.products li.product .price,
+		.woocommerce div.product p.price,
+		.woocommerce div.product span.price {
+			color: {$settings['colors_woocommerce_accent']};
 		}
 
 CSS;

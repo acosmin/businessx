@@ -39,3 +39,17 @@
 			'sidebars_settings',
 			esc_html__( 'Disable sidebar globally', 'businessx' ),
 			esc_html__( 'This will overwrite any option you select for each page.', 'businessx' ), false );
+
+		////// Sidebars - WooCommerce
+		if( businessx_wco_is_activated() ) {
+		businessx_controller_info(
+			'sidebars_woocommerce_info',
+			'sidebars_settings',
+			__( 'WooCommerce view', 'businessx' ) );
+
+		businessx_controller_checkbox(
+			'sidebars_woocommerce_disable',
+			'sidebars_settings',
+			esc_html__( 'Disable sidebar globally', 'businessx' ),
+			esc_html__( 'This will overwrite any option you select for each product or on shop homepage/archives. Also, this does not work for cart,  checkout and my account pages (use the Page view option instead)', 'businessx' ), false );
+		} // END WooCommerce Check

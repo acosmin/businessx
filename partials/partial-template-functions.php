@@ -464,3 +464,70 @@ if ( ! function_exists( 'businessx_portfolio_page_masonry_script' ) ) {
 }
 
 endif; // Jetpack check
+
+
+
+/* ------------------------------------------------------------------------- *
+ *  WooCommerce
+/* ------------------------------------------------------------------------- */
+
+if( businessx_wco_is_activated() ) {
+
+/* -- Change number or products per row to 3 */
+if ( ! function_exists( 'businessx_wco_loop_columns' ) ) {
+	function businessx_wco_loop_columns() {
+		return ( ! businessx_hide_sidebar( 'product' ) ) ? 3 : 4;
+	}
+}
+
+/* -- Related products */
+if ( ! function_exists( 'businessx_wco_related_loop_columns' ) ) {
+	function businessx_wco_related_loop_columns( $args ) {
+		$cols = ( ! businessx_hide_sidebar( 'product' ) ) ? 3 : 4;
+
+		$args['posts_per_page'] = apply_filters( 'businessx_wco_filter_related___ppp', $cols );
+		$args['columns'] = apply_filters( 'businessx_wco_filter_related___columns', $cols );
+
+		return $args;
+	}
+}
+
+/* Before shop loop */
+if ( ! function_exists( 'businessx_wco_before_shop_loop_start' ) ) {
+	function businessx_wco_before_shop_loop_start() {
+		echo '<div class="before-shop-loop clearfix">';
+	}
+}
+
+if ( ! function_exists( 'businessx_wco_before_shop_loop_end' ) ) {
+	function businessx_wco_before_shop_loop_end() {
+		echo '</div>';
+	}
+}
+
+/* Shopping Cart */
+if ( ! function_exists( 'businessx_wco_cart_link_fragment' ) ) {
+	function businessx_wco_cart_link_fragment( $fragments ) {
+		global $woocommerce;
+
+		ob_start();
+		businessx_wco_cart_link();
+		$fragments['span.shopping-button'] = ob_get_clean();
+
+		return $fragments;
+	}
+}
+
+if ( ! function_exists( 'businessx_wco_cart_link' ) ) {
+	function businessx_wco_cart_link() {
+		?>
+		<span class="ac-btn-h shopping-button">
+			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'businessx' ); ?>">
+				<?php businessx_icon( 'shopping-bag' ) ?><span class="count"><?php echo absint( WC()->cart->get_cart_contents_count() ); ?></span>
+			</a>
+		</span>
+		<?php
+	}
+}
+
+} // WooCommerce Activated/Exists

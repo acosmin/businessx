@@ -59,25 +59,29 @@ if ( ! function_exists( 'businessx_final_inline_css' ) ) {
 
 		/* Colors - Body */
 		if( businessx_cd( 'colors_body_background', $colors_body_background ) ) {
-			$css .= businessx_gcs( 'body, .comment-reply-title', 'background-color', 'colors_body_background' );
-			$css .= businessx_gcs( '.comment-reply-title:after', 'border-bottom-color', 'colors_body_background' ); }
+			$css .= businessx_gcs( 'body, .comment-reply-title, .woocommerce div.product .woocommerce-tabs ul.tabs li.active', 'background-color', 'colors_body_background' );
+			$css .= businessx_gcs( '.comment-reply-title:after', 'border-bottom-color', 'colors_body_background' );
+			$css .= businessx_gcs( '.woocommerce div.product .woocommerce-tabs ul.tabs li.active', 'border-bottom-color', 'colors_body_background' );
+			$css .= businessx_gcs( '.woocommerce .widget_price_filter .ui-slider .ui-slider-handle', 'box-shadow', 'colors_body_background', '0 0 0 2px' );}
 
 		if( businessx_cd( 'colors_body_font', $colors_body_font ) ) {
 			$css .= businessx_gcs( 'body', 'color', 'colors_body_font' ); }
 
 		if( businessx_cd( 'colors_body_border', $colors_body_border ) ) {
-			$css .= businessx_gcs( 'blockquote, pre, abbr, acronym, table, th, td, fieldset, .tagcloud a, .post-index.sticky, .comments-title, .comment, .pingback, .comment-reply-title, .tags-display, .posts-pagination .paging-wrap', 'border-color', 'colors_body_border' );
-			$css .= businessx_gcs( '.comment-reply-title:before', 'border-bottom-color', 'colors_body_border' ); }
+			$css .= businessx_gcs( 'blockquote, pre, abbr, acronym, table, th, td, fieldset, .tagcloud a, .post-index.sticky, .comments-title, .comment, .pingback, .comment-reply-title, .tags-display, .posts-pagination .paging-wrap,.woocommerce div.product form.cart .variations,
+			.woocommerce nav.woocommerce-pagination ul, .woocommerce div.product .woocommerce-tabs ul.tabs:before, .woocommerce div.product .woocommerce-tabs ul.tabs li, .woocommerce table.shop_table, #add_payment_method .cart-collaterals .cart_totals table td, #add_payment_method .cart-collaterals .cart_totals table th, .woocommerce-cart .cart-collaterals .cart_totals table td, .woocommerce-cart .cart-collaterals .cart_totals table th, .woocommerce-checkout .cart-collaterals .cart_totals table td, .woocommerce-checkout .cart-collaterals .cart_totals table th, #add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods, .woocommerce-checkout-payment, .woocommerce-MyAccount-navigation ul, .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register', 'border-color', 'colors_body_border' );
+			$css .= businessx_gcs( '.comment-reply-title:before', 'border-bottom-color', 'colors_body_border' );
+			$css .= businessx_gcs( '.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content', 'background-color', 'colors_body_border' ); }
 
 		if( businessx_cd( 'colors_body_999', $colors_body_999 ) ) {
-			$css .= businessx_gcs( 'blockquote cite, blockquote small, .wp-caption .wp-caption-text, .gallery-caption, .comment-notes, .logged-in-as, .form-allowed-tags', 'color', 'colors_body_999' ); }
+			$css .= businessx_gcs( 'blockquote cite, blockquote small, .wp-caption .wp-caption-text, .gallery-caption, .comment-notes, .logged-in-as, .form-allowed-tags, .woocommerce .star-rating:before', 'color', 'colors_body_999' ); }
 
 		/* Colors - Links */
 		if( businessx_cd( 'colors_links_default', $colors_links_default ) ) {
 			$css .= businessx_gcs( 'a', 'color', 'colors_links_default' ); }
 
 		if( businessx_cd( 'colors_links_other', $colors_links_other ) ) {
-			$css .= businessx_gcs( 'a:hover, a:focus, a:active', 'color', 'colors_links_other' ); }
+			$css .= businessx_gcs( 'a:hover, a:focus, a:active,.woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current, .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce-MyAccount-navigation li.is-active a ', 'color', 'colors_links_other' ); }
 
 		/* Colors - Headings */
 		if( businessx_cd( 'colors_headings_base', $colors_headings_base ) ) {
@@ -88,7 +92,7 @@ if ( ! function_exists( 'businessx_final_inline_css' ) ) {
 
 		if( businessx_cd( 'colors_headings_other', $colors_headings_other ) ) {
 			$css .= businessx_gcs(
-				'h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus, h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active',
+				'h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus, h6 a:focus, h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,  .woocommerce div.product .woocommerce-tabs ul.tabs li a:focus, .woocommerce div.product .woocommerce-tabs ul.tabs li a:active, .woocommerce div.product .woocommerce-tabs ul.tabs li.active a',
 				'color', 'colors_headings_other' ); }
 
 		/* Colors - Inputs */
@@ -99,30 +103,32 @@ if ( ! function_exists( 'businessx_final_inline_css' ) ) {
 			$css .= businessx_gcs( ':-ms-input-placeholder', 'color', 'colors_inputs_placeholder' ); }
 
 		if( businessx_cd( 'colors_inputs_border_bottom', $colors_inputs_border_bottom ) ) {
-			$css .= businessx_gcs( 'input[type=text], input[type=search], input[type=radio], input[type=tel], input[type=time], input[type=url], input[type=week], input[type=password], input[type=checkbox], input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=month], input[type=number], select, textarea', 'border-color', 'colors_inputs_border_bottom' ); }
+			$css .= businessx_gcs( 'input[type=text], input[type=search], input[type=radio], input[type=tel], input[type=time], input[type=url], input[type=week], input[type=password], input[type=checkbox], input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=month], input[type=number], select, textarea, #add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text', 'border-color', 'colors_inputs_border_bottom' ); }
 
 		if( businessx_cd( 'colors_inputs_background', $colors_inputs_background ) ) {
-			$css .= businessx_gcs( 'input[type=text], input[type=search], input[type=radio], input[type=tel], input[type=time], input[type=url], input[type=week], input[type=password], input[type=checkbox], input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=month], input[type=number], select, textarea', 'background-color', 'colors_inputs_background' ); }
+			$css .= businessx_gcs( 'input[type=text], input[type=search], input[type=radio], input[type=tel], input[type=time], input[type=url], input[type=week], input[type=password], input[type=checkbox], input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=month], input[type=number], select, textarea, #add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text', 'background-color', 'colors_inputs_background' ); }
 
 		if( businessx_cd( 'colors_inputs_color', $colors_inputs_color ) ) {
-			$css .= businessx_gcs( 'input[type=text], input[type=search], input[type=radio], input[type=tel], input[type=time], input[type=url], input[type=week], input[type=password], input[type=checkbox], input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=month], input[type=number], select, textarea', 'color', 'colors_inputs_color' );
+			$css .= businessx_gcs( 'input[type=text], input[type=search], input[type=radio], input[type=tel], input[type=time], input[type=url], input[type=week], input[type=password], input[type=checkbox], input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=month], input[type=number], select, textarea, #add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text', 'color', 'colors_inputs_color' );
 			$css .= businessx_gcs( 'input[type=radio]:checked:before', 'background-color', 'colors_inputs_color' ); }
 
 		if( businessx_cd( 'colors_inputs_f_border_bottom', $colors_inputs_f_border_bottom ) ) {
-			$css .= businessx_gcs( 'input[type=text]:focus, input[type=search]:focus, input[type=radio]:focus, input[type=tel]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, input[type=password]:focus, input[type=checkbox]:focus, input[type=color]:focus, input[type=date]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=email]:focus, input[type=month]:focus, input[type=number]:focus, select:focus, textarea:focus', 'border-color', 'colors_inputs_f_border_bottom' ); }
+			$css .= businessx_gcs( 'input[type=text]:focus, input[type=search]:focus, input[type=radio]:focus, input[type=tel]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, input[type=password]:focus, input[type=checkbox]:focus, input[type=color]:focus, input[type=date]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=email]:focus, input[type=month]:focus, input[type=number]:focus, select:focus, textarea:focus, #add_payment_method table.cart td.actions .coupon .input-text:focus, .woocommerce-cart table.cart td.actions .coupon .input-text:focus, .woocommerce-checkout table.cart td.actions .coupon .input-text:focus', 'border-color', 'colors_inputs_f_border_bottom' ); }
 
 		if( businessx_cd( 'colors_inputs_f_background', $colors_inputs_f_background ) ) {
-			$css .= businessx_gcs( 'input[type=text]:focus, input[type=search]:focus, input[type=radio]:focus, input[type=tel]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, input[type=password]:focus, input[type=checkbox]:focus, input[type=color]:focus, input[type=date]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=email]:focus, input[type=month]:focus, input[type=number]:focus, select:focus, textarea:focus', 'background-color', 'colors_inputs_f_background' ); }
+			$css .= businessx_gcs( 'input[type=text]:focus, input[type=search]:focus, input[type=radio]:focus, input[type=tel]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, input[type=password]:focus, input[type=checkbox]:focus, input[type=color]:focus, input[type=date]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=email]:focus, input[type=month]:focus, input[type=number]:focus, select:focus, textarea:focus, #add_payment_method table.cart td.actions .coupon .input-text:focus, .woocommerce-cart table.cart td.actions .coupon .input-text:focus, .woocommerce-checkout table.cart td.actions .coupon .input-text:focus', 'background-color', 'colors_inputs_f_background' ); }
 
 		/* Colors - Default Button */
 		if( businessx_cd( 'colors_btn_def_default', $colors_btn_def_default ) ) {
-			$css .= businessx_gcs( '.ac-btn, input[type=submit], input[type=reset], input[type=button], button', 'background-color', 'colors_btn_def_default' ); }
+			$css .= businessx_gcs( '.ac-btn, input[type=submit], input[type=reset], input[type=button], button, .woocommerce a.button,  .woocommerce button.button, .woocommerce input.button, .woocommerce input[type=submit].button, .woocommerce #respond input#submit, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt', 'background-color', 'colors_btn_def_default' ); }
 
 		if( businessx_cd( 'colors_btn_def_hover', $colors_btn_def_hover ) ) {
-			$css .= businessx_gcs( '.ac-btn:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, button:hover', 'background-color', 'colors_btn_def_hover' ); }
+			$css .= businessx_gcs( '.ac-btn:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, button:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce input[type=submit].button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce #respond input#submit.disabled, .woocommerce #respond input#submit:disabled, .woocommerce #respond input#submit:disabled[disabled], .woocommerce a.button.disabled, .woocommerce a.button:disabled, .woocommerce a.button:disabled[disabled], .woocommerce button.button.disabled, .woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce input.button.disabled, .woocommerce input.button:disabled, .woocommerce input.button:disabled[disabled],
+			.woocommerce #respond input#submit.disabled:hover, .woocommerce #respond input#submit:disabled:hover, .woocommerce #respond input#submit:disabled[disabled]:hover, .woocommerce a.button.disabled:hover, .woocommerce a.button:disabled:hover, .woocommerce a.button:disabled[disabled]:hover, .woocommerce button.button.disabled:hover, .woocommerce button.button:disabled:hover, .woocommerce button.button:disabled[disabled]:hover, .woocommerce input.button.disabled:hover, .woocommerce input.button:disabled:hover, .woocommerce input.button:disabled[disabled]:hover, .woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce input.button.alt.disabled:hover, .woocommerce input.button.alt:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover', 'background-color', 'colors_btn_def_hover' ); }
 
 		if( businessx_cd( 'colors_btn_def_other', $colors_btn_def_other ) ) {
-			$css .= businessx_gcs( '.ac-btn:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=button]:focus, button:focus, .ac-btn:active, input[type=submit]:active, input[type=reset]:active, input[type=button]:focus, button:active', 'background-color', 'colors_btn_def_other' ); }
+			$css .= businessx_gcs( '.ac-btn:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=button]:focus, button:focus, .ac-btn:active, input[type=submit]:active, input[type=reset]:active, input[type=button]:focus, button:active, .woocommerce a.button:focus,
+			.woocommerce button.button:focus, .woocommerce input.button:focus, .woocommerce input[type=submit].button:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button.alt:focus, .woocommerce button.button.alt:focus, .woocommerce input.button.alt:focus, .woocommerce #respond input#submit.alt:focus, .ac-btn:active, input[type=submit]:active, input[type=reset]:active, input[type=button]:focus, button:active, .woocommerce a.button:active, .woocommerce button.button:active, .woocommerce input.button:active, .woocommerce input[type=submit].button:active, .woocommerce #respond input#submit:active, .woocommerce a.button.alt:active, .woocommerce button.button.alt:active, .woocommerce input.button.alt:active, .woocommerce #respond input#submit.alt:active', 'background-color', 'colors_btn_def_other' ); }
 
 		/* Colors - Opaque Button */
 		if( businessx_cd( 'colors_btn_opq_default', $colors_btn_opq_default ) ) {
@@ -275,7 +281,7 @@ if ( ! function_exists( 'businessx_final_inline_css' ) ) {
 
 		if( businessx_cd( 'colors_header_heading_page_links', $colors_header_heading_page_links ) ) {
 			$css .= businessx_gcs(
-				'.page-heading a:not(.ac-btn), .page-heading a:not(.ac-btn):hover, .page-heading a:not(.ac-btn):focus, .page-heading a:not(.ac-btn):active', 'color', 'colors_header_heading_page_links' ); }
+				'.page-heading a:not(.ac-btn), .page-heading a:not(.ac-btn):hover, .page-heading a:not(.ac-btn):focus, .page-heading a:not(.ac-btn):active, .woocommerce .woocommerce-breadcrumb', 'color', 'colors_header_heading_page_links' ); }
 
 		/* Header Heading - Single Colors */
 		if( businessx_cd( 'colors_header_heading_single_bg', $colors_header_heading_single_bg ) ) {
@@ -286,7 +292,8 @@ if ( ! function_exists( 'businessx_final_inline_css' ) ) {
 
 		if( businessx_cd( 'colors_header_heading_single_text_shadow', $colors_header_heading_single_text_shadow ) ) {
 			$css .= businessx_gcs(
-				'.single-heading .sec-hs-elements .hs-primary-large, .single-heading  .sec-hs-elements .sec-hs-description, .single-heading .sec-hs-elements .ac-btns-or, .single-heading .entry-meta-list', 'text-shadow', 'colors_header_heading_single_text_shadow', '0 1px 2px ' ); }
+				'.single-heading .sec-hs-elements .hs-primary-large, .single-heading  .sec-hs-elements .sec-hs-description, .single-heading .sec-hs-elements .ac-btns-or, .single-heading .entry-meta-list, .index-heading .entry-meta-list, .page-heading .entry-meta-list,
+				.woocommerce .term-description, .woocommerce .woocommerce-breadcrumb', 'text-shadow', 'colors_header_heading_single_text_shadow', '0 1px 2px ' ); }
 
 		if( businessx_cd( 'colors_header_heading_single_overlay_color', $colors_header_heading_single_overlay_color ) ) {
 			$css .= businessx_gcs( '.single-heading .grid-overlay', 'background-color', 'colors_header_heading_single_overlay_color' ); }
@@ -369,6 +376,12 @@ if ( ! function_exists( 'businessx_final_inline_css' ) ) {
 		if( businessx_cd( 'colors_footer_credits_links', $colors_footer_credits_links ) ) {
 			$css .= businessx_gcs( '.footer-creds a, .footer-creds a:hover, .footer-creds a:focus, .footer-creds a:active', 'color', 'colors_footer_credits_links' ); }
 
+		/* WooCommerce colors */
+		if( businessx_cd( 'colors_woocommerce_accent', $colors_woocommerce_accent ) ) {
+			$css .= businessx_gcs( '.woocommerce ul.products li.product .price, .woocommerce div.product p.price, .woocommerce div.product span.price', 'color', 'colors_woocommerce_accent' ); }
+
+		if( businessx_cd( 'colors_woocommerce_accent2', $colors_woocommerce_accent2 ) ) {
+			$css .= businessx_gcs( 'mark, ins, .woocommerce ul.products li.product .price ins, .woocommerce div.product p.price ins, .woocommerce div.product span.price ins, .woocommerce .widget_price_filter .ui-slider .ui-slider-handle, .woocommerce .widget_price_filter .ui-slider .ui-slider-range, .woocommerce span.onsale', 'background-color', 'colors_woocommerce_accent2' ); }
 
 		// Adds inline CSS
 		wp_add_inline_style( 'businessx-style', businessx_sanitize_css( $css ) );

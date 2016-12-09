@@ -13,7 +13,7 @@
  *  Define some constants
 /* ------------------------------------ */
 if( ! defined( 'BUSINESSX_VERSION' ) ) {
-	define( 'BUSINESSX_VERSION', '1.0.5.1' ); }
+	define( 'BUSINESSX_VERSION', '1.0.5.2' ); }
 
 if( ! defined( 'BUSINESSX_AC_URL' ) ) {
 	define( 'BUSINESSX_AC_URL', '//www.acosmin.com/' ); }
@@ -42,6 +42,7 @@ require_once ( BUSINESSX_FUNCTIONS_PATH . 'helpers.php' );
 require_once ( BUSINESSX_FUNCTIONS_PATH . 'preloader.php' );
 require_once ( BUSINESSX_FUNCTIONS_PATH . 'post-options.php' );
 require_once ( BUSINESSX_FUNCTIONS_PATH . 'page-options.php' );
+require_once ( BUSINESSX_FUNCTIONS_PATH . 'product-options.php' );
 require_once ( BUSINESSX_FUNCTIONS_PATH . 'portfolio-options.php' );
 require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-css-classes.php' );
 require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-functions.php' );
@@ -125,6 +126,9 @@ if ( ! function_exists( 'businessx_setup' ) ) {
 
 		// Widgets selective refresh
 		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		// WooCommerce theme support
+		add_theme_support( 'woocommerce' );
 
 	}
 }
@@ -271,6 +275,18 @@ if ( ! function_exists( 'businessx_sidebars_and_widgets' ) ) {
 			'before_title'  => '<h3 class="widget-title hs-secondary-smallest ls-min"><span>',
 			'after_title'   => '</span></h3>',
 		) );
+
+		if( businessx_wco_is_activated() ) {
+			register_sidebar( array( // Shop sidebar
+				'name'          => __( 'Shop Sidebar', 'businessx' ),
+				'id'            => 'sidebar-shop',
+				'description'   => __( 'Shop sidebar - index/archive view', 'businessx' ),
+				'before_widget' => '<aside id="%1$s" class="%2$s widget clearfix">',
+				'after_widget'  => '</aside><!-- END .widget -->',
+				'before_title'  => '<h3 class="widget-title hs-secondary-smallest ls-min"><span>',
+				'after_title'   => '</span></h3>',
+			) );
+		}
 
 	}
 }

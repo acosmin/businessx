@@ -239,6 +239,8 @@ if ( ! function_exists( 'businessx_header_bg_options' ) ) {
 		$show_ch 	= false;
 		$px_index	= get_theme_mod( 'enable_parallax_custom_headers', apply_filters( 'enable_parallax_custom_headers___filter', false ) );
 		$px_sp		= get_theme_mod( 'enable_parallax_featured_images', apply_filters( 'enable_parallax_featured_images___filter', false ) );
+		$wooheader  = false;
+		$wooindex   = false;
 
 		// Post id
 		if( ! empty( $post ) ) { $pid = $post->ID; }
@@ -252,8 +254,31 @@ if ( ! function_exists( 'businessx_header_bg_options' ) ) {
 			}
 		} else { $show_ch = true; }
 
+		// WooCommerce Category thumbnail
+		if( businessx_wco_is_activated() ) {
+			if ( is_product_category() ) {
+				$category = get_queried_object();
+
+				$thumbnail_id = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true  );
+				if ( $thumbnail_id ) {
+					$image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
+					$image = $image[0];
+				} else {
+					$image = false;
+				}
+
+				if ( $image ) {
+					$css .= ' #top-header { background-image: url("' . esc_url( $image ) . '"); }';
+					$wooheader = true;
+				}
+			}
+			if( is_shop() ) {
+				$wooindex = true;
+			}
+		}
+
 		// Custom header
-		if ( ! empty( $ch ) && ! businessx_front_pt() && $show_ch && ! ( is_page() || is_single() ) && ! $px_index ) {
+		if ( ! empty( $ch ) && ! businessx_front_pt() && $show_ch && ! ( is_page() || is_single() ) && ! $px_index && ! $wooheader ) {
 			$css .= ' #top-header { background-image: url("' . esc_url( $ch ) . '"); }';
 		}
 
