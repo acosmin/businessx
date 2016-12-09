@@ -91,6 +91,9 @@ if ( ! function_exists( 'businessx_body_classes' ) ) {
 		if( businessx_hide_sidebar( 'portfolio' ) ) {
 			$new_classes[] = 'no-sidebar';
 		}
+		if( businessx_hide_sidebar( 'product' ) ) {
+			$new_classes[] = 'no-sidebar';
+		}
 
 		//$new_classes[] = 'fader-reset'; // ADD OPTION
 
@@ -472,6 +475,24 @@ if ( ! function_exists( 'businessx_sidebar_single_classes' ) ) {
 }
 add_filter( 'businessx_sidebar___single_classes', 'businessx_sidebar_single_classes' );
 
+// -- Shop sidebar
+if( businessx_wco_is_activated() ) {
+
+if ( ! function_exists( 'businessx_sidebar_shop_classes' ) ) {
+	function businessx_sidebar_shop_classes( $classes ) {
+		$classes[] = 'grid-col';
+		$classes[] = 'grid-sidebar-col';
+		$classes[] = 'last-col';
+		$classes[] = 'sidebar';
+		$classes[] = 'sidebar-shop';
+		$classes[] = 'clearfix';
+		return $classes;
+	}
+}
+add_filter( 'businessx_sidebar___shop_classes', 'businessx_sidebar_shop_classes' );
+
+}
+
 // -- Page sidebar
 if ( ! function_exists( 'businessx_sidebar_page_classes' ) ) {
 	function businessx_sidebar_page_classes( $classes ) {
@@ -526,3 +547,58 @@ if ( ! function_exists( 'businessx_index_archives_animations' ) ) {
 	}
 }
 add_filter( 'businessx_post_classes___filter', 'businessx_index_archives_animations' );
+
+
+
+/* ------------------------------------------------------------------------- *
+ *  WooCommerce
+/* ------------------------------------------------------------------------- */
+
+// -- woocommerce\archive-product.php Main classes
+if ( ! function_exists( 'businessx_wc_archive_main_classes' ) ) {
+	function businessx_wc_archive_main_classes( $classes ) {
+		$classes[] = 'grid-col';
+		$classes[] = 'grid-woocommerce-col';
+		$classes[] = 'site-main';
+		$classes[] = 'clearfix';
+		return $classes;
+	}
+}
+add_filter( 'businessx_wc_archive___main_classes', 'businessx_wc_archive_main_classes' );
+
+// -- woocommerce\single-product.php Main classes
+if ( ! function_exists( 'businessx_wc_single_main_classes' ) ) {
+	function businessx_wc_single_main_classes( $classes ) {
+		$classes[] = 'grid-col';
+		if( ! businessx_hide_sidebar( 'single' ) ) {
+			$classes[] = 'grid-posts-col'; } else {
+			$classes[] = 'grid-4x-col'; }
+		$classes[] = 'site-wc-single';
+		$classes[] = 'clearfix';
+		return $classes;
+	}
+}
+add_filter( 'businessx_wc_single___main_classes', 'businessx_wc_single_main_classes' );
+
+// -- woocommerce\global\wrapper-start.php Section classes
+if ( ! function_exists( 'businessx_wc_wrapper_section_classes' ) ) {
+	function businessx_wc_wrapper_section_classes( $classes ) {
+		$classes[] = 'grid-wrap';
+		$classes[] = 'gw-woocommerce';
+		return $classes;
+	}
+}
+add_filter( 'businessx_wc_wrapper___section_classes', 'businessx_wc_wrapper_section_classes' );
+
+// -- woocommerce\global\wrapper-start.php Container classes
+if ( ! function_exists( 'businessx_wc_wrapper_container_classes' ) ) {
+	function businessx_wc_wrapper_container_classes( $classes ) {
+		$classes[] = 'grid-container';
+		$classes[] = 'gc-woocommerce';
+		$classes[] = 'grid-1';
+		$classes[] = 'padding-small';
+		$classes[] = 'clearfix';
+		return $classes;
+	}
+}
+add_filter( 'businessx_wc_wrapper___container_classes', 'businessx_wc_wrapper_container_classes' );

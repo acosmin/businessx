@@ -88,3 +88,39 @@ add_action( 'businessx_portfolio_page__inner_items_wrap_top', 'businessx_portfol
 add_action( 'wp_enqueue_scripts', 'businessx_portfolio_page_masonry_script' ); // Output masonry script
 
 endif; // Jetpack check
+
+
+
+/* ------------------------------------------------------------------------- *
+ *  WooCommerce
+/* ------------------------------------------------------------------------- */
+
+if( businessx_wco_is_activated() ) {
+
+/* -- Shopping cart buttons */
+add_action( 'businessx_header__action_btns_2', 'businessx_wco_cart_link', 15 );
+
+if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
+add_filter( 'woocommerce_add_to_cart_fragments', 'businessx_wco_cart_link_fragment' ); } else {
+add_filter( 'add_to_cart_fragments', 'businessx_wco_cart_link_fragment' ); }
+
+/* -- Breadcrumbs */
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+add_action( 'businessx_woocom_hfw__heading_bottom', 'woocommerce_breadcrumb', 20 );
+add_action( 'businessx_woocom_shfw__heading_bottom', 'woocommerce_breadcrumb', 20 );
+
+/* -- Before shop loop */
+add_action( 'woocommerce_before_shop_loop', 'businessx_wco_before_shop_loop_start', 1 );
+add_action( 'woocommerce_before_shop_loop', 'businessx_wco_before_shop_loop_end', 999 );
+
+/* -- Products list */
+add_filter( 'loop_shop_columns', 'businessx_wco_loop_columns' ); // Number of products per row
+
+/* -- Related products */
+add_filter( 'woocommerce_output_related_products_args', 'businessx_wco_related_loop_columns' );
+add_filter( 'woocommerce_output_up_sells_products_args', 'businessx_wco_related_loop_columns' );
+
+/* -- Product page */
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+
+} // WooCommerce Activated/Exists
