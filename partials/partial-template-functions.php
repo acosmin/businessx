@@ -65,7 +65,7 @@ if ( ! function_exists( 'businessx_menu_main_area' ) ) {
 	function businessx_menu_main_area() {
 		if( has_nav_menu( 'primary' ) ) {
 		?>
-		<nav class="main-menu-wrap" role="navigation" aria-label="<?php _e( 'Primary Menu', 'businessx' ); ?>">
+		<nav class="main-menu-wrap" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'businessx' ); ?>">
 			<?php
                 $menu_args = apply_filters( 'businessx_menu___args', $menu_args = array(
                     'theme_location'	=> 'primary',

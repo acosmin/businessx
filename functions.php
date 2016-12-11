@@ -13,7 +13,7 @@
  *  Define some constants
 /* ------------------------------------ */
 if( ! defined( 'BUSINESSX_VERSION' ) ) {
-	define( 'BUSINESSX_VERSION', '1.0.5.2' ); }
+	define( 'BUSINESSX_VERSION', '1.0.5.3' ); }
 
 if( ! defined( 'BUSINESSX_AC_URL' ) ) {
 	define( 'BUSINESSX_AC_URL', '//www.acosmin.com/' ); }
@@ -56,7 +56,7 @@ require_once ( BUSINESSX_PARTIALS_PATH . 'partial-template-hooks.php' );
 if ( ! function_exists( 'businessx_setup' ) ) {
 	function businessx_setup() {
 
-		// Make BusinessX available for translation.
+		// Make Businessx available for translation.
 		load_theme_textdomain( 'businessx', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.

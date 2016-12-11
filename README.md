@@ -3,6 +3,9 @@ Businessx is distributed under the terms of the GNU GPL v2.0.
 
 ### Changelog ###
 
+**v1.0.5.3**
+* Fixed a few issues for TRT review
+
 **v1.0.5.2**
 * Added WooCommerce support;
 * Changed screenshot;
