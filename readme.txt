@@ -5,7 +5,7 @@ Theme URI: http://www.acosmin.com/theme/businessx/
 Contributors: acosmin
 Requires at least: WordPress 4.5
 Tested up to: WordPress 4.7
-Version: 1.0.5.2
+Version: 1.0.5.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -31,6 +31,11 @@ News & Updates @ http://www.acosmin.com/blog/
 == Notes ==
 1. Theme doesn't have support for website description;
 2. It includes a custom posts pagination function `businessx_paged()`, replacing `the_posts_pagination()`;
+3. The menus in this theme should be used with a maximum number of 4-5 items for each menu position.
+ * Primary and Footer - 4-5 items (item with a maximum length of 15 characters) for each menu position. If you have a lot of items,
+ please restructure your menu into sub-menus (you can add as many as you like).
+ * Actions menu - 2 items. It doesn't support sub-menus, you can use this for a link to "My Account" or a "Register" button
+ for example.
 
 
 == Copyright ==
@@ -52,7 +57,7 @@ Businessx Theme bundles the following third-party resources:
 
 ----
 
-Owl carousel v2.1.0 jQuery script & Addons - http://www.owlcarousel.owlgraphic.com/
+Owl carousel jQuery script & Addons - http://www.owlcarousel.owlgraphic.com/
 License: Distributed under the terms of the MIT license
 Copyright: Bartosz Wojciechowski & David Deutsch
 
@@ -65,7 +70,7 @@ This script also includes the following addons which are licensed the same:
 
 ----
 
-FitVids v1.1 jQuery script - ​http://fitvidsjs.com/
+FitVids jQuery script - ​http://fitvidsjs.com/
 License: Distributed under the terms of the WTFPL license
 Copyright: Chris Coyier - css-tricks.com + Dave Rupert - daverupert.com
 
@@ -77,25 +82,25 @@ Copyright: Nicolas Gallagher and Jonathan Neal
 
 ----
 
-Font Awesome v4.6.3 icon set - http://fortawesome.github.io/Font-Awesome/
+Font Awesome icon set - http://fortawesome.github.io/Font-Awesome/
 License: Font Awesome licensed under SIL OFL 1.1 / Code licensed under MIT License
 Copyright: Dave Gandy, twitter.com/davegandy
 
 ----
 
-parallax.js v1.4.2 jQuery script - http://pixelcog.github.io/parallax.js/
+parallax.js jQuery script - http://pixelcog.github.io/parallax.js/
 License: Distributed under the terms of the MIT license
 Copyright: PixelCog, Inc.
 
 ----
 
-Waypoints - 4.0.0 jQuery script - https://github.com/imakewebthings/waypoints/
+Waypoints jQuery script - https://github.com/imakewebthings/waypoints/
 License: Distributed under the terms of the MIT license
 Copyright: Caleb Troughton
 
 ----
 
-animate.css - 3.5.1 css styles - http://daneden.me/animate
+animate.css css styles - http://daneden.me/animate
 License: Distributed under the terms of the MIT license
 Copyright: Daniel Eden - daneden.me
 

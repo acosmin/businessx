@@ -8,16 +8,19 @@ msgstr ""
 "Last-Translator: ACOSMIN <support@acosmin.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
+
 #: 404.php:34
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
 #: comments.php:22
+#, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%s&rdquo;"
 msgstr ""
 
 #: comments.php:27
+#, php-format
 msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
@@ -40,145 +43,157 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:188
+#: functions.php:191
 msgctxt "search overlay placeholder"
 msgid "Type the keywords you are searching for"
 msgstr ""
 
-#: functions.php:205 functions.php:207 sidebar.php:22
+#: functions.php:208 sidebar.php:22
 msgid "Index Sidebar"
 msgstr ""
 
-#: functions.php:215 sidebar-single.php:23
+#: functions.php:210
+msgid "This sidebar appears where the index/arhives views are shown."
+msgstr ""
+
+#: functions.php:218 sidebar-single.php:23
 msgid "Posts Sidebar"
 msgstr ""
 
-#: functions.php:217
+#: functions.php:220
 msgid "This sidebar appears when you view a post"
 msgstr ""
 
-#: functions.php:225 sidebar-page.php:23
+#: functions.php:228 sidebar-page.php:23
 msgid "Page Sidebar"
 msgstr ""
 
-#: functions.php:227
+#: functions.php:230
 msgid "This sidebar appears when you view a page"
 msgstr ""
 
-#: functions.php:236 sidebar-portfolio.php:23
+#: functions.php:239 sidebar-portfolio.php:23
 msgid "Portfolio Sidebar"
 msgstr ""
 
-#: functions.php:238
+#: functions.php:241
 msgid "This sidebar appears when you view a Jetpack Portfolio item"
 msgstr ""
 
-#: functions.php:247
+#: functions.php:250
 msgid "Footer #1 Sidebar"
 msgstr ""
 
-#: functions.php:249
+#: functions.php:252
 msgid "First footer sidebar"
 msgstr ""
 
-#: functions.php:257
+#: functions.php:260
 msgid "Footer #2 Sidebar"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:262
 msgid "Second footer sidebar"
 msgstr ""
 
-#: functions.php:267
+#: functions.php:270
 msgid "Footer #3 Sidebar"
 msgstr ""
 
-#: functions.php:269
-msgid "Three footer sidebar"
+#: functions.php:272
+msgid "Third footer sidebar"
 msgstr ""
 
-#: taxonomy-jetpack-portfolio-tag.php:50 taxonomy-jetpack-portfolio-type.php:50
-#: template-jetpack-portfolio.php:60
+#: functions.php:281 sidebar-shop.php:23
+msgid "Shop Sidebar"
+msgstr ""
 
+#: functions.php:283
+msgid "Shop sidebar - index/archive view"
+msgstr ""
+
+#: taxonomy-jetpack-portfolio-tag.php:50
+#: taxonomy-jetpack-portfolio-type.php:50 template-jetpack-portfolio.php:60
+#, php-format
 msgid ""
 "Ready to publish your first project? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: taxonomy-jetpack-portfolio-tag.php:56 taxonomy-jetpack-portfolio-type.php:56
-#: template-jetpack-portfolio.php:66
+#: taxonomy-jetpack-portfolio-tag.php:56
+#: taxonomy-jetpack-portfolio-type.php:56 template-jetpack-portfolio.php:66
 msgid "You need Jetpack - Portfolio module enabled to use this section."
 msgstr ""
 
-#: acosmin/customizer/controllers.php:306
+#: acosmin/customizer/controllers.php:307
 msgid "Background-size:"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:321
+#: acosmin/customizer/controllers.php:322
 msgid "Background-repeat:"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:336
+#: acosmin/customizer/controllers.php:337
 msgid "Background-position:"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:370
+#: acosmin/customizer/controllers.php:371
 msgid "Overlay background color:"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:382
+#: acosmin/customizer/controllers.php:383
 msgid "Background overlay opacity:"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:388
+#: acosmin/customizer/controllers.php:389
 #: acosmin/customizer/sections/settings-panel/header-options.php:21
 msgid "Transparent"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:389
+#: acosmin/customizer/controllers.php:390
 msgid "10%"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:390
+#: acosmin/customizer/controllers.php:391
 msgid "20%"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:391
+#: acosmin/customizer/controllers.php:392
 msgid "30%"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:392
+#: acosmin/customizer/controllers.php:393
 msgid "40%"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:393
+#: acosmin/customizer/controllers.php:394
 msgid "50%"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:394
+#: acosmin/customizer/controllers.php:395
 msgid "60%"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:395
+#: acosmin/customizer/controllers.php:396
 msgid "70%"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:396
+#: acosmin/customizer/controllers.php:397
 msgid "80%"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:397
+#: acosmin/customizer/controllers.php:398
 msgid "90%"
 msgstr ""
 
-#: acosmin/customizer/controllers.php:398
+#: acosmin/customizer/controllers.php:399
 msgid "100%"
 msgstr ""
 
-#: acosmin/customizer/customizer.php:44
+#: acosmin/customizer/customizer.php:46
 msgid "Colors"
 msgstr ""
 
-#: acosmin/customizer/customizer.php:50
+#: acosmin/customizer/customizer.php:52
 msgid "Settings"
 msgstr ""
 
@@ -206,6 +221,63 @@ msgstr ""
 
 #: acosmin/customizer/sections/docs-button.php:9
 msgid "Documentation"
+msgstr ""
+
+#: acosmin/customizer/sections/recommend.php:9
+msgctxt "Customizer Extensions Installer"
+msgid "Recommended Plugin:"
+msgstr ""
+
+#: acosmin/customizer/sections/recommend.php:10
+#: acosmin/customizer/sections/recommend.php:22
+msgctxt "Customizer Extensions Installer"
+msgid "Businessx Extensions"
+msgstr ""
+
+#: acosmin/customizer/sections/recommend.php:12
+msgctxt "Customizer Extensions Installer"
+msgid ""
+"If you want to take full advantage of all the options this theme has to offer"
+msgstr ""
+
+#: acosmin/customizer/sections/recommend.php:13
+msgctxt "Customizer Extensions Installer"
+msgid "please install and activate"
+msgstr ""
+
+#: acosmin/customizer/sections/recommend.php:17
+msgctxt "Customizer Extensions Installer"
+msgid "(Front Page sections)"
+msgstr ""
+
+#: acosmin/customizer/sections/recommend.php:21
+msgctxt "Customizer Extensions Installer"
+msgid "Install Businessx Extensions Now"
+msgstr ""
+
+#: acosmin/customizer/sections/recommend.php:23
+msgctxt "Customizer Extensions Installer"
+msgid "Install Now"
+msgstr ""
+
+#: acosmin/customizer/sections/recommend.php:27
+msgctxt "Customizer Extensions Installer"
+msgid "Dismiss Installer Message"
+msgstr ""
+
+#: acosmin/customizer/sections/recommend.php:28
+msgctxt "Customizer Extensions Installer"
+msgid "Dismiss"
+msgstr ""
+
+#: acosmin/customizer/sections/recommend.php:32
+msgctxt "Customizer Extensions Installer"
+msgid "The plugin is installed but not activated."
+msgstr ""
+
+#: acosmin/customizer/sections/recommend.php:34
+msgctxt "Customizer Extensions Installer"
+msgid "Activate Plugin"
 msgstr ""
 
 #: acosmin/customizer/sections/colors-panel/body-options.php:8
@@ -617,6 +689,28 @@ msgstr ""
 msgid "Widget title 2nd border color:"
 msgstr ""
 
+#: acosmin/customizer/sections/colors-panel/woocommerce-options.php:8
+msgid "WooCommerce"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/woocommerce-options.php:17
+msgid "Accent #1:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/woocommerce-options.php:18
+msgid "This will change the price tag font color."
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/woocommerce-options.php:24
+msgid "Accent #2:"
+msgstr ""
+
+#: acosmin/customizer/sections/colors-panel/woocommerce-options.php:25
+msgid ""
+"This will change the sale tag background color, price filter handles and a "
+"few other things."
+msgstr ""
+
 #: acosmin/customizer/sections/settings-panel/animations-options.php:8
 msgid "Animations"
 msgstr ""
@@ -861,6 +955,7 @@ msgstr ""
 
 #: acosmin/customizer/sections/settings-panel/sidebars-options.php:28
 #: acosmin/customizer/sections/settings-panel/sidebars-options.php:40
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:53
 msgid "Disable sidebar globally"
 msgstr ""
 
@@ -872,202 +967,212 @@ msgstr ""
 msgid "This will overwrite any option you select for each page."
 msgstr ""
 
-#: acosmin/functions/helpers.php:209
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:48
+msgid "WooCommerce view"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/sidebars-options.php:54
+msgid ""
+"This will overwrite any option you select for each product or on shop "
+"homepage/archives. Also, this does not work for cart,  checkout and my "
+"account pages (use the Page view option instead)"
+msgstr ""
+
+#: acosmin/functions/helpers.php:237
 msgid "If this message appears you need to update Businessx Extensions"
 msgstr ""
 
-#: acosmin/functions/helpers.php:270
+#: acosmin/functions/helpers.php:344
 msgctxt "image background repeat"
 msgid "repeat"
 msgstr ""
 
-#: acosmin/functions/helpers.php:271
+#: acosmin/functions/helpers.php:345
 msgctxt "image background repeat"
 msgid "repeat-x"
 msgstr ""
 
-#: acosmin/functions/helpers.php:272
+#: acosmin/functions/helpers.php:346
 msgctxt "image background repeat"
 msgid "repeat-y"
 msgstr ""
 
-#: acosmin/functions/helpers.php:273
+#: acosmin/functions/helpers.php:347
 msgctxt "image background repeat"
 msgid "no-repeat"
 msgstr ""
 
-#: acosmin/functions/helpers.php:274
+#: acosmin/functions/helpers.php:348
 msgctxt "image background repeat"
 msgid "initial"
 msgstr ""
 
-#: acosmin/functions/helpers.php:285
+#: acosmin/functions/helpers.php:359
 msgctxt "image background position"
 msgid "left top"
 msgstr ""
 
-#: acosmin/functions/helpers.php:286
+#: acosmin/functions/helpers.php:360
 msgctxt "image background position"
 msgid "left center"
 msgstr ""
 
-#: acosmin/functions/helpers.php:287
+#: acosmin/functions/helpers.php:361
 msgctxt "image background position"
 msgid "left bottom"
 msgstr ""
 
-#: acosmin/functions/helpers.php:288
+#: acosmin/functions/helpers.php:362
 msgctxt "image background position"
 msgid "right top"
 msgstr ""
 
-#: acosmin/functions/helpers.php:289
+#: acosmin/functions/helpers.php:363
 msgctxt "image background position"
 msgid "right center"
 msgstr ""
 
-#: acosmin/functions/helpers.php:290
+#: acosmin/functions/helpers.php:364
 msgctxt "image background position"
 msgid "right bottom"
 msgstr ""
 
-#: acosmin/functions/helpers.php:291
+#: acosmin/functions/helpers.php:365
 msgctxt "image background position"
 msgid "center top"
 msgstr ""
 
-#: acosmin/functions/helpers.php:292
+#: acosmin/functions/helpers.php:366
 msgctxt "image background position"
 msgid "center center"
 msgstr ""
 
-#: acosmin/functions/helpers.php:293
+#: acosmin/functions/helpers.php:367
 msgctxt "image background position"
 msgid "center bottom"
 msgstr ""
 
-#: acosmin/functions/helpers.php:304
+#: acosmin/functions/helpers.php:378
 msgctxt "image background size"
 msgid "auto"
 msgstr ""
 
-#: acosmin/functions/helpers.php:305
+#: acosmin/functions/helpers.php:379
 msgctxt "image background size"
 msgid "cover"
 msgstr ""
 
-#: acosmin/functions/helpers.php:306
+#: acosmin/functions/helpers.php:380
 msgctxt "image background size"
 msgid "contain"
 msgstr ""
 
-#: acosmin/functions/helpers.php:327
+#: acosmin/functions/helpers.php:401 acosmin/functions/helpers.php:457
 msgctxt "background opacity option"
 msgid "Transparent"
 msgstr ""
 
-#: acosmin/functions/helpers.php:332 acosmin/functions/helpers.php:384
+#: acosmin/functions/helpers.php:406 acosmin/functions/helpers.php:458
 msgctxt "background opacity option"
 msgid "10%"
 msgstr ""
 
-#: acosmin/functions/helpers.php:337 acosmin/functions/helpers.php:385
+#: acosmin/functions/helpers.php:411 acosmin/functions/helpers.php:459
 msgctxt "background opacity option"
 msgid "20%"
 msgstr ""
 
-#: acosmin/functions/helpers.php:342 acosmin/functions/helpers.php:386
+#: acosmin/functions/helpers.php:416 acosmin/functions/helpers.php:460
 msgctxt "background opacity option"
 msgid "30%"
 msgstr ""
 
-#: acosmin/functions/helpers.php:347 acosmin/functions/helpers.php:387
+#: acosmin/functions/helpers.php:421 acosmin/functions/helpers.php:461
 msgctxt "background opacity option"
 msgid "40%"
 msgstr ""
 
-#: acosmin/functions/helpers.php:352 acosmin/functions/helpers.php:388
+#: acosmin/functions/helpers.php:426 acosmin/functions/helpers.php:462
 msgctxt "background opacity option"
 msgid "50%"
 msgstr ""
 
-#: acosmin/functions/helpers.php:357 acosmin/functions/helpers.php:389
+#: acosmin/functions/helpers.php:431 acosmin/functions/helpers.php:463
 msgctxt "background opacity option"
 msgid "60%"
 msgstr ""
 
-#: acosmin/functions/helpers.php:362 acosmin/functions/helpers.php:390
+#: acosmin/functions/helpers.php:436 acosmin/functions/helpers.php:464
 msgctxt "background opacity option"
 msgid "70%"
 msgstr ""
 
-#: acosmin/functions/helpers.php:367 acosmin/functions/helpers.php:391
+#: acosmin/functions/helpers.php:441 acosmin/functions/helpers.php:465
 msgctxt "background opacity option"
 msgid "80%"
 msgstr ""
 
-#: acosmin/functions/helpers.php:372 acosmin/functions/helpers.php:392
+#: acosmin/functions/helpers.php:446 acosmin/functions/helpers.php:466
 msgctxt "background opacity option"
 msgid "90%"
 msgstr ""
 
-#: acosmin/functions/helpers.php:377 acosmin/functions/helpers.php:393
+#: acosmin/functions/helpers.php:451 acosmin/functions/helpers.php:467
 msgctxt "background opacity option"
 msgid "100%"
 msgstr ""
 
-#: acosmin/functions/helpers.php:383
-msgctxt "businessx"
-msgid "Transparent"
-msgstr ""
-
-#: acosmin/functions/helpers.php:535
+#: acosmin/functions/helpers.php:609
 msgid "Read More"
 msgstr ""
 
-#: acosmin/functions/helpers.php:542
+#: acosmin/functions/helpers.php:616
 msgctxt "post author"
 msgid "by"
 msgstr ""
 
-#: acosmin/functions/helpers.php:560
+#: acosmin/functions/helpers.php:634
 msgid "Sticky Post"
 msgstr ""
 
-#: acosmin/functions/helpers.php:577
+#: acosmin/functions/helpers.php:651
 msgid ", "
 msgstr ""
 
-#: acosmin/functions/helpers.php:667
+#: acosmin/functions/helpers.php:741
 msgctxt "previous articles page"
 msgid "&larr; Previous"
 msgstr ""
 
-#: acosmin/functions/helpers.php:668
+#: acosmin/functions/helpers.php:742
 msgctxt "next articles page"
 msgid "Next &rarr;"
 msgstr ""
 
-#: acosmin/functions/helpers.php:682
+#: acosmin/functions/helpers.php:756
 msgid "Pages:"
 msgstr ""
 
-#: acosmin/functions/helpers.php:688
+#: acosmin/functions/helpers.php:762
 msgctxt "single view"
 msgid "Next page"
 msgstr ""
 
-#: acosmin/functions/helpers.php:689
+#: acosmin/functions/helpers.php:763
 msgctxt "single view"
 msgid "Previous page"
 msgstr ""
 
-#: acosmin/functions/helpers.php:704
+#: acosmin/functions/helpers.php:778
 msgid "Older comments"
 msgstr ""
 
-#: acosmin/functions/helpers.php:705
+#: acosmin/functions/helpers.php:779
 msgid "Newer comments"
+msgstr ""
+
+#: acosmin/functions/helpers.php:851
+msgid "Permission denied"
 msgstr ""
 
 #: acosmin/functions/page-options.php:10
@@ -1077,12 +1182,14 @@ msgstr ""
 #: acosmin/functions/page-options.php:35
 #: acosmin/functions/portfolio-options.php:45
 #: acosmin/functions/post-options.php:35
+#: acosmin/functions/product-options.php:35
 msgid "Hide sidebar"
 msgstr ""
 
 #: acosmin/functions/page-options.php:35
 #: acosmin/functions/portfolio-options.php:45
 #: acosmin/functions/post-options.php:35
+#: acosmin/functions/product-options.php:35
 msgid "You can hide it globally from the Customizer."
 msgstr ""
 
@@ -1094,53 +1201,8 @@ msgstr ""
 msgid "Post Options:"
 msgstr ""
 
-#: acosmin/functions/recommend.php:95
-msgid "Install Businessx Extensions Now"
-msgstr ""
-
-#: acosmin/functions/recommend.php:95 acosmin/functions/recommend.php:151
-#: partials/headings/index-heading-no-sections.php:19
-msgid "Businessx Extensions"
-msgstr ""
-
-#: acosmin/functions/recommend.php:95
-msgctxt "businessx extensions recommend"
-msgid "Install Now"
-msgstr ""
-
-#: acosmin/functions/recommend.php:96
-msgid "Dismiss Installer Message"
-msgstr ""
-
-#: acosmin/functions/recommend.php:96
-msgctxt "businessx extensions recommend"
-msgid "Dismiss Notice"
-msgstr ""
-
-#: acosmin/functions/recommend.php:101
-
-msgid ""
-"The plugin is installed but not activated. Please <a href=\"%s\"><b>activate "
-"it</b></a>."
-msgstr ""
-
-#: acosmin/functions/recommend.php:102
-msgid "Dismiss Notice"
-msgstr ""
-
-#: acosmin/functions/recommend.php:130
-msgid "Permission denied"
-msgstr ""
-
-#: acosmin/functions/recommend.php:151
-
-msgid ""
-"If you want to take full advantage of the options this theme has to provide "
-"%s, please install and activate the %s plugin."
-msgstr ""
-
-#: acosmin/functions/recommend.php:151
-msgid "(Front Page sections)"
+#: acosmin/functions/product-options.php:10
+msgid "Product Options:"
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:327
@@ -1152,12 +1214,12 @@ msgid "Install Plugins"
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:330
-
+#, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:332
-
+#, php-format
 msgid "Updating Plugin: %s"
 msgstr ""
 
@@ -1166,21 +1228,21 @@ msgid "Something went wrong with the plugin API."
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:336
-
+#, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: acosmin/functions/tgmpa.php:342
-
+#, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: acosmin/functions/tgmpa.php:348
-
+#, php-format
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
 "maximum compatibility with this theme: %1$s."
@@ -1191,21 +1253,21 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: acosmin/functions/tgmpa.php:354
-
+#, php-format
 msgid "There is an update available for: %1$s."
 msgid_plural "There are updates available for the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: acosmin/functions/tgmpa.php:360
-
+#, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
 #: acosmin/functions/tgmpa.php:366
-
+#, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
@@ -1249,19 +1311,19 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: acosmin/functions/tgmpa.php:390
-
+#, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:392
-
+#, php-format
 msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:394
-
+#, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr ""
 
@@ -1311,7 +1373,7 @@ msgid "and"
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:1982
-
+#, php-format
 msgid "TGMPA v%s"
 msgstr ""
 
@@ -1360,12 +1422,13 @@ msgid "Update recommended"
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:2342
+#, php-format
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:2388
-
+#, php-format
 msgctxt "plugins"
 msgid "All <span class=\"count\">(%s)</span>"
 msgid_plural "All <span class=\"count\">(%s)</span>"
@@ -1373,21 +1436,21 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: acosmin/functions/tgmpa.php:2392
-
+#, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
 #: acosmin/functions/tgmpa.php:2396
-
+#, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
 msgid_plural "Update Available <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
 #: acosmin/functions/tgmpa.php:2400
-
+#, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
 msgid_plural "To Activate <span class=\"count\">(%s)</span>"
 msgstr[0] ""
@@ -1435,17 +1498,17 @@ msgid "Status"
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:2603
-
+#, php-format
 msgid "Install %2$s"
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:2608
-
+#, php-format
 msgid "Update %2$s"
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:2614
-
+#, php-format
 msgid "Activate %2$s"
 msgstr ""
 
@@ -1494,17 +1557,17 @@ msgid "Plugin activation failed."
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:3498
-
+#, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:3501
-
+#, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:3503
-
+#, php-format
 msgid "The installation of %1$s failed."
 msgstr ""
 
@@ -1515,7 +1578,7 @@ msgid ""
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:3509
-
+#, php-format
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
@@ -1532,7 +1595,7 @@ msgid "All installations and activations have been completed."
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:3512
-
+#, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
@@ -1543,7 +1606,7 @@ msgid ""
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:3517
-
+#, php-format
 msgid "%1$s installed successfully."
 msgstr ""
 
@@ -1552,7 +1615,7 @@ msgid "All installations have been completed."
 msgstr ""
 
 #: acosmin/functions/tgmpa.php:3520
-
+#, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
@@ -1562,6 +1625,7 @@ msgid "Menu"
 msgstr ""
 
 #: partials/partial-template-functions.php:325
+#, php-format
 msgctxt "credit text"
 msgid "%1$s designed by %2$s."
 msgstr ""
@@ -1585,8 +1649,12 @@ msgstr ""
 msgid "Tagged with: "
 msgstr ""
 
-#: partials/partial-template-helpers.php:43
+#: partials/partial-template-functions.php:525
+msgid "View your shopping cart"
+msgstr ""
 
+#: partials/partial-template-helpers.php:43
+#, php-format
 msgid ""
 "This sidebar is empty, you should add some widgets (in %s). Until then we "
 "are showing some default widgets. Only you can see this message"
@@ -1610,10 +1678,12 @@ msgid ""
 msgstr ""
 
 #: partials/partial-template-helpers.php:186
+#, php-format
 msgid "Page #: %s of %s"
 msgstr ""
 
 #: partials/partial-template-helpers.php:203
+#, php-format
 msgid "Portfolio Page #%s"
 msgstr ""
 
@@ -1621,20 +1691,25 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: partials/headings/index-heading-no-sections.php:10
+#: partials/headings/index-heading-no-sections.php:12
 msgid "Businessx Extensions is not activated!"
 msgstr ""
 
-#: partials/headings/index-heading-no-sections.php:19
-
+#: partials/headings/index-heading-no-sections.php:21
+#, php-format
 msgid "You need %s activated to display sections. Activate the plugin first!"
 msgstr ""
 
-#: partials/headings/index-heading-no-sections.php:19
+#: partials/headings/index-heading-no-sections.php:21
 msgid "https://wordpress.org/plugins/businessx-extensions/"
 msgstr ""
 
+#: partials/headings/index-heading-no-sections.php:21
+msgid "Businessx Extensions"
+msgstr ""
+
 #: partials/headings/search-heading-full-width.php:12
+#, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -1643,5 +1718,6 @@ msgid "It looks like nothing was found!"
 msgstr ""
 
 #: partials/posts/content.php:6
+#, php-format
 msgid "Blog post: %s"
 msgstr ""
