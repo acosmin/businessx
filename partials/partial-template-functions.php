@@ -96,6 +96,7 @@ if ( ! function_exists( 'businessx_menu_actions_area' ) ) {
             	<?php
 				/* Hooked:
 				businessx_search_button() - 10
+				businessx_wco_cart_link() - 15
 				businessx_mobile_menu_button() - 20 */
 				do_action( 'businessx_header__action_btns_2' ); ?>
 			</div>
@@ -520,6 +521,7 @@ if ( ! function_exists( 'businessx_wco_cart_link_fragment' ) ) {
 
 if ( ! function_exists( 'businessx_wco_cart_link' ) ) {
 	function businessx_wco_cart_link() {
+		if( ! get_theme_mod( 'woocommerce_cart_disable', 0 ) ) {
 		?>
 		<span class="ac-btn-h shopping-button">
 			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'businessx' ); ?>">
@@ -527,6 +529,7 @@ if ( ! function_exists( 'businessx_wco_cart_link' ) ) {
 			</a>
 		</span>
 		<?php
+		}
 	}
 }
 

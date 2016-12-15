@@ -63,7 +63,7 @@ if ( ! function_exists( 'businessx_customize_register' ) ) {
 
 			$sections = array(
 				'settings' => array(
-					'header', 'posts', 'sidebars', 'footer', 'animations', 'preloader',
+					'header', 'posts', 'sidebars', 'footer', 'animations', 'preloader', 'woocommerce',
 				),
 				'colors' => array(
 					'body', 'links', 'headings', 'inputs', 'buttons', 'header', 'header-heading',
