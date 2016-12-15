@@ -290,7 +290,7 @@ if ( ! function_exists( 'businessx_footer_creds_menu' ) ) {
 	function businessx_footer_creds_menu() {
 		if( has_nav_menu( 'footer' ) ) {
 		?>
-        <nav class="footer-creds-menu-wrap" role="navigation" aria-label="<?php _e( 'Footer Menu', 'businessx' ); ?>">
+        <nav class="footer-creds-menu-wrap" role="navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'businessx' ); ?>">
 			<?php
                 wp_nav_menu( apply_filters( 'businessx_footer_creds___menu_args', array(
                     'theme_location'	=> 'footer',
