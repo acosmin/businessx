@@ -37,7 +37,7 @@
 			esc_html__( 'Homepage main heading', 'businessx' ),
 			esc_html__( 'This will change the heading on your homepage/blog, leave empty for none.', 'businessx' ),
 			esc_html__( 'Homepage Heading', 'businessx' ),
-			'#top-header .hs-primary-large' );
+			'.home:not(.paged) #top-header .hs-primary-large' );
 
 		////// Header misc
 		businessx_controller_info(
