@@ -144,8 +144,6 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 				moving_class	= 'mh-moving',
 				wHeight, wScrollCurrent, wScrollBefore, wScrollDiff, dHeight = 0;
 
-
-
 			if( $fixed_menu.length ) {
 				var dHeight				= $document.height(),
 					wHeight				= $window.height(),
@@ -155,7 +153,7 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 						didScroll = true;
 					});
 
-					function hasScrolled() {
+					var hasScrolled = function() {
 						var wScrollCurrent	= $window.scrollTop();
 						var wScrollDiff		= wScrollBefore - wScrollCurrent;
 

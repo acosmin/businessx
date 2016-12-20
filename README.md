@@ -3,8 +3,15 @@ Businessx is distributed under the terms of the GNU GPL v2.0.
 
 ### Changelog ###
 
+**v1.0.5.4**
+* Fixed Safari issues;
+* Added an option to disable the shopping cart button;
+* Escaped an attribute in partials/partial-template-functions.php:293;
+* Fixed index heading - global refresh;
+* Updated .po files;
+
 **v1.0.5.3**
-* Fixed a few issues for TRT review
+* Fixed a few issues for TRT review;
 
 **v1.0.5.2**
 * Added WooCommerce support;

@@ -39,7 +39,7 @@ msgstr ""
 msgid "Actions Menu"
 msgstr ""
 
-#: functions.php:79 partials/partial-template-functions.php:292
+#: functions.php:79 partials/partial-template-functions.php:293
 msgid "Footer Menu"
 msgstr ""
 
@@ -690,6 +690,7 @@ msgid "Widget title 2nd border color:"
 msgstr ""
 
 #: acosmin/customizer/sections/colors-panel/woocommerce-options.php:8
+#: acosmin/customizer/sections/settings-panel/woocommerce-options.php:8
 msgid "WooCommerce"
 msgstr ""
 
@@ -976,6 +977,14 @@ msgid ""
 "This will overwrite any option you select for each product or on shop "
 "homepage/archives. Also, this does not work for cart,  checkout and my "
 "account pages (use the Page view option instead)"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/woocommerce-options.php:16
+msgid "Disable cart button"
+msgstr ""
+
+#: acosmin/customizer/sections/settings-panel/woocommerce-options.php:17
+msgid "Hide the shopping cart button in the header"
 msgstr ""
 
 #: acosmin/functions/helpers.php:237
@@ -1619,37 +1628,37 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: partials/partial-template-functions.php:140
+#: partials/partial-template-functions.php:141
 msgctxt "mobile anchor text"
 msgid "Menu"
 msgstr ""
 
-#: partials/partial-template-functions.php:325
+#: partials/partial-template-functions.php:326
 #, php-format
 msgctxt "credit text"
 msgid "%1$s designed by %2$s."
 msgstr ""
 
-#: partials/partial-template-functions.php:326
+#: partials/partial-template-functions.php:327
 msgctxt "credit text - theme"
 msgid "Businessx theme"
 msgstr ""
 
-#: partials/partial-template-functions.php:327
+#: partials/partial-template-functions.php:328
 msgid "Premium WordPress Themes &amp; Plugins by Acosmin"
 msgstr ""
 
-#: partials/partial-template-functions.php:327
+#: partials/partial-template-functions.php:328
 msgctxt "credit text - theme author"
 msgid "Acosmin"
 msgstr ""
 
-#: partials/partial-template-functions.php:356
-#: partials/partial-template-functions.php:432
+#: partials/partial-template-functions.php:357
+#: partials/partial-template-functions.php:433
 msgid "Tagged with: "
 msgstr ""
 
-#: partials/partial-template-functions.php:525
+#: partials/partial-template-functions.php:527
 msgid "View your shopping cart"
 msgstr ""
 
