@@ -177,6 +177,8 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 						wScrollBefore = wScrollCurrent;
 					}
 
+					hasScrolled();
+
 					setInterval(function () {
 						if (didScroll) {
 							hasScrolled();
