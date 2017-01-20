@@ -3,6 +3,8 @@ Businessx is distributed under the terms of the GNU GPL v2.0.
 
 ### Changelog ###
 
+**v1.0.5.5**
+
 **v1.0.5.4**
 * Fixed Safari issues;
 * Added an option to disable the shopping cart button;
