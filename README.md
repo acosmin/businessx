@@ -4,6 +4,7 @@ Businessx is distributed under the terms of the GNU GPL v2.0.
 ### Changelog ###
 
 **v1.0.5.5**
+* Fixed Scroll to section doesn't work in some browsers;
 
 **v1.0.5.4**
 * Fixed Safari issues;

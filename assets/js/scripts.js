@@ -286,7 +286,7 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 				id_target	= $( the_href );
 
 			if( id_target.length ) {
-				$body.animate({
+				$( 'body, html' ).animate({
 					scrollTop: id_target.offset().top
 				}, 500);
 			}
