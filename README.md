@@ -5,6 +5,7 @@ Businessx is distributed under the terms of the GNU GPL v2.0.
 
 **v1.0.5.5**
 * Fixed Scroll to section doesn't work in some browsers;
+* Added two full width page templates, one with page title displaying and one without (this one has the colored/fixed menu enabled amd can only be changed with the use of filters).
 
 **v1.0.5.4**
 * Fixed Safari issues;
