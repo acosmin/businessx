@@ -1,10 +1,10 @@
 /*
 ---------------------------------------------------------------------
-	To keep page requests to a minimum number we compiled all the
-	necessary scripts into one file;
-	--------------------------------
-	You can find all the original files (minified or unminified) in:
-	../assets/js/
+ To keep page requests to a minimum number we compiled all the
+ necessary scripts into one file;
+ --------------------------------
+ You can find all the original files (minified or unminified) in:
+ ../assets/js/
 ---------------------------------------------------------------------
 */
 
@@ -281,15 +281,38 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 
 
 		// Scroll to id
-		$document.on( 'click', '.gotosection > a', function( event ) {
-			var the_href	= $( this ).attr( 'href' ),
+		var ac_ScrollTo = function( acTheHref ) {
+			var the_href	= $( acTheHref ).attr( 'href' ),
 				id_target	= $( the_href );
 
 			if( id_target.length ) {
+				var	bar         = $( '#wpadminbar' ),
+					ttop        = id_target.offset().top,
+					hheight     = $header.innerHeight(),
+					hheight_t   = hheight - ( parseInt( $header.css( 'paddingTop' ) ) / 2 ),
+					bheight     = bar.innerHeight(),
+					fromtop, goto;
+
+				if( $header.hasClass('mh-fixed mh-transparent') ) {
+					fromtop = bar.length ? ttop - ( hheight_t + bheight ) : ttop - hheight_t;
+				} else if ( $header.hasClass('mh-fixed') ) {
+					fromtop = bar.length ? ttop - ( hheight + bheight ) : ttop - hheight;
+				} else {
+					fromtop = bar.length ? ttop - bheight : ttop;
+				}
+
+				goto = fromtop < 32 ? 0 : fromtop;
+
 				$( 'body, html' ).animate({
-					scrollTop: id_target.offset().top
+					scrollTop: goto,
 				}, 500);
+			} else {
+				return;
 			}
+		}
+
+		$document.on( 'click', 'body:not(.nav-open) .gotosection > a', function( event ) {
+			ac_ScrollTo( this );
 			event.preventDefault();
 		});
 
@@ -360,13 +383,14 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 
 		// Mobile Menu
 		var ac_MobileMenu = function() {
-			var menu			= 'main-menu',
-				menu_select		= $('.' + menu),
-				opened_menu 	= 'nav-open',
-				mobile_menu		= 'mobile-menu',
-				mobile_arrow	= '.mobile-arrow',
-				parent_opened	= 'parent-opened',
-				opened			= 'opened';
+			var menu            = 'main-menu',
+				menu_select     = $('.' + menu),
+				opened_menu     = 'nav-open',
+				mobile_menu     = 'mobile-menu',
+				mobile_arrow    = '.mobile-arrow',
+				parent_opened   = 'parent-opened',
+				opened          = 'opened',
+				actions_menu    = '.actions-menu';
 
 			if( ! menu_select.length )
 				return;
@@ -378,17 +402,22 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 			$document.on('touchend click', '.ac-btn-mobile-menu', function( event ) {
 				event.preventDefault();
 				menu_select.detach().prependTo('body').addClass(mobile_menu).removeClass(menu).fadeIn(300);
+				$('.menu-hidden-select').parent('.menu-item').detach().appendTo('.' + mobile_menu);
 				$('.'+mobile_menu).find('li.menu-item-has-children > a').after('<a href="#" class="mobile-arrow"></a>');
 				$body.toggleClass(opened_menu);
 			});
 
-			$document.on('touchend click', '.ac-btn-mobile-close', function( event ){
+			$document.on('touchend click', '.ac-btn-mobile-close, .nav-open .gotosection', function( event ){
 				event.preventDefault();
 				$('.'+mobile_menu).prependTo('.main-menu-wrap').removeClass(mobile_menu).addClass(menu);
+				$('.menu-hidden-select').parent('.menu-item').detach().appendTo(actions_menu);
 				menu_select.find(mobile_arrow).remove();
 				menu_select.find('.'+parent_opened).removeClass(parent_opened);
 				menu_select.find('.'+opened).removeClass(opened);
 				$body.removeClass(opened_menu);
+				if( $( event.currentTarget ).hasClass('gotosection') ) {
+					ac_ScrollTo( $( event.currentTarget ).find('a') );
+				}
 			});
 
 			$document.on('touchend click', mobile_arrow, function( event ){

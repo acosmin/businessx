@@ -111,12 +111,13 @@ if ( ! function_exists( 'businessx_menu_action_btns' ) ) {
 	function businessx_menu_action_btns() {
 
 		$args = apply_filters( 'businessx_menu___actions_args', array(
-			'theme_location'	=> 'actions',
-			'menu_class'     	=> 'actions-menu clearfix"',
-			'container'			=> false,
-			'depth'				=> 1,
-			'fallback_cb'		=> '__return_false',
-			'echo'				=> false,
+			'theme_location' => 'actions',
+			'menu_class'     => 'actions-menu clearfix"',
+			'container'      => false,
+			'depth'          => 1,
+			'fallback_cb'    => '__return_false',
+			'echo'           => false,
+			'after'          => '<b class="menu-hidden-select"></b>'
 		) );
 
 		echo wp_nav_menu( $args );
