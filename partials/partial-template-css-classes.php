@@ -95,6 +95,11 @@ if ( ! function_exists( 'businessx_body_classes' ) ) {
 			$new_classes[] = 'no-sidebar';
 		}
 
+		// WooCommerce
+		if( ! get_theme_mod( 'woocommerce_cart_disable', 0 ) ) {
+			$new_classes[] = 'has-cart-btn';
+		}
+
 		//$new_classes[] = 'fader-reset'; // ADD OPTION
 
 		// From select a header type
