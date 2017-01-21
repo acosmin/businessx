@@ -46,6 +46,7 @@ Text Domain: businessx
  * 5.0 - Plugins Compatibility
  *   5.1 - Owl Carousel
  *   5.2 - Animate.css
+ *   5.3 - Polylang
  * 6.0 - Header
  *   6.1 - Header
  * 	 6.2 - Search Form
@@ -2251,6 +2252,15 @@ body.no-sidebar .site-page {
 
 
 /**
+ * 5.3 - Polylang
+ */
+.pll-parent-menu-item img, .lang-item img {
+	vertical-align: initial;
+}
+
+
+
+/**
  * 6.0 - Header
  */
 .main-header {
@@ -2277,6 +2287,10 @@ body.no-sidebar .site-page {
 .main-header a:active,
 .main-header a:active i {
 	color: #444444 !important;
+}
+.main-header img, .mobile-menu img {
+	display: inline-block;
+	vertical-align: initial;
 }
 .mh-placeholder {
 	width: 100%;
