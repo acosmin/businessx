@@ -129,7 +129,7 @@ if ( ! function_exists( 'businessx_search_button' ) ) {
 	function businessx_search_button() {
 		$disabled = get_theme_mod( 'header_misc_hide_search_btn', false );
 		if( ! $disabled ) : ?>
-        <span class="ac-btn-h"><a href="#" id="big-search-trigger"><?php businessx_icon( 'search' ) ?></a></span>
+        <span class="ac-btn-h ac-btn-search"><a href="#" id="big-search-trigger"><?php businessx_icon( 'search' ) ?></a></span>
         <?php endif;
 	}
 }
@@ -140,7 +140,7 @@ if ( ! function_exists( 'businessx_mobile_menu_button' ) ) {
 	function businessx_mobile_menu_button() {
 		$menu_btn = '';
 		$btn_icon = 'bars';
-		$format   = '<span class="ac-btn-h ac-btn-mobile"><a href="#" class="ac-btn-mobile-menu">%1$s%2$s</a></span>';
+		$format   = '<span class="ac-btn-h ac-btn-mobile ac-btn-mob"><a href="#" class="ac-btn-mobile-menu">%1$s%2$s</a></span>';
 
 		if ( has_nav_menu( 'primary' ) ) :
 			$output = sprintf( $format, businessx_icon( $btn_icon, false ), esc_html( $menu_btn ) );
@@ -154,8 +154,8 @@ if ( ! function_exists( 'businessx_mobile_menu_button' ) ) {
 if ( ! function_exists( 'businessx_mobile_actions_menu_button' ) ) {
 	function businessx_mobile_actions_menu_button() {
 		$menu_btn = '';
-		$btn_icon = 'flash';
-		$format   = '<span class="ac-btn-h ac-btn-mobile"><a href="#" class="ac-btn-mobile-actions-menu">%1$s%2$s</a></span>';
+		$btn_icon = 'star';
+		$format   = '<span class="ac-btn-h ac-btn-mobile ac-btn-act"><a href="#" class="ac-btn-mobile-actions-menu">%1$s%2$s</a></span>';
 
 		if ( has_nav_menu( 'actions' ) ) :
 			$output = sprintf( $format, businessx_icon( $btn_icon, false ), esc_html( $menu_btn ) );
@@ -540,7 +540,7 @@ if ( ! function_exists( 'businessx_wco_cart_link' ) ) {
 	function businessx_wco_cart_link() {
 		if( ! get_theme_mod( 'woocommerce_cart_disable', 0 ) ) {
 		?>
-		<span class="ac-btn-h shopping-button">
+		<span class="ac-btn-h shopping-button ac-btn-mobile">
 			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'businessx' ); ?>">
 				<?php businessx_icon( 'shopping-bag' ) ?><span class="count"><?php echo absint( WC()->cart->get_cart_contents_count() ); ?></span>
 			</a>
