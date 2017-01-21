@@ -189,6 +189,7 @@ if ( ! function_exists( 'businessx_scripts' ) ) {
 			apply_filters( 'businessx_frontend_js_data_filter', array(
 				/* Search form placeholder */
 				'search_placeholder' => esc_attr_x( 'Type the keywords you are searching for', 'search overlay placeholder', 'businessx' ),
+				'home_url'           => esc_url( home_url() ),
 			) )
 		);
 

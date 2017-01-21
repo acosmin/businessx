@@ -283,7 +283,8 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 		// Scroll to id
 		var ac_ScrollTo = function( acTheHref ) {
 			var the_href	= $( acTheHref ).attr( 'href' ),
-				id_target	= $( the_href );
+				id_target	= $( the_href ),
+				home_url    = businessx_scripts_data[ 'home_url' ];
 
 			if( id_target.length ) {
 				var	bar         = $( '#wpadminbar' ),
@@ -306,6 +307,8 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 				$( 'body, html' ).animate({
 					scrollTop: goto,
 				}, 500);
+			} else if( home_url.length ) {
+				window.location.href = home_url + the_href;
 			} else {
 				return;
 			}
