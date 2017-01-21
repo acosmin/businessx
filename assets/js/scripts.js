@@ -405,18 +405,38 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 			$document.on('touchend click', '.ac-btn-mobile-menu', function( event ) {
 				event.preventDefault();
 				menu_select.detach().prependTo('body').addClass(mobile_menu).removeClass(menu).fadeIn(300);
-				$('.menu-hidden-select').parent('.menu-item').detach().appendTo('.' + mobile_menu);
 				$('.'+mobile_menu).find('li.menu-item-has-children > a').after('<a href="#" class="mobile-arrow"></a>');
+				$body.toggleClass(opened_menu);
+			});
+
+			$document.on('touchend click', '.ac-btn-mobile-actions-menu', function( event ) {
+				event.preventDefault();
+				$( '.actions-menu' )
+				.detach()
+				.prependTo('body')
+				.removeClass('actions-menu')
+				.addClass(mobile_menu)
+				.removeClass(menu)
+				.fadeIn(300);
+
 				$body.toggleClass(opened_menu);
 			});
 
 			$document.on('touchend click', '.ac-btn-mobile-close, .nav-open .gotosection', function( event ){
 				event.preventDefault();
 				$('.'+mobile_menu).prependTo('.main-menu-wrap').removeClass(mobile_menu).addClass(menu);
-				$('.menu-hidden-select').parent('.menu-item').detach().appendTo(actions_menu);
 				menu_select.find(mobile_arrow).remove();
 				menu_select.find('.'+parent_opened).removeClass(parent_opened);
 				menu_select.find('.'+opened).removeClass(opened);
+				$body.removeClass(opened_menu);
+				if( $( event.currentTarget ).hasClass('gotosection') ) {
+					ac_ScrollTo( $( event.currentTarget ).find('a') );
+				}
+			});
+
+			$document.on('touchend click', '.ac-btn-mobile-act-close, .nav-open .gotosection', function( event ){
+				event.preventDefault();
+				$('.'+mobile_menu).prependTo('.main-header-right').removeClass(mobile_menu).addClass('actions-menu');
 				$body.removeClass(opened_menu);
 				if( $( event.currentTarget ).hasClass('gotosection') ) {
 					ac_ScrollTo( $( event.currentTarget ).find('a') );

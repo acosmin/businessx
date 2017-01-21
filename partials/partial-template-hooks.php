@@ -32,6 +32,7 @@ add_action( 'businessx_header__action_btns_1', 'businessx_menu_action_btns', 11 
 /* -- Header / Action Buttons style 2 */
 add_action( 'businessx_header__action_btns_2', 'businessx_search_button', 10 ); // Action buttons - search
 add_action( 'businessx_header__action_btns_2', 'businessx_mobile_menu_button', 20 ); // Action buttons - mobile menu
+add_action( 'businessx_header__action_btns_2', 'businessx_mobile_actions_menu_button', 30 ); // Action buttons - mobile actions menu
 
 
 

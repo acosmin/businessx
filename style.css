@@ -2408,6 +2408,9 @@ body.no-sidebar .site-page {
 .main-header-right .ac-btn-alt.alt2, .main-header-btns {
 	margin-left: 1.389em;
 }
+.actions-menu .ac-btn-mobile-act-close {
+	display: none;
+}
 .main-header-right .actions-menu a,
 .main-header-right .ac-btn-alt.alt2 {
 	border-color: #82cf1f;
@@ -2431,6 +2434,7 @@ body.no-sidebar .site-page {
 	margin-left: 0.222em;
 	border-radius: 1.667em;
 	padding: 0 1.111em;
+	float: left; /* TO DO */
 }
 .main-header-btns .ac-btn-h:hover {
 	background-color: rgba(255,255,255,0.3);
