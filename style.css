@@ -2317,6 +2317,11 @@ body.no-sidebar .site-page {
 	position: fixed;
 }
 .main-header-inner-wrap {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
 	position: relative;
 	width: 100%;
 	max-width: 100em;
@@ -2371,8 +2376,8 @@ body.no-sidebar .site-page {
 /* Logo */
 .main-header .logo-wrap {
 	position: relative;
-	float:left;
 	display: inline-block;
+	flex: 0 0 auto;
 	margin-right: 2.500em;
 	padding-top: 3px;
 }
@@ -2401,9 +2406,6 @@ body.no-sidebar .site-page {
 /* Header - Elements positions */
 .main-menu-wrap, .main-header-right {
 	display: inline-block;
-	position: absolute;
-	top: 46.5%;
-	margin-top: -0.8335em;
 	-webkit-backface-visibility: hidden;
 	font-weight: 400;
 }
@@ -2411,6 +2413,9 @@ body.no-sidebar .site-page {
 	height:	1.667em;
 }
 .main-header-right {
+	position: absolute;
+	top: 50%;
+	margin-top: -0.833em;
 	right: 0;
 }
 /* Header - Right Side */
@@ -2479,7 +2484,9 @@ body.no-sidebar .site-page {
 /**
  * 6.1 - Header Navigation
  */
-.main-menu-wrap {}
+.main-menu-wrap {
+	flex: 0 0 auto;
+}
 .main-menu-wrap ul {
 	display: inline-block;
 	list-style: none;
