@@ -1921,6 +1921,9 @@ body.no-sidebar .site-page {
 .sec-portfolio-pmt {
 	height: 3em;
 }
+.archive .sec-portfolio .grid-2 {
+	padding: 3.222em 0 6.111em;
+}
 
 
 
