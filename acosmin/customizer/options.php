@@ -7,6 +7,9 @@ global $businessx_customizer_settings;
 
 $businessx_cs_no_filters = array(
 
+	/* Settings - Site Identity */
+	'sticky_logo_height' => '2em',
+
 	/* Colors - Body */
 	'colors_body_background' => '#ffffff',
 	'colors_body_font' => '#414141',

@@ -2403,6 +2403,12 @@ body.no-sidebar .site-page {
 .logo-wrap.logo-display {
 	display: inline-block;
 }
+body.sticky-logo .mh-moving .logo-wrap img {
+	max-height: 2em;
+}
+body:not(.sticky-logo) .mh-moving .logo-wrap {
+	display: none;
+}
 /* Header - Elements positions */
 .main-menu-wrap, .main-header-right {
 	display: inline-block;
@@ -4726,6 +4732,14 @@ input:disabled {
 		float: right;
 	}
 	.main-header .logo-wrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		-moz-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		-o-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
 		float: none;
     	margin-right: 0;
 		margin-bottom: 0;
@@ -4768,7 +4782,6 @@ input:disabled {
 	.actions-menu li:first-child a {
 		margin-left: 0;
 	}
-
 	.main-header {
 		padding-left: 0.455em;
 		padding-right: 0.455em;
