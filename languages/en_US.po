@@ -13,6 +13,13 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
+#: archive-jetpack-portfolio.php:50 taxonomy-jetpack-portfolio-tag.php:50
+#: taxonomy-jetpack-portfolio-type.php:50 template-jetpack-portfolio.php:60
+#, php-format
+msgid ""
+"Ready to publish your first project? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
 #: comments.php:22
 #, php-format
 msgctxt "comments title"
@@ -39,7 +46,7 @@ msgstr ""
 msgid "Actions Menu"
 msgstr ""
 
-#: functions.php:79 partials/partial-template-functions.php:293
+#: functions.php:79 partials/partial-template-functions.php:310
 msgid "Footer Menu"
 msgstr ""
 
@@ -48,75 +55,68 @@ msgctxt "search overlay placeholder"
 msgid "Type the keywords you are searching for"
 msgstr ""
 
-#: functions.php:208 sidebar.php:22
+#: functions.php:209 sidebar.php:22
 msgid "Index Sidebar"
 msgstr ""
 
-#: functions.php:210
+#: functions.php:211
 msgid "This sidebar appears where the index/arhives views are shown."
 msgstr ""
 
-#: functions.php:218 sidebar-single.php:23
+#: functions.php:219 sidebar-single.php:23
 msgid "Posts Sidebar"
 msgstr ""
 
-#: functions.php:220
+#: functions.php:221
 msgid "This sidebar appears when you view a post"
 msgstr ""
 
-#: functions.php:228 sidebar-page.php:23
+#: functions.php:229 sidebar-page.php:23
 msgid "Page Sidebar"
 msgstr ""
 
-#: functions.php:230
+#: functions.php:231
 msgid "This sidebar appears when you view a page"
 msgstr ""
 
-#: functions.php:239 sidebar-portfolio.php:23
+#: functions.php:240 sidebar-portfolio.php:23
 msgid "Portfolio Sidebar"
 msgstr ""
 
-#: functions.php:241
+#: functions.php:242
 msgid "This sidebar appears when you view a Jetpack Portfolio item"
 msgstr ""
 
-#: functions.php:250
+#: functions.php:251
 msgid "Footer #1 Sidebar"
 msgstr ""
 
-#: functions.php:252
+#: functions.php:253
 msgid "First footer sidebar"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:261
 msgid "Footer #2 Sidebar"
 msgstr ""
 
-#: functions.php:262
+#: functions.php:263
 msgid "Second footer sidebar"
 msgstr ""
 
-#: functions.php:270
+#: functions.php:271
 msgid "Footer #3 Sidebar"
 msgstr ""
 
-#: functions.php:272
+#: functions.php:273
 msgid "Third footer sidebar"
 msgstr ""
 
-#: functions.php:281 sidebar-shop.php:23
+#: functions.php:282 sidebar-shop.php:23
 msgid "Shop Sidebar"
 msgstr ""
 
-#: functions.php:283
+#: functions.php:284
 msgid "Shop sidebar - index/archive view"
-msgstr ""
-
-#: taxonomy-jetpack-portfolio-tag.php:50
-#: taxonomy-jetpack-portfolio-type.php:50 template-jetpack-portfolio.php:60
-#, php-format
-msgid ""
-"Ready to publish your first project? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: taxonomy-jetpack-portfolio-tag.php:56
@@ -213,6 +213,56 @@ msgstr ""
 msgid ""
 "Select whether to use a custom logo or your site title. If a logo is not "
 "selected, the text one is displayed."
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:22
+msgid "Sticky Logo"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:23
+msgid ""
+"Show logo on scroll? If you use this feature, the logo will show up if the "
+"menu is sticky on scroll"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:31
+msgctxt "sticky logo size"
+msgid "1.5"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:32
+msgctxt "sticky logo size"
+msgid "2"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:33
+msgctxt "sticky logo size"
+msgid "2.5"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:34
+msgctxt "sticky logo size"
+msgid "3"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:35
+msgctxt "sticky logo size"
+msgid "3.5"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:36
+msgctxt "sticky logo size"
+msgid "4"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:38
+msgid "Sticky Logo Height"
+msgstr ""
+
+#: acosmin/customizer/custom-options/options.php:39
+msgid ""
+"Logo height on scroll, works only if the above option is on and the logo is "
+"and image. The value is represented in EM units"
 msgstr ""
 
 #: acosmin/customizer/sections/docs-button.php:8
@@ -1628,37 +1678,32 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: partials/partial-template-functions.php:141
-msgctxt "mobile anchor text"
-msgid "Menu"
-msgstr ""
-
-#: partials/partial-template-functions.php:326
+#: partials/partial-template-functions.php:343
 #, php-format
 msgctxt "credit text"
 msgid "%1$s designed by %2$s."
 msgstr ""
 
-#: partials/partial-template-functions.php:327
+#: partials/partial-template-functions.php:344
 msgctxt "credit text - theme"
 msgid "Businessx theme"
 msgstr ""
 
-#: partials/partial-template-functions.php:328
+#: partials/partial-template-functions.php:345
 msgid "Premium WordPress Themes &amp; Plugins by Acosmin"
 msgstr ""
 
-#: partials/partial-template-functions.php:328
+#: partials/partial-template-functions.php:345
 msgctxt "credit text - theme author"
 msgid "Acosmin"
 msgstr ""
 
-#: partials/partial-template-functions.php:357
-#: partials/partial-template-functions.php:433
+#: partials/partial-template-functions.php:374
+#: partials/partial-template-functions.php:450
 msgid "Tagged with: "
 msgstr ""
 
-#: partials/partial-template-functions.php:527
+#: partials/partial-template-functions.php:544
 msgid "View your shopping cart"
 msgstr ""
 
@@ -1698,6 +1743,10 @@ msgstr ""
 
 #: partials/headings/404-heading-full-width.php:12
 msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: partials/headings/archive-portfolio-heading-full-width.php:6
+msgid "Portfolio Heading"
 msgstr ""
 
 #: partials/headings/index-heading-no-sections.php:12

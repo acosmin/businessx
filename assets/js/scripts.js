@@ -1,10 +1,10 @@
 /*
 ---------------------------------------------------------------------
-	To keep page requests to a minimum number we compiled all the
-	necessary scripts into one file;
-	--------------------------------
-	You can find all the original files (minified or unminified) in:
-	../assets/js/
+ To keep page requests to a minimum number we compiled all the
+ necessary scripts into one file;
+ --------------------------------
+ You can find all the original files (minified or unminified) in:
+ ../assets/js/
 ---------------------------------------------------------------------
 */
 
@@ -139,14 +139,15 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 
 		// Sticky header/menu
 		var ac_FixedMenu = function() {
-			var hidden_class	= 'mh-hidden',
-				transp_class	= 'mh-transparent',
-				moving_class	= 'mh-moving',
+			var hidden_class  = 'mh-hidden',
+				transp_class  = 'mh-transparent',
+				moving_class  = 'mh-moving',
+				sticky_logo   = 'sticky-logo',
 				wHeight, wScrollCurrent, wScrollBefore, wScrollDiff, dHeight = 0;
 
 			if( $fixed_menu.length ) {
-				var dHeight				= $document.height(),
-					wHeight				= $window.height(),
+				var dHeight  = $document.height(),
+					wHeight  = $window.height(),
 					didScroll;
 
 					$window.on( 'scroll', function() {
@@ -154,11 +155,13 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 					});
 
 					var hasScrolled = function() {
-						var wScrollCurrent	= $window.scrollTop();
-						var wScrollDiff		= wScrollBefore - wScrollCurrent;
+						var wScrollCurrent = $window.scrollTop();
+						var wScrollDiff    = wScrollBefore - wScrollCurrent;
 
 						if( wScrollCurrent <= 0 ) {
-							$logo_wrap.fadeIn(100).css('display','');
+							if( ! $body.hasClass(sticky_logo) ) {
+								$logo_wrap.fadeIn(100).css('display','');
+							}
 							if( $body.hasClass( 'menu-ff' ) ) {
 								$fixed_menu.removeClass( moving_class );
 							} else if( $body.hasClass( 'menu-tf' ) ) {
@@ -167,10 +170,15 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 
 						} else if( wScrollDiff < 0 ) {
 							if( $body.hasClass( 'menu-tf' ) ) {
-								$fixed_menu.removeClass( transp_class );
-								$logo_wrap.fadeOut(0);
+								$fixed_menu.removeClass( transp_class ).addClass( moving_class );
+								if( ! $body.hasClass(sticky_logo) ) {
+									$logo_wrap.fadeOut(0);
+								}
 							} else {
-								$logo_wrap.fadeOut(100);
+								if( ! $body.hasClass(sticky_logo) ) {
+									$logo_wrap.fadeOut(100);
+								}
+								$fixed_menu.addClass( moving_class );
 							}
 						}
 
@@ -186,7 +194,13 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 						}
 					}, 0);
 
-					if( $window.scrollTop() > 0 ) { $header.removeClass( transp_class ); $logo_wrap.hide(); };
+					if( $body.hasClass(sticky_logo) && $window.scrollTop() > 0 ) {
+						$fixed_menu.addClass( moving_class );
+						$header.removeClass( transp_class );
+					} else if( $window.scrollTop() > 0 ) {
+						$fixed_menu.addClass( moving_class );
+						$header.removeClass( transp_class );
+					};
 
 			}
 		} // Sticky menu
@@ -281,15 +295,41 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 
 
 		// Scroll to id
-		$document.on( 'click', '.gotosection > a', function( event ) {
-			var the_href	= $( this ).attr( 'href' ),
-				id_target	= $( the_href );
+		var ac_ScrollTo = function( acTheHref ) {
+			var the_href	= $( acTheHref ).attr( 'href' ),
+				id_target	= $( the_href ),
+				home_url    = businessx_scripts_data[ 'home_url' ];
 
 			if( id_target.length ) {
-				$body.animate({
-					scrollTop: id_target.offset().top
+				var	bar         = $( '#wpadminbar' ),
+					ttop        = id_target.offset().top,
+					hheight     = $header.innerHeight(),
+					hheight_t   = hheight - ( parseInt( $header.css( 'paddingTop' ) ) / 2 ),
+					bheight     = bar.innerHeight(),
+					fromtop, goto;
+
+				if( $header.hasClass('mh-fixed mh-transparent') ) {
+					fromtop = bar.length ? ttop - ( hheight_t + bheight ) : ttop - hheight_t;
+				} else if ( $header.hasClass('mh-fixed') ) {
+					fromtop = bar.length ? ttop - ( hheight + bheight ) : ttop - hheight;
+				} else {
+					fromtop = bar.length ? ttop - bheight : ttop;
+				}
+
+				goto = fromtop < 32 ? 0 : fromtop;
+
+				$( 'body, html' ).animate({
+					scrollTop: goto,
 				}, 500);
+			} else if( home_url.length ) {
+				window.location.href = home_url + the_href;
+			} else {
+				return;
 			}
+		}
+
+		$document.on( 'click', 'body:not(.nav-open) .gotosection > a', function( event ) {
+			ac_ScrollTo( this );
 			event.preventDefault();
 		});
 
@@ -360,35 +400,56 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 
 		// Mobile Menu
 		var ac_MobileMenu = function() {
-			var menu			= 'main-menu',
-				menu_select		= $('.' + menu),
-				opened_menu 	= 'nav-open',
-				mobile_menu		= 'mobile-menu',
-				mobile_arrow	= '.mobile-arrow',
-				parent_opened	= 'parent-opened',
-				opened			= 'opened';
-
-			if( ! menu_select.length )
-				return;
+			var menu            = 'main-menu',
+				menu_select     = $('.' + menu),
+				opened_menu     = 'nav-open',
+				mobile_menu     = 'mobile-menu',
+				mobile_arrow    = '.mobile-arrow',
+				parent_opened   = 'parent-opened',
+				opened          = 'opened',
+				actions_menu    = 'actions-menu',
+				actions_select  = $('.' + actions_menu );
 
 			if( $body.hasClass('menu-ff') || $body.hasClass('menu-nn') ) {
 				$('.sec-hero .sec-hs-elements').css('top','50%');
 			}
 
+			if( ! menu_select.length &&  ! actions_select.length )
+				return;
+
 			$document.on('touchend click', '.ac-btn-mobile-menu', function( event ) {
 				event.preventDefault();
-				menu_select.detach().prependTo('body').addClass(mobile_menu).removeClass(menu).fadeIn(300);
+				menu_select.detach().prependTo('body').addClass(mobile_menu).addClass('menu-m').removeClass(menu).fadeIn(300);
 				$('.'+mobile_menu).find('li.menu-item-has-children > a').after('<a href="#" class="mobile-arrow"></a>');
 				$body.toggleClass(opened_menu);
 			});
 
-			$document.on('touchend click', '.ac-btn-mobile-close', function( event ){
+			$document.on('touchend click', '.ac-btn-mobile-actions-menu', function( event ) {
 				event.preventDefault();
-				$('.'+mobile_menu).prependTo('.main-menu-wrap').removeClass(mobile_menu).addClass(menu);
+				actions_select.detach().prependTo('body').addClass(mobile_menu).addClass('menu-a').removeClass(actions_menu).fadeIn(300);
+
+				$body.toggleClass(opened_menu);
+			});
+
+			$document.on('touchend click', '.ac-btn-mobile-close, .nav-open .menu-m .gotosection', function( event ){
+				event.preventDefault();
+				$('.'+mobile_menu).prependTo('.main-menu-wrap').removeClass(mobile_menu).removeClass('menu-m').addClass(menu);
 				menu_select.find(mobile_arrow).remove();
 				menu_select.find('.'+parent_opened).removeClass(parent_opened);
 				menu_select.find('.'+opened).removeClass(opened);
 				$body.removeClass(opened_menu);
+				if( $( event.currentTarget ).hasClass('gotosection') ) {
+					ac_ScrollTo( $( event.currentTarget ).find('a') );
+				}
+			});
+
+			$document.on('touchend click', '.ac-btn-mobile-act-close, .nav-open .menu-a .gotosection', function( event ){
+				event.preventDefault();
+				$('.'+mobile_menu).prependTo('.main-header-right').addClass(actions_menu).removeClass('menu-a').removeClass(mobile_menu);
+				$body.removeClass(opened_menu);
+				if( $( event.currentTarget ).hasClass('gotosection') ) {
+					ac_ScrollTo( $( event.currentTarget ).find('a') );
+				}
 			});
 
 			$document.on('touchend click', mobile_arrow, function( event ){

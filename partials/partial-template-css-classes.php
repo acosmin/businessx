@@ -95,7 +95,17 @@ if ( ! function_exists( 'businessx_body_classes' ) ) {
 			$new_classes[] = 'no-sidebar';
 		}
 
+		// WooCommerce
+		if( ! get_theme_mod( 'woocommerce_cart_disable', 0 ) ) {
+			$new_classes[] = 'has-cart-btn';
+		}
+
 		//$new_classes[] = 'fader-reset'; // ADD OPTION
+
+		// Sticky logo
+		if( get_theme_mod( 'sticky_logo', false ) ) {
+			$new_classes[] = 'sticky-logo';
+		}
 
 		// From select a header type
 		$header_type = get_theme_mod( 'header_type_select', 'menu-tf' );
@@ -122,6 +132,45 @@ if ( ! function_exists( 'businessx_body_classes' ) ) {
 	}
 }
 add_filter( 'body_class', 'businessx_body_classes' );
+
+
+
+
+/* ------------------------------------------------------------------------- *
+ *	body_class & Header classes
+ *	__________
+ *
+ *  If the current page has some sort of full width page.
+/* ------------------------------------------------------------------------- */
+if( ! function_exists( 'businessx_header_page_fw_css_classes' ) ) {
+	function businessx_header_page_fw_css_classes( $classes ) {
+		if( is_page_template( 'template-fullwidth.php' ) ) {
+			$current_page = get_queried_object_id();
+			$classes = array();
+			$classes[] = 'main-header';
+			$classes[] = 'mh-fixed';
+			$classes[] = 'mh-nontransparent';
+			return apply_filters( 'businessx_header_page_fw___css_classes', $classes, $current_page );
+		} else {
+			return $classes;
+		}
+	}
+}
+add_filter( 'businessx_header___css_classes', 'businessx_header_page_fw_css_classes', 11 );
+
+if( ! function_exists( 'businessx_body_page_fw_classes_filter' ) ) {
+	function businessx_body_page_fw_classes_filter( $new_classes ) {
+		if( is_page_template( 'template-fullwidth.php' ) ) {
+			$current_page = get_queried_object_id();
+			$new_classes = array();
+			$new_classes[] = 'menu-ff';
+			return apply_filters( 'businessx_body_page_fw___classes_filter', $new_classes, $current_page );
+		} else {
+			return $new_classes;
+		}
+	}
+}
+add_filter( 'businessx_body_classes_filter', 'businessx_body_page_fw_classes_filter', 11 );
 
 
 

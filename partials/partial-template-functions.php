@@ -68,10 +68,10 @@ if ( ! function_exists( 'businessx_menu_main_area' ) ) {
 		<nav class="main-menu-wrap" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'businessx' ); ?>">
 			<?php
                 $menu_args = apply_filters( 'businessx_menu___args', $menu_args = array(
-                    'theme_location'	=> 'primary',
-					'items_wrap'     	=> '<ul class="main-menu clearfix">%3$s<li class="close-menu"><a href="#" class="ac-btn btn-small ac-btn-mobile-close">' . businessx_icon( 'close', false ) . '</a></li></ul>',
-                    'container'			=> false,
-                    'fallback_cb'		=> 'businessx_fb_menu'
+                    'theme_location'    => 'primary',
+					'items_wrap'        => '<ul class="main-menu clearfix">%3$s<li class="close-menu"><a href="#" class="ac-btn btn-small ac-btn-mobile-close">' . businessx_icon( 'close', false ) . '</a></li></ul>',
+                    'container'         => false,
+                    'fallback_cb'       => 'businessx_fb_menu'
                 ) );
 
                 wp_nav_menu( $menu_args );
@@ -111,12 +111,12 @@ if ( ! function_exists( 'businessx_menu_action_btns' ) ) {
 	function businessx_menu_action_btns() {
 
 		$args = apply_filters( 'businessx_menu___actions_args', array(
-			'theme_location'	=> 'actions',
-			'menu_class'     	=> 'actions-menu clearfix"',
-			'container'			=> false,
-			'depth'				=> 1,
-			'fallback_cb'		=> '__return_false',
-			'echo'				=> false,
+			'theme_location' => 'actions',
+			'items_wrap'     => '<ul class="actions-menu clearfix">%3$s<li class="close-menu"><a href="#" class="ac-btn btn-small ac-btn-mobile-act-close">' . businessx_icon( 'close', false ) . '</a></li></ul>',
+			'container'      => false,
+			'depth'          => 1,
+			'fallback_cb'    => '__return_false',
+			'echo'           => false,
 		) );
 
 		echo wp_nav_menu( $args );
@@ -129,7 +129,7 @@ if ( ! function_exists( 'businessx_search_button' ) ) {
 	function businessx_search_button() {
 		$disabled = get_theme_mod( 'header_misc_hide_search_btn', false );
 		if( ! $disabled ) : ?>
-        <span class="ac-btn-h"><a href="#" id="big-search-trigger"><?php businessx_icon( 'search' ) ?></a></span>
+        <span class="ac-btn-h ac-btn-search"><a href="#" id="big-search-trigger"><?php businessx_icon( 'search' ) ?></a></span>
         <?php endif;
 	}
 }
@@ -138,11 +138,28 @@ if ( ! function_exists( 'businessx_search_button' ) ) {
 /* -- Action buttons - Mobile menu */
 if ( ! function_exists( 'businessx_mobile_menu_button' ) ) {
 	function businessx_mobile_menu_button() {
-		$menu_btn = apply_filters( 'businessx_mobile_menu_button___text', $menu_btn = _x( 'Menu', 'mobile anchor text', 'businessx' ) );
+		$menu_btn = '';
+		$btn_icon = 'bars';
+		$format   = '<span class="ac-btn-h ac-btn-mobile ac-btn-mob"><a href="#" class="ac-btn-mobile-menu">%1$s%2$s</a></span>';
+
 		if ( has_nav_menu( 'primary' ) ) :
-		?>
-        <span class="ac-btn-h ac-btn-mobile"><a href="#" class="ac-btn-mobile-menu"><?php businessx_icon( 'bars' ) ?> <?php echo esc_html( $menu_btn ); ?></a></span>
-        <?php
+			$output = sprintf( $format, businessx_icon( $btn_icon, false ), esc_html( $menu_btn ) );
+			echo apply_filters( 'businessx_mobile_menu_button___output', $output, $format, $btn_icon, $menu_btn );
+		endif;
+	}
+}
+
+
+/* -- Action buttons - Mobile menu for actions */
+if ( ! function_exists( 'businessx_mobile_actions_menu_button' ) ) {
+	function businessx_mobile_actions_menu_button() {
+		$menu_btn = '';
+		$btn_icon = 'star';
+		$format   = '<span class="ac-btn-h ac-btn-mobile ac-btn-act"><a href="#" class="ac-btn-mobile-actions-menu">%1$s%2$s</a></span>';
+
+		if ( has_nav_menu( 'actions' ) ) :
+			$output = sprintf( $format, businessx_icon( $btn_icon, false ), esc_html( $menu_btn ) );
+			echo apply_filters( 'businessx_mobile_actions_menu_button___output', $output, $format, $btn_icon, $menu_btn );
 		endif;
 	}
 }
@@ -523,7 +540,7 @@ if ( ! function_exists( 'businessx_wco_cart_link' ) ) {
 	function businessx_wco_cart_link() {
 		if( ! get_theme_mod( 'woocommerce_cart_disable', 0 ) ) {
 		?>
-		<span class="ac-btn-h shopping-button">
+		<span class="ac-btn-h shopping-button ac-btn-mobile">
 			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'businessx' ); ?>">
 				<?php businessx_icon( 'shopping-bag' ) ?><span class="count"><?php echo absint( WC()->cart->get_cart_contents_count() ); ?></span>
 			</a>

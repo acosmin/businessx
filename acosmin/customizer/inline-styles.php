@@ -57,6 +57,10 @@ if ( ! function_exists( 'businessx_final_inline_css' ) ) {
 			}
 		}
 
+		/* Settings - Site Identity */
+		if( businessx_cd( 'sticky_logo_height', $sticky_logo_height ) ) {
+			$css .= businessx_gcs( 'body.sticky-logo .mh-moving .logo-wrap img', 'max-height', 'sticky_logo_height' ); }
+
 		/* Colors - Body */
 		if( businessx_cd( 'colors_body_background', $colors_body_background ) ) {
 			$css .= businessx_gcs( 'body, .comment-reply-title, .woocommerce div.product .woocommerce-tabs ul.tabs li.active', 'background-color', 'colors_body_background' );

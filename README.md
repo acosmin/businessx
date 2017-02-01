@@ -1,7 +1,17 @@
 # Businessx WordPress Theme #
-Businessx is distributed under the terms of the GNU GPL v2.0.
+Businessx is distributed under the terms of the GNU GPL v3.0.
 
 ### Changelog ###
+
+**v1.0.5.5**
+* Fixed Scroll to section, doesn't work in some browsers;
+* Fixed Actions menu not working on all mobile displays. It was moved into a separate mobile menu with a button. To change the button icon, use the `businessx_mobile_actions_menu_button___output` filter;
+* Fixed Scroll To Section if the current page doesn't have a section to scroll to. On click it will redirect to your homepage;
+* Fixed Primary menu issues on Safari. `.main-header-inner-wrap` uses `display: flex` now, solving the issue;
+* Added `archive-jetpack-portfolio.php` for support with Jetpack Portfolios. You can now use the `/portfolio/` permalink witout using the custom page template;
+* Added two full width page templates, one with page title displaying and one without (this one has the colored/fixed menu enabled and can only be changed with the use of filters);
+* Added styles for the Polylang language switcher (dropdown enabled), only works with the Primary location;
+* Added option for sticky logo. The logo will remain visible on scroll;
 
 **v1.0.5.4**
 * Fixed Safari issues;
