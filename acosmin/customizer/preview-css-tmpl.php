@@ -19,6 +19,11 @@ if ( ! function_exists( 'businessx_czr_output_css' ) ) {
 		return <<<CSS
 		/* CSS GOES HERE */
 
+		/* Settings - Site Identity */
+		body.sticky-logo .mh-moving .logo-wrap img {
+			max-height: {$settings['sticky_logo_height']};
+		}
+
 		/* Colors - Body */
 		body, .comment-reply-title, .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
 			background-color: {$settings['colors_body_background']};

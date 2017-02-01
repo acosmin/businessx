@@ -139,14 +139,15 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 
 		// Sticky header/menu
 		var ac_FixedMenu = function() {
-			var hidden_class	= 'mh-hidden',
-				transp_class	= 'mh-transparent',
-				moving_class	= 'mh-moving',
+			var hidden_class  = 'mh-hidden',
+				transp_class  = 'mh-transparent',
+				moving_class  = 'mh-moving',
+				sticky_logo   = 'sticky-logo',
 				wHeight, wScrollCurrent, wScrollBefore, wScrollDiff, dHeight = 0;
 
 			if( $fixed_menu.length ) {
-				var dHeight				= $document.height(),
-					wHeight				= $window.height(),
+				var dHeight  = $document.height(),
+					wHeight  = $window.height(),
 					didScroll;
 
 					$window.on( 'scroll', function() {
@@ -154,11 +155,13 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 					});
 
 					var hasScrolled = function() {
-						var wScrollCurrent	= $window.scrollTop();
-						var wScrollDiff		= wScrollBefore - wScrollCurrent;
+						var wScrollCurrent = $window.scrollTop();
+						var wScrollDiff    = wScrollBefore - wScrollCurrent;
 
 						if( wScrollCurrent <= 0 ) {
-							$logo_wrap.fadeIn(100).css('display','');
+							if( ! $body.hasClass(sticky_logo) ) {
+								$logo_wrap.fadeIn(100).css('display','');
+							}
 							if( $body.hasClass( 'menu-ff' ) ) {
 								$fixed_menu.removeClass( moving_class );
 							} else if( $body.hasClass( 'menu-tf' ) ) {
@@ -168,9 +171,13 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 						} else if( wScrollDiff < 0 ) {
 							if( $body.hasClass( 'menu-tf' ) ) {
 								$fixed_menu.removeClass( transp_class ).addClass( moving_class );
-								$logo_wrap.fadeOut(0);
+								if( ! $body.hasClass(sticky_logo) ) {
+									$logo_wrap.fadeOut(0);
+								}
 							} else {
-								$logo_wrap.fadeOut(100);
+								if( ! $body.hasClass(sticky_logo) ) {
+									$logo_wrap.fadeOut(100);
+								}
 								$fixed_menu.addClass( moving_class );
 							}
 						}
@@ -187,7 +194,13 @@ $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width
 						}
 					}, 0);
 
-					if( $window.scrollTop() > 0 ) { $header.removeClass( transp_class ); $logo_wrap.hide(); };
+					if( $body.hasClass(sticky_logo) && $window.scrollTop() > 0 ) {
+						$fixed_menu.addClass( moving_class );
+						$header.removeClass( transp_class );
+					} else if( $window.scrollTop() > 0 ) {
+						$fixed_menu.addClass( moving_class );
+						$header.removeClass( transp_class );
+					};
 
 			}
 		} // Sticky menu

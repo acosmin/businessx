@@ -2294,6 +2294,11 @@ body.no-sidebar .site-page {
 .main-header img, .mobile-menu img {
 	display: inline-block;
 	vertical-align: initial;
+	-webkit-transition: max-height .3s ease-in-out;
+	-moz-transition: max-height .3s ease-in-out;
+	-o-transition: max-height .3s ease-in-out;
+    transition: max-height .3s ease-in-out;
+	-webkit-backface-visibility: hidden;
 }
 .mh-placeholder {
 	width: 100%;
@@ -2317,6 +2322,11 @@ body.no-sidebar .site-page {
 	position: fixed;
 }
 .main-header-inner-wrap {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
 	position: relative;
 	width: 100%;
 	max-width: 100em;
@@ -2371,10 +2381,9 @@ body.no-sidebar .site-page {
 /* Logo */
 .main-header .logo-wrap {
 	position: relative;
-	float:left;
 	display: inline-block;
+	flex: 0 0 auto;
 	margin-right: 2.500em;
-	padding-top: 3px;
 }
 .logo-wrap {
 	font-size: 1.333em;
@@ -2398,12 +2407,15 @@ body.no-sidebar .site-page {
 .logo-wrap.logo-display {
 	display: inline-block;
 }
+body.sticky-logo .mh-moving .logo-wrap img {
+	max-height: 2em;
+}
+body:not(.sticky-logo) .mh-moving .logo-wrap {
+	display: none;
+}
 /* Header - Elements positions */
 .main-menu-wrap, .main-header-right {
 	display: inline-block;
-	position: absolute;
-	top: 46.5%;
-	margin-top: -0.8335em;
 	-webkit-backface-visibility: hidden;
 	font-weight: 400;
 }
@@ -2411,6 +2423,9 @@ body.no-sidebar .site-page {
 	height:	1.667em;
 }
 .main-header-right {
+	position: absolute;
+	top: 50%;
+	margin-top: -0.833em;
 	right: 0;
 }
 /* Header - Right Side */
@@ -2479,7 +2494,9 @@ body.no-sidebar .site-page {
 /**
  * 6.1 - Header Navigation
  */
-.main-menu-wrap {}
+.main-menu-wrap {
+	flex: 0 0 auto;
+}
 .main-menu-wrap ul {
 	display: inline-block;
 	list-style: none;
@@ -4719,9 +4736,24 @@ input:disabled {
 		float: right;
 	}
 	.main-header .logo-wrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		-moz-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		-o-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
 		float: none;
     	margin-right: 0;
 		margin-bottom: 0;
+	}
+	.main-header img, .mobile-menu img {
+		-webkit-transition: initial;
+		-moz-transition: initial;
+		-o-transition: initial;
+	    transition: initial;
+		-webkit-backface-visibility: hidden;
 	}
 	.main-header-right {
 		width: 100%;
@@ -4761,7 +4793,6 @@ input:disabled {
 	.actions-menu li:first-child a {
 		margin-left: 0;
 	}
-
 	.main-header {
 		padding-left: 0.455em;
 		padding-right: 0.455em;

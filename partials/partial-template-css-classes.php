@@ -102,6 +102,11 @@ if ( ! function_exists( 'businessx_body_classes' ) ) {
 
 		//$new_classes[] = 'fader-reset'; // ADD OPTION
 
+		// Sticky logo
+		if( get_theme_mod( 'sticky_logo', false ) ) {
+			$new_classes[] = 'sticky-logo';
+		}
+
 		// From select a header type
 		$header_type = get_theme_mod( 'header_type_select', 'menu-tf' );
 		switch( $header_type ) {
