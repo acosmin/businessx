@@ -1,5 +1,5 @@
 # Businessx WordPress Theme #
-Businessx is distributed under the terms of the GNU GPL v2.0.
+Businessx is distributed under the terms of the GNU GPL v3.0.
 
 ### Changelog ###
 
