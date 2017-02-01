@@ -3,7 +3,7 @@
  *	Portfolio Archive heading template
 /* ------------------------------------------------------------------------- */
 
-$title = get_theme_mod( 'portfolio_section_title', __( 'Portfolio Heading', 'businessx-extensions' ) );
+$title = get_theme_mod( 'portfolio_section_title', __( 'Portfolio Heading', 'businessx' ) );
 $title = apply_filters( 'portfolio_section_title___output', $title );
 ?>
 
