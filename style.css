@@ -2294,6 +2294,11 @@ body.no-sidebar .site-page {
 .main-header img, .mobile-menu img {
 	display: inline-block;
 	vertical-align: initial;
+	-webkit-transition: max-height .3s ease-in-out;
+	-moz-transition: max-height .3s ease-in-out;
+	-o-transition: max-height .3s ease-in-out;
+    transition: max-height .3s ease-in-out;
+	-webkit-backface-visibility: hidden;
 }
 .mh-placeholder {
 	width: 100%;
@@ -2379,7 +2384,6 @@ body.no-sidebar .site-page {
 	display: inline-block;
 	flex: 0 0 auto;
 	margin-right: 2.500em;
-	padding-top: 3px;
 }
 .logo-wrap {
 	font-size: 1.333em;
@@ -4743,6 +4747,13 @@ input:disabled {
 		float: none;
     	margin-right: 0;
 		margin-bottom: 0;
+	}
+	.main-header img, .mobile-menu img {
+		-webkit-transition: initial;
+		-moz-transition: initial;
+		-o-transition: initial;
+	    transition: initial;
+		-webkit-backface-visibility: hidden;
 	}
 	.main-header-right {
 		width: 100%;
