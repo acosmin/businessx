@@ -82,12 +82,12 @@
 .control-section-link-button .accordion-section-title .button {
 	margin-top:  -4px;
 	font-weight: 400;
-	margin-left: 8px;
+	width: 49%;
+	text-align: center;
 }
 
 .rtl .control-section-link-button .accordion-section-title .button {
 	margin-left:  0;
-	margin-right: 8px;
 }
 
 /* Customizer Installer */

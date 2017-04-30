@@ -5,8 +5,8 @@ Theme Name: Businessx
 Theme URI: http://www.acosmin.com/theme/businessx/
 Author: Acosmin
 Author URI: http://www.acosmin.com/
-Description: Businessx is a modern one page WordPress theme with WooCommerce support, perfect for any business, agency or blog. With the help of the free Businessx Extensions plugin you will be able to add 12 sections (Slider, Features, About Us, Team, Clients, Portfolio, Actions, Testimonials, Pricing, FAQ, Hero, Blog) to your homepage and position them as you want on page. Download this plugin from: https://wordpress.org/plugins/businessx-extensions/ & Full Demo: http://demo.acosmin.com/themes/businessx/
-Version: 1.0.5.5
+Description: Businessx is a modern one page WordPress theme with WooCommerce & Polylang support, perfect for any business, agency or blog. With the help of the free Businessx Extensions plugin you will be able to add 14 sections (Slider, Features, About Us, Team, Clients, Portfolio, Actions, Testimonials, Pricing, FAQ, Hero, Blog, Contact, Google Map) to your homepage and position them as you want on page. Download this plugin from: https://wordpress.org/plugins/businessx-extensions/ & Full Demo: http://demo.acosmin.com/themes/businessx/
+Version: 1.0.5.6
 License: GNU General Public License version 3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: custom-header, grid-layout, right-sidebar, sticky-post, translation-ready, threaded-comments, featured-images, custom-menu, theme-options, footer-widgets, portfolio, blog, e-commerce
@@ -2467,7 +2467,7 @@ body:not(.sticky-logo) .mh-moving .logo-wrap {
 	top: -15%;
 	margin-left: 0.222em;
 	border-radius: 1.667em;
-	padding: 0 1.111em;
+	padding: 0;
 	float: left;
 }
 .main-header-btns .ac-btn-h:hover {
@@ -2477,6 +2477,7 @@ body:not(.sticky-logo) .mh-moving .logo-wrap {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
+	padding: 0 1.111em;
 }
 .main-header-btns .ac-btn-h.shopping-button .count {
 	font-weight: 700;
@@ -3987,7 +3988,7 @@ li.menu-item-type-custom a[href*="dribbble.com"]:before, a.simple-social[href*="
 li.menu-item-type-custom a[href*="github.com"]:before, a.simple-social[href*="github.com"] i:before {
 	content: "\f092";
 }
-a.simple-social[href=""] i:before {
+a.simple-social i:before, a.simple-social[href=""] i:before {
 	content: "\f0c1";
 }
 

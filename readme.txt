@@ -4,8 +4,8 @@ Theme Name: Businessx
 Theme URI: http://www.acosmin.com/theme/businessx/
 Contributors: acosmin
 Requires at least: WordPress 4.5
-Tested up to: WordPress 4.7.2
-Version: 1.0.5.5
+Tested up to: WordPress 4.7.4
+Version: 1.0.5.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
