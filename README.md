@@ -3,6 +3,11 @@ Businessx is distributed under the terms of the GNU GPL v3.0.
 
 ### Changelog ###
 
+**v1.0.5.6**
+* Fixed buttons not displaying any icon if the link was non-social type - Team section;
+* Fixed mobile buttons clickable area, made it larger;
+* Changed theme description;
+
 **v1.0.5.5**
 * Fixed Scroll to section, doesn't work in some browsers;
 * Fixed Actions menu not working on all mobile displays. It was moved into a separate mobile menu with a button. To change the button icon, use the `businessx_mobile_actions_menu_button___output` filter;
