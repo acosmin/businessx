@@ -2467,7 +2467,7 @@ body:not(.sticky-logo) .mh-moving .logo-wrap {
 	top: -15%;
 	margin-left: 0.222em;
 	border-radius: 1.667em;
-	padding: 0 1.111em;
+	padding: 0;
 	float: left;
 }
 .main-header-btns .ac-btn-h:hover {
@@ -2477,6 +2477,7 @@ body:not(.sticky-logo) .mh-moving .logo-wrap {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
+	padding: 0 1.111em;
 }
 .main-header-btns .ac-btn-h.shopping-button .count {
 	font-weight: 700;
