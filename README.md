@@ -6,6 +6,7 @@ Businessx is distributed under the terms of the GNU GPL v3.0.
 **v1.0.5.6**
 * Fixed buttons not displaying any icon if the link was non-social type - Team section;
 * Fixed mobile buttons clickable area, made it larger;
+* Added a `Leave a rating` button in the customizer and change the `Documentation` button's position;
 * Changed theme description;
 
 **v1.0.5.5**
