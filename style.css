@@ -3987,7 +3987,7 @@ li.menu-item-type-custom a[href*="dribbble.com"]:before, a.simple-social[href*="
 li.menu-item-type-custom a[href*="github.com"]:before, a.simple-social[href*="github.com"] i:before {
 	content: "\f092";
 }
-a.simple-social[href=""] i:before {
+a.simple-social i:before, a.simple-social[href=""] i:before {
 	content: "\f0c1";
 }
 
