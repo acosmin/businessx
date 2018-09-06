@@ -113,6 +113,8 @@ if ( ! function_exists( 'businessx_setup' ) ) {
 		global $businessx_sections;
 
 		// Add front-page sections positions
+		// This part is deprecated by Businessx Extensions v1.0.6, the plugin will handle this
+		// Keeping it for backwards compatibility with older versions of Businessx Extensions
 		$sections_position	= get_theme_mod( 'businessx_sections_position' );
 		$businessx_sections	= apply_filters( 'businessx_sections_filter', array() );
 
