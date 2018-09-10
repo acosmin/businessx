@@ -3,6 +3,9 @@ Businessx is distributed under the terms of the GNU GPL v3.0.
 
 ### Changelog ###
 
+**v1.0.5.7**
+* Updated the screenshot for .org's new requirements;
+
 **v1.0.5.6**
 * Fixed buttons not displaying any icon if the link was non-social type - Team section;
 * Fixed mobile buttons clickable area, made it larger;
